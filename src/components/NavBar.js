@@ -18,6 +18,7 @@ const NavBarContainer = styled(FullWidthContainer)`
 
 const NavList = styled.div`
   width: 100%;
+  height: 100%;
   font-size: 1.1em;
   list-style: none;
   display: flex;
