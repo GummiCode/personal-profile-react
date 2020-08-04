@@ -9,7 +9,7 @@ import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';
 
 const ProjectContainer = styled(FullWidthContainer)`
-  background-color: #687697;
+  background-color: ${props => props.backgroundColor};
   `;
 
 const LeftProjectContainer = styled(HalfWidthContainer)`
@@ -21,14 +21,14 @@ const LeftProjectContainer = styled(HalfWidthContainer)`
 
 const TitleText = styled.h1`
   font-size: 5em;
-  color: #DEDDE3;
+  color: ${props => props.featureTextColor};
   padding: 0;
   margin: 30px 0 0 0;
 `;
 
 const SummaryText = styled.h2`
   font-size: 3em;
-  color: #DEDDE3;
+  color: ${props => props.featureTextColor};
   padding:0;
   margin: 20px 0 0 0;
 `
@@ -105,7 +105,9 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
     aspects,
     gitHub,
     url,
-    image
+    image,
+    featureTextColor,
+    backgroundColor
   } = projectData;
 
   const mapAspects = (aspects) => {
@@ -119,12 +121,21 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
     <ProjectContainer
       data-testid={projectId}
       id={projectId}
+      backgroundColor={backgroundColor}
     >
 
       <LeftProjectContainer>
 
-        <TitleText>{title}</TitleText>
-        <SummaryText>{summary}</SummaryText>
+        <TitleText
+          featureTextColor={featureTextColor}
+        >
+          {title}
+        </TitleText>
+        <SummaryText
+          featureTextColor={featureTextColor}
+        >
+          {summary}
+        </SummaryText>
         <SectionText>
           {mapAspects(aspects)}
         </SectionText>

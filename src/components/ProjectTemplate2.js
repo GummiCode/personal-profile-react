@@ -21,14 +21,14 @@ const RightProjectContainer = styled(HalfWidthContainer)`
 
 const TitleText = styled.h1`
   font-size: 5em;
-  color: ${props => props.titleColor};
+  color: ${props => props.featureTextColor};
   padding: 0;
   margin: 30px 0 0 0;
 `;
 
 const SummaryText = styled.h2`
   font-size: 3em;
-  color: ${props => props.titleColor};
+  color: ${props => props.featureTextColor};
   padding:0;
   margin: 20px 0 0 0;
 `
@@ -106,7 +106,7 @@ const ProjectTemplate2 = ({ projectData, projectId, nextSection }) => {
     gitHub,
     url,
     image,
-    titleColor,
+    featureTextColor,
     backgroundColor
   } = projectData;
 
@@ -133,12 +133,12 @@ const ProjectTemplate2 = ({ projectData, projectId, nextSection }) => {
       <RightProjectContainer>
 
         <TitleText
-          titleColor={titleColor}
+          featureTextColor={featureTextColor}
         >
           {title}
         </TitleText>
         <SummaryText
-          titleColor={titleColor}
+          featureTextColor={featureTextColor}
         >
           {summary}
         </SummaryText>
