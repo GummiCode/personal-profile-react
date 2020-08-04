@@ -7,7 +7,7 @@ const ProjectRenderer = ({ projectData }) => {
   
   const renderProjects = (projectData) => {
     return projectData.map((project, index) => {
-      if(index%2 == 0) {
+      if(index%2 === 0) {
         return (
           <ProjectTemplate1
             projectData={project}
