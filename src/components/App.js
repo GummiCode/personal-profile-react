@@ -5,7 +5,7 @@ import Intro from "./Intro";
 import About from "./About";
 import Experience from "./Experience";
 import ProjectRenderer from "./ProjectRenderer";
-
+import ProjectTemplate2 from "./ProjectTemplate2";
 
 
 
@@ -63,6 +63,9 @@ function App() {
         nextSection="project0" />
       <ProjectRenderer 
         projectData={projectData}
+      />
+      <ProjectTemplate2
+        projectData={projectData[0]}
       />
       <header>
         <h1>
