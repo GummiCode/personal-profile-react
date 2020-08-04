@@ -26,7 +26,9 @@ function App() {
       ],
       gitHub: "https://github.com/GummiCode/spacefrens",
       url: "https://spacefrens.herokuapp.com/",
-      image: "./images/spacefrens-demo.png"
+      image: "./images/spacefrens-demo.png",
+      titleColor: "#171226",
+      backgroundColor: "#FFEDED"
     },
   
     {
@@ -40,7 +42,9 @@ function App() {
       ],
       gitHub: "https://github.com/ian-antking/q-family-dinner",
       url: "https://queerfamilytea.com/#/",
-      image: "./images/cat-walk-icon.png"
+      image: "./images/cat-walk-icon.png",
+      titleColor: "#171226",
+      backgroundColor: "#EAB39F"
     },
   ];
   
