@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About component screenshot test 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm sc-AxhCb letZQW"
+    data-testid="about"
+    id="about"
+  >
+    <div
+      class="sc-AxirZ sc-AxhUy glbHQz"
+    >
+      <h1
+        class="sc-AxheI drkDFn"
+      >
+        About:
+      </h1>
+      <ul
+        class="sc-Axmtr fvVXkl"
+      >
+        <li
+          class="sc-AxmLO fyzVOQ"
+        >
+          I'm a 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Manchester-based junior developer
+          </span>
+          .
+        </li>
+        <li
+          class="sc-AxmLO fyzVOQ"
+        >
+          I'm seeking my first 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Full-Time Position
+          </span>
+           as a 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Software Engineer
+          </span>
+          .
+        </li>
+        <li
+          class="sc-AxmLO fyzVOQ"
+        >
+          I've worked with 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            React
+          </span>
+          , 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Express
+          </span>
+          , 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            MySQL
+          </span>
+          , 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Heroku
+          </span>
+          , 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            React Testing Library
+          </span>
+           and other [contemporary] technologies.
+        </li>
+        <li
+          class="sc-AxmLO fyzVOQ"
+        >
+          I've undertaken 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Intensive Self-Training
+          </span>
+           using 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Contemporary Resources
+          </span>
+           to ensure [relevance] of skills.
+        </li>
+        <li
+          class="sc-AxmLO fyzVOQ"
+        >
+          I come from a career in 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Chemical Research and Development
+          </span>
+          . I possess strong executive skills including 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Project Management
+          </span>
+          , 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Troubleshooting
+          </span>
+          , 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Independent Learning
+          </span>
+           and 
+          <span
+            class="sc-fzozJi eWsAKO"
+          >
+            Collaborative Working
+          </span>
+          .
+        </li>
+      </ul>
+    </div>
+    <div
+      class="sc-AxirZ sc-AxgMl jsusbt"
+    />
+    <a
+      class="sc-AxiKw ixvQq"
+    >
+      <svg
+        fill="currentColor"
+        height="5em"
+        stroke="currentColor"
+        stroke-width="0"
+        style="color: rgb(0, 0, 0);"
+        viewBox="0 0 320 512"
+        width="5em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+        />
+      </svg>
+    </a>
+  </div>
+</DocumentFragment>
+`;
