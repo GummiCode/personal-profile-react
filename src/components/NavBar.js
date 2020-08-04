@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 
 import FullWidthContainer from './FullWidthContainer';
+import NavLinkRenderer from "./NavLinkRenderer";
 
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
@@ -36,7 +37,7 @@ const NavItem = styled(scrollLink)`
     }
 `;
 
-const NavBar = () => {
+const NavBar = ({ projectData }) => {
   return (
     <NavBarContainer
       data-testid="nav-bar"
@@ -75,38 +76,9 @@ const NavBar = () => {
           Experience/Technologies
         </NavItem>
 
-        <NavItem
-          activeClass="active"
-          to="project1"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Project 1
-        </NavItem>
-
-        <NavItem
-          activeClass="active"
-          to="project2"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Project 2
-        </NavItem>
-
-        <NavItem
-          activeClass="active"
-          to="project3"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Project 3
-        </NavItem>
+        <NavLinkRenderer
+          projectData={projectData}
+        />
 
       </NavList>
     </NavBarContainer>

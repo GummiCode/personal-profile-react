@@ -51,8 +51,8 @@ const RightProjectContainer = styled.div`
   background-size: contain;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: end;
+  flex-flow: row nowrap;
+  justify-content: start;
   align-items: center;
   `;
 

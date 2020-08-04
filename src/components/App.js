@@ -52,7 +52,9 @@ function App() {
 
   return (
     <div data-testid="app">
-      <NavBar />
+      <NavBar
+        projectData={projectData}
+      />
       <Header 
         nextSection="intro"
       />
