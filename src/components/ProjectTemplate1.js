@@ -13,7 +13,8 @@ const ProjectContainer = styled(FullWidthContainer)`
   `;
 
 const LeftProjectContainer = styled(HalfWidthContainer)`
-  height: 75%;
+  position: relative;
+  height: 100%;
   width: calc(55% - 40px);
   padding: 0 0 0 40px;
 `;
@@ -70,7 +71,9 @@ const LowBanner= styled.div`
 `;
 
 const LinkBanner = styled.div`
-  margin: 0;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 12vh 0;
   height: 12vh;
   width: calc(37vw);
   border-radius: 6vh;
