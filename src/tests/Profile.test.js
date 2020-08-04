@@ -1,18 +1,18 @@
 import React from 'react';
 import {render } from '@testing-library/react';
-import Profile from '../components/Profile';
+import Intro from '../components/Intro';
 
 test('component Profile renders', () => {
   const { getByTestId } = render (
-    <Profile />
+    <Intro />
   );
-  const testId = getByTestId("profile");
+  const testId = getByTestId("intro");
   expect(testId).toBeInTheDocument();
 });
 
 test('Link components are rendered and direct to the correct locations', () => {
   const {queryByTestId} = render(
-    <Profile />
+    <Intro />
   );
   const gitHubTest = queryByTestId("github-link");
   expect(gitHubTest).toBeInTheDocument();
