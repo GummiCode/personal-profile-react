@@ -65,9 +65,9 @@ const StyledFaAt = styled(FaAt)`
   }
 `;
 
-const Profile = ({ nextSection }) => {
+const Intro = ({ nextSection }) => {
   return (
-    <ProfileContainer data-testid="profile">
+    <ProfileContainer data-testid="intro">
       <TextContainer>
         <ProfileText>
           Self-Trained Software Engineer.
@@ -106,4 +106,4 @@ const Profile = ({ nextSection }) => {
   )
 };
 
-export default Profile;
+export default Intro;

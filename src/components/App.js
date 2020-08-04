@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from "./NavBar";
 import Header from "./Header";
-import Profile from "./Profile";
+import Intro from "./Intro";
 import About from "./About";
 import Experience from "./Experience";
 import Project from "./Project";
@@ -30,9 +30,9 @@ function App() {
     <div data-testid="app">
       <NavBar />
       <Header 
-        nextSection="profile"
+        nextSection="intro"
       />
-      <Profile 
+      <Intro 
         nextSection="about"
       />
       <About 
