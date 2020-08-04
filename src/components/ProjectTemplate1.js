@@ -111,7 +111,7 @@ const StyledFaGlobe = styled(FaGlobe)`
   }
 `;
 
-const Project = ({ projectData, projectId, nextSection }) => {
+const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
 
   const {
     title,
@@ -190,4 +190,4 @@ const Project = ({ projectData, projectId, nextSection }) => {
   )
 };
 
-export default Project;
+export default ProjectTemplate1;

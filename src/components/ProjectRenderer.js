@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "./Project";
+import ProjectTemplate1 from "./ProjectTemplate1";
 
 const ProjectRenderer = ({ projectData }) => {
 
@@ -7,7 +7,7 @@ const ProjectRenderer = ({ projectData }) => {
   const renderProjects = (projectData) => {
     return projectData.map((project, index) => {
       return (
-        <Project
+        <ProjectTemplate1
           projectData={project}
           projectId={`project${index}`}
           nextSection={`project${++index}`}
