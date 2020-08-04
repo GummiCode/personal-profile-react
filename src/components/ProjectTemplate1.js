@@ -70,10 +70,7 @@ const LowBanner= styled.div`
 `;
 
 const LinkBanner = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 40px 0 70px 60px;
+  margin: 0;
   height: 12vh;
   width: calc(37vw);
   border-radius: 6vh;
@@ -136,20 +133,14 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
     >
 
       <LeftProjectContainer>
+
         <TitleText>{title}</TitleText>
         <SummaryText>{summary}</SummaryText>
         <SectionText>
           {mapAspects(aspects)}
         </SectionText>
-        
-      </LeftProjectContainer>
 
-      <RightProjectContainer
-        image={image}
-      >
-
-      </RightProjectContainer>
-      <LinkBanner>
+        <LinkBanner>
         <LinkBannerText>
           VIEW PROJECT:
         </LinkBannerText>
@@ -182,6 +173,13 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
           </IconContext.Provider>
         </LinkBannerLink>
       </LinkBanner>
+        
+      </LeftProjectContainer>
+
+      <RightProjectContainer
+        image={image}
+      >
+      </RightProjectContainer>
 
       <SectionArrow 
         nextSectionId={nextSection}
