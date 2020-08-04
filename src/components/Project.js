@@ -111,13 +111,12 @@ const StyledFaGlobe = styled(FaGlobe)`
   }
 `;
 
-const Project = ({ projectData, nextSection }) => {
+const Project = ({ projectData, projectId, nextSection }) => {
 
   const {
     title,
     summary,
     aspects,
-    technologies,
     gitHub,
     url,
     image
@@ -132,8 +131,8 @@ const Project = ({ projectData, nextSection }) => {
 
   return (
     <ProjectContainer
-      data-testid="projectId"
-      id="projectId"
+      data-testid={projectId}
+      id={projectId}
     >
 
       <LeftProjectContainer>
