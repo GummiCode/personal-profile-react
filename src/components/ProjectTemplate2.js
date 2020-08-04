@@ -56,20 +56,6 @@ const LeftProjectContainer = styled.div`
   align-items: center;
   `;
 
-const LowBanner= styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 25vh;
-  width: calc(100vw - 40px);
-  padding: 0 0 0 40px;
-  background-color: rgba(10, 10, 10, 0.3);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: start;
-  align-items: center;
-`;
-
 const LinkBanner = styled.div`
   position: absolute;
   bottom: 0;
