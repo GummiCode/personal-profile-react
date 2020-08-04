@@ -36,13 +36,20 @@ const NavLink = styled(scrollLink)`
   height: 100%;
   width: auto;
   padding: 0 2vw;
-  background-color: ${props => props.linkBackground};
-  color: ${props => props.linkText};
+  background-color: #DAD9DE;
+  font-size: 1.1em;
+  color: #000000;
   clip-path: polygon(7px 0, 100% 0, calc(100% - 7px) 100%, 0 100%);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+
+  &:hover{    
+    background-color: ${props => props.linkBackground};
+    color: ${props => props.linkText};
+    transition: 0.2s;
+  }
 `;
 
 
