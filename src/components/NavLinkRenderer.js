@@ -7,9 +7,8 @@ import { FaCaretDown, FaGithub, FaAt } from 'react-icons/fa';
 
 const ProjectsDropdown = styled(Dropdown)`
   height: 100%;
-  width: 15vw;
-  margin: 0 2vw;
-  padding: 0 2vw;
+  width: auto;
+  margin: 0 0 0 1.5vw;
   background: rgba(0, 0, 0, 0);
   font-size: 5em;
   color: #FFFFFF;
@@ -22,7 +21,7 @@ const Caret = styled(FaCaretDown)`
 
 
 const Title = styled.span`
-  margin: 0 3% 0 0;
+  margin: 0 10% 0 0;
 `;
 
 const DropdownTitle = styled(Dropdown.Toggle)`
@@ -30,7 +29,7 @@ const DropdownTitle = styled(Dropdown.Toggle)`
   width: 100%;
   background: rgba(0, 0, 0, 0);
   border: none;
-  font-size: 0.24em;
+  font-size: 0.20em;
   color: #FFFFFF;
   display: flex;
   flex-flow: row nowrap;
@@ -74,7 +73,7 @@ const NavLink = styled(scrollLink)`
   width: 75%;
   padding: 0 0 0 15%;
   margin: 0.25vh 0;
-  font-size: 0.24em;
+  font-size: 0.20em;
   color: #FFFFFF;
   text-decoration: none !important;
   background: rgba(0, 0, 0, 0.9);

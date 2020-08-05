@@ -29,7 +29,7 @@ const SideSection = styled.div`
 const NavList = styled.div`
   width: 100%;
   height: 100%;
-  font-size: 1.1em;
+  font-size: 1.3em;
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
@@ -38,7 +38,7 @@ const NavList = styled.div`
 `
 
 const NavItem = styled(scrollLink)`
-    margin: 0 0 0 40px;
+    margin: 0 0 0 1.5vw;
     display: flex;
     flex-flow: row nowrap;
     
@@ -120,6 +120,17 @@ const NavBar = ({ projectData }) => {
           <NavLinkRenderer
             projectData={projectData}
           />
+
+          <NavItem
+            activeClass="active"
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            Contact
+          </NavItem>
 
         </NavList>
         </SideSection>
