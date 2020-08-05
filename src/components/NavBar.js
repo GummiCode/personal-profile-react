@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
-import { FaGithub, FaAt } from "react-icons/fa";
-import { TiSocialLinkedinCircular as TiLinkedin } from "react-icons/ti";
+import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 
 import FullWidthContainer from './FullWidthContainer';
 import NavLinkRenderer from "./NavLinkRenderer";
@@ -56,6 +55,17 @@ const LinkContainer = styled.a`
   margin: 0 0 0 .5vw;
 `;
 
+const EmailIcon = styled(FaAt)`
+    fill: #FFFFFF;
+    width: 100%;
+    height: 100%;
+
+  &:hover {
+    fill: #C9512F;
+    transition: 0.5s;
+  }
+`;
+
 const GithubIcon = styled(FaGithub)`
     fill: #FFFFFF;
     width: 100%;
@@ -67,18 +77,7 @@ const GithubIcon = styled(FaGithub)`
   }
 `;
 
-const LinkedinIcon = styled(TiLinkedin)`
-    fill: #FFFFFF;
-    width: 120%;
-    height: 120%;
-
-  &:hover {
-    fill: #C9512F;
-    transition: 0.5s;
-  }
-`;
-
-const EmailIcon = styled(FaAt)`
+const LinkedinIcon = styled(FaLinkedin)`
     fill: #FFFFFF;
     width: 100%;
     height: 100%;
@@ -88,6 +87,7 @@ const EmailIcon = styled(FaAt)`
     transition: 0.5s;
   }
 `;
+
 
 const NavBar = ({ projectData }) => {
   return (
@@ -148,6 +148,15 @@ const NavBar = ({ projectData }) => {
         </SideSection>
 
         <SideSection>
+        <LinkContainer
+            data-testid="nav-email-link"
+            href="mailto:gummicodeblog@gmail.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >       
+            <EmailIcon />
+          </LinkContainer>
+          
           <LinkContainer
             data-testid="nav-github-link"
             href="https://github.com/gummicode" 
@@ -164,15 +173,6 @@ const NavBar = ({ projectData }) => {
             rel="noopener noreferrer"
           >       
             <LinkedinIcon />
-          </LinkContainer>
-
-          <LinkContainer
-            data-testid="nav-email-link"
-            href="mailto:gummicodeblog@gmail.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >       
-            <EmailIcon />
           </LinkContainer>
         </SideSection>
 
