@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { FaGithub, FaAt } from "react-icons/fa";
+import { TiSocialLinkedinCircular as TiLinkedin } from "react-icons/ti";
 
 import FullWidthContainer from './FullWidthContainer';
 import NavLinkRenderer from "./NavLinkRenderer";
@@ -59,6 +60,17 @@ const GithubIcon = styled(FaGithub)`
     fill: #FFFFFF;
     width: 100%;
     height: 100%;
+
+  &:hover {
+    fill: #C9512F;
+    transition: 0.5s;
+  }
+`;
+
+const LinkedinIcon = styled(TiLinkedin)`
+    fill: #FFFFFF;
+    width: 120%;
+    height: 120%;
 
   &:hover {
     fill: #C9512F;
@@ -143,6 +155,15 @@ const NavBar = ({ projectData }) => {
             rel="noopener noreferrer"
           >       
             <GithubIcon />
+          </LinkContainer>
+
+          <LinkContainer
+            data-testid="nav-linkedin-link"
+            href="https://github.com/gummicode" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >       
+            <LinkedinIcon />
           </LinkContainer>
 
           <LinkContainer

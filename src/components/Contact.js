@@ -112,7 +112,7 @@ const Contact  = ({ nextSection }) => {
         </LinkContainer>
 
         <LinkContainer
-          data-testid="nav-github-link"
+          data-testid="nav-linkedin-link"
           href="https://github.com/gummicode" 
           target="_blank" 
           rel="noopener noreferrer"
