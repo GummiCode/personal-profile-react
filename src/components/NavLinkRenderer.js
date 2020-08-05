@@ -60,15 +60,17 @@ const Item = styled(Dropdown.Item)`
 
 const NavLink = styled(scrollLink)`
   height: 90%;
-  width: 90%;
-  padding: 0;
+  width: 75%;
+  padding: 0 0 0 15%;
   margin: 0.25vh 0;
   font-size: 0.24em;
-  color: #000000;
-  background: #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none !important;
+  background: rgba(0, 0, 0, 0.9);
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 
   &:hover{    
@@ -112,6 +114,7 @@ const NavLinkRenderer = ({ projectData }) => {
                 duration={500}
                 linkBackground={backgroundColor}
                 linkText={featureTextColor}
+                style={{textDecoration: "none !important",}}
               >
                 {title}
               </NavLink>
