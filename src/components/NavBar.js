@@ -11,7 +11,7 @@ const NavBarContainer = styled(FullWidthContainer)`
   height: 60px;
   color: white;
   background: black;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
   z-index: 9;
   `;
@@ -43,45 +43,50 @@ const NavBar = ({ projectData }) => {
     <NavBarContainer
       data-testid="nav-bar"
     >
-      <NavList>
-        <NavItem
-          activeClass="active"
-          to="header"
-          spy={true}
-          smooth={true}
-          offset={-60}
-          duration={500}
-        >
-          Home
-        </NavItem>
+      <div>
+        <NavList>
+          <NavItem
+            activeClass="active"
+            to="header"
+            spy={true}
+            smooth={true}
+            offset={-60}
+            duration={500}
+          >
+            Home
+          </NavItem>
 
-        <NavItem
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          About
-        </NavItem>
+          <NavItem
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            About
+          </NavItem>
 
-        <NavItem
-          activeClass="active"
-          to="experience"
-          spy={true}
-          smooth={true}
-          offset={-50}
-          duration={500}
-        >
-          Experience/Technologies
-        </NavItem>
+          <NavItem
+            activeClass="active"
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            Experience/Technologies
+          </NavItem>
 
-        <NavLinkRenderer
-          projectData={projectData}
-        />
+          <NavLinkRenderer
+            projectData={projectData}
+          />
 
-      </NavList>
+        </NavList>
+        </div>
+        <div>
+           Links go here!
+        </div>
     </NavBarContainer>
   )
 };
