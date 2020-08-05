@@ -156,7 +156,7 @@ const NavBar = ({ projectData }) => {
           >       
             <EmailIcon />
           </LinkContainer>
-          
+
           <LinkContainer
             data-testid="nav-github-link"
             href="https://github.com/gummicode" 
@@ -168,7 +168,7 @@ const NavBar = ({ projectData }) => {
 
           <LinkContainer
             data-testid="nav-linkedin-link"
-            href="https://github.com/gummicode" 
+            href="https://www.linkedin.com/in/david-arrowsmith/" 
             target="_blank" 
             rel="noopener noreferrer"
           >       

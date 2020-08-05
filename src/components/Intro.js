@@ -93,7 +93,7 @@ const Intro = ({ nextSection }) => {
 
       <LinksContainer>
         <SingleLinkContainer 
-          data-testid="email-link"
+          data-testid="intro-email-link"
           href="mailto:gummicodeblog@gmail.com"
           target="_blank"
           rel="noopener noreferrer" 
@@ -102,7 +102,7 @@ const Intro = ({ nextSection }) => {
         </SingleLinkContainer>
 
         <SingleLinkContainer
-          data-testid="github-link"
+          data-testid="intro-github-link"
           href="https://github.com/gummicode" 
           target="_blank" 
           rel="noopener noreferrer"
@@ -111,8 +111,8 @@ const Intro = ({ nextSection }) => {
         </SingleLinkContainer>
 
         <SingleLinkContainer 
-          data-testid="linkiedin-link"
-          href="#"
+          data-testid="intro-linkiedin-link"
+          href="https://www.linkedin.com/in/david-arrowsmith/"
           target="_blank"
           rel="noopener noreferrer" 
         >

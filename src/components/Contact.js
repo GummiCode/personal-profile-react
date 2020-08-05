@@ -106,7 +106,7 @@ const Contact  = ({ nextSection }) => {
         </Title>
 
         <LinkContainer
-          data-testid="nav-email-link"
+          data-testid="contact-email-link"
           href="mailto:gummicodeblog@gmail.com" 
           target="_blank" 
           rel="noopener noreferrer"
@@ -116,17 +116,17 @@ const Contact  = ({ nextSection }) => {
         </LinkContainer>
 
         <LinkedinContainer
-          data-testid="nav-linkedin-link"
-          href="https://github.com/gummicode" 
+          data-testid="contact-linkedin-link"
+          href="https://www.linkedin.com/in/david-arrowsmith/" 
           target="_blank" 
           rel="noopener noreferrer"
         >       
           <LinkedinIcon />
-          <LinkText>Linkedin: TBC</LinkText>
+          <LinkText>Linkedin: david-arrowsmith</LinkText>
         </LinkedinContainer>
 
         <LinkContainer
-          data-testid="nav-github-link"
+          data-testid="contact-github-link"
           href="https://github.com/gummicode" 
           target="_blank" 
           rel="noopener noreferrer"
