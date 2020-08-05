@@ -59,10 +59,10 @@ const RightProjectContainer = styled.div`
 const LinkBanner = styled.div`
   position: absolute;
   bottom: 0;
-  margin: 0 0 12vh 0;
-  height: 12vh;
-  width: calc(37vw);
-  border-radius: 6vh;
+  margin: 0 0 10vh 0;
+  height: 10vh;
+  width: 30vw;
+  border-radius: 5vh;
   background-color: rgba(255, 237, 237, 0.9);
   display: flex;
   flex-flow: row nowrap;
@@ -71,15 +71,15 @@ const LinkBanner = styled.div`
 `;
 
 const LinkBannerText = styled.span`
-  font-size: 3.6em;
+  font-size: 3em;
   font-weight: bold;
   font-style: italic;
   color: #000000;
 `;
 
 const LinkBannerLink = styled.a`
-  height: 10vh;
-  width: 10vh;
+  height: 8vh;
+  width: 8vh;
   border-radius: 45%;
 `;
 
