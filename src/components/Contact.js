@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaAt } from "react-icons/fa";
+import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
+import { TiSocialLinkedinCircular as TiLinkedin } from "react-icons/ti";
 
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
@@ -53,28 +54,25 @@ const LinkContainer = styled.a`
 
 `;
 
-const GithubIcon = styled(FaGithub)`
-    margin: 0 0 0 1%;
-    fill: #000000;
-    height: 89%;
-    width: auto;
-
-  &:hover {
-    fill: #C9512F;
-    transition: 0.5s;
-  }
-`;
-
 const EmailIcon = styled(FaAt)`
     margin: 0 0 0 1%;
     fill: #000000;
     height: 89%;
     width: auto;
+`;
 
-  &:hover {
-    fill: #C9512F;
-    transition: 0.5s;
-  }
+const LinkedinIcon = styled(TiLinkedin)`
+      margin: 0 0 0 -0.8%;
+    fill: #000000;
+    height: 120%;
+    width: auto;
+`;
+
+const GithubIcon = styled(FaGithub)`
+    margin: 0 0 0 1%;
+    fill: #000000;
+    height: 89%;
+    width: auto;
 `;
 
 const LinkText = styled.span`
@@ -114,13 +112,13 @@ const Contact  = ({ nextSection }) => {
         </LinkContainer>
 
         <LinkContainer
-          data-testid="nav-email-link"
-          href="mailto:gummicodeblog@gmail.com" 
+          data-testid="nav-github-link"
+          href="https://github.com/gummicode" 
           target="_blank" 
           rel="noopener noreferrer"
         >       
-          <EmailIcon />
-          <LinkText>LinkedIn: TBC</LinkText>
+          <LinkedinIcon />
+          <LinkText>Linkedin: TBC</LinkText>
         </LinkContainer>
 
         <LinkContainer
