@@ -79,7 +79,9 @@ const NavLinkRenderer = ({ projectData }) => {
         Projects [arrow image]
       </DropdownTitle>
 
-      <Menu>
+      <Menu
+        rootCloseEvent="mousedown"
+      >
 
         {projectData.map((project, index) => {
           const {
