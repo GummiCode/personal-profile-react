@@ -14,6 +14,8 @@ const ProjectsDropdown = styled(Dropdown)`
   background: rgba(0, 0, 0, 0);
   font-size: 5em;
   color: #FFFFFF;
+  
+  border: none;
 `;
 
 const DropdownTitle = styled(Dropdown.Toggle)`
@@ -27,6 +29,15 @@ const DropdownTitle = styled(Dropdown.Toggle)`
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
+
+  &:hover {
+      color: #FFD2AE;
+      transition: 0.2s;
+    };
+
+  &:focus {
+    outline: none;
+  };
 `
 
 const Menu = styled(Dropdown.Menu)`
