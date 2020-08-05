@@ -14,10 +14,23 @@ const LeftAboutContainer = styled(HalfWidthContainer)`
   padding: 0 0 0 40px;
 `
 
+const RightSideImage = styled(HalfWidthContainer)`
+  position: absolute;
+  right: 0;
+  width: 40vw;
+  background-image: url("./images/about-picture.jpg");
+  background-size: auto 100%;
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 7;
+`
+
 const RightSideScreen = styled(HalfWidthContainer)`
+  position: absolute;
+  right: 0;
   width: 40vw;
   background: rgba(10, 10, 10, 0.3);
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 8;
 `
 
 const TitleText = styled.h1`
@@ -68,6 +81,8 @@ const About  = ({ nextSection }) => {
             </Item>
           </SectionText>
         </LeftAboutContainer>
+
+        <RightSideImage />
         <RightSideScreen />
 
         <SectionArrow 
