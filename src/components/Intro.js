@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub, FaAt } from "react-icons/fa";
+import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
@@ -43,7 +43,7 @@ const SingleLinkContainer = styled.a`
   margin: 0 0 0 .5vw;
 `;
 
-const StyledFaGithub = styled(FaGithub)`
+const EmailIcon = styled(FaAt)`
     fill: #000000;
     width: 100%;
     height: 100%;
@@ -54,7 +54,18 @@ const StyledFaGithub = styled(FaGithub)`
   }
 `;
 
-const StyledFaAt = styled(FaAt)`
+const LinkedinIcon = styled(FaLinkedin)`
+    fill: #000000;
+    width: 100%;
+    height: 100%;
+
+  &:hover {
+    fill: #FFD9B4;
+    transition: 0.5s;
+  }
+`;
+
+const GithubIcon = styled(FaGithub)`
     fill: #000000;
     width: 100%;
     height: 100%;
@@ -81,21 +92,31 @@ const Intro = ({ nextSection }) => {
       </TextContainer>
 
       <LinksContainer>
-        <SingleLinkContainer
-          data-testid="github-link"
-          href="https://github.com/gummicode" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          <StyledFaGithub />
-        </SingleLinkContainer>
         <SingleLinkContainer 
           data-testid="email-link"
           href="mailto:gummicodeblog@gmail.com"
           target="_blank"
           rel="noopener noreferrer" 
         >
-          <StyledFaAt />
+          <EmailIcon />
+        </SingleLinkContainer>
+
+        <SingleLinkContainer
+          data-testid="github-link"
+          href="https://github.com/gummicode" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <GithubIcon />
+        </SingleLinkContainer>
+
+        <SingleLinkContainer 
+          data-testid="linkiedin-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer" 
+        >
+          <LinkedinIcon />
         </SingleLinkContainer>
       </LinksContainer>
 
