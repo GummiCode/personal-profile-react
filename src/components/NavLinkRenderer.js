@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
-import { Dropdown, DropdownButton } from "react-bootstrap";
-
-
-
+import { Dropdown } from "react-bootstrap";
+import { IconContext } from "react-icons";
+import { FaCaretDown } from 'react-icons/fa';
 
 const ProjectsDropdown = styled(Dropdown)`
   height: 100%;
@@ -16,6 +15,13 @@ const ProjectsDropdown = styled(Dropdown)`
   color: #FFFFFF;
   
   border: none;
+`;
+
+const Caret = styled(FaCaretDown)`
+`;
+
+const Title = styled.span`
+  margin: 0 3% 0 0;
 `;
 
 const DropdownTitle = styled(Dropdown.Toggle)`
@@ -34,6 +40,10 @@ const DropdownTitle = styled(Dropdown.Toggle)`
       color: #FFD2AE;
       transition: 0.2s;
     };
+
+  &:hover ${Caret} {
+      fill: #FFD2AE;
+  };
 
   &:focus {
     outline: none;
@@ -89,7 +99,15 @@ const NavLinkRenderer = ({ projectData }) => {
       <DropdownTitle
         id="projectsDropdown"
       >
-        Projects [arrow image]
+        <Title>Projects</Title> 
+        <IconContext.Provider 
+        value={{ 
+          color: "#FFFFFF", 
+          size: "1.2em"
+        }}
+        >
+          <Caret />
+        </IconContext.Provider>
       </DropdownTitle>
 
       <Menu
