@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { Dropdown } from "react-bootstrap";
@@ -11,7 +11,7 @@ const ProjectsDropdown = styled(Dropdown)`
   width: 15vw;
   margin: 0 2vw;
   padding: 0 2vw;
-  background-color: #000000;
+  background: rgba(0, 0, 0, 0);
   font-size: 5em;
   color: #FFFFFF;
 `;
@@ -19,8 +19,10 @@ const ProjectsDropdown = styled(Dropdown)`
 const DropdownTitle = styled(Dropdown.Toggle)`
   height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0);
+  border: none;
   font-size: 0.24em;
-  color: #000000;
+  color: #FFFFFF;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
@@ -30,25 +32,30 @@ const DropdownTitle = styled(Dropdown.Toggle)`
 const Menu = styled(Dropdown.Menu)`
   height: 60px;
   width: 15vw;
+  background: rgba(0, 0, 0, 0);
+  transition: .5s;
 `
 
 const Item = styled(Dropdown.Item)`
-  height: 60px;
-  width: 15vw;
+
+  height: 55px;
+  width: 14.5vw;
+  margin: 0.2vh 0 0 0;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  background: rgba(0, 0, 0, 0);
 `
 
 const NavLink = styled(scrollLink)`
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   padding: 0;
-  margin: 0;
-  background-color: #FFFFFF;
+  margin: 0.25vh 0;
   font-size: 0.24em;
   color: #000000;
+  background: #FFFFFF;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -64,9 +71,13 @@ const NavLink = styled(scrollLink)`
 
 const NavLinkRenderer = ({ projectData }) => {
 
+  const [open, setOpen] = useState(false);
+
   return (
     <ProjectsDropdown>
-      <DropdownTitle variant="success" id="projectsDropdown">
+      <DropdownTitle
+        id="projectsDropdown"
+      >
         Projects [arrow image]
       </DropdownTitle>
 
