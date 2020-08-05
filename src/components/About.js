@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { BsPersonBoundingBox as AboutIcon  } from "react-icons/bs";
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';
@@ -34,11 +34,17 @@ const RightSideScreen = styled(HalfWidthContainer)`
 `
 
 const TitleText = styled.h1`
-  font-size: 5em;
-  color: #FFD9B4;
+  font-size: 4em;
+  color: #000000;
   padding: 0;
-  margin: 30px 0 0 0;
+  margin:  50px 0 0 0;
 `;
+
+const StyledAboutIcon = styled(AboutIcon)`
+  height: .8em; 
+  width: auto;
+  margin: 0 1vw 0 2vw;
+`
 
 const SectionText = styled.ul`
   font-size: 2em;
@@ -62,19 +68,22 @@ const About  = ({ nextSection }) => {
       id="about"
     >
         <LeftAboutContainer>
-          <TitleText>About:</TitleText>
+          <TitleText>
+          <StyledAboutIcon />
+            About
+          </TitleText>
           <SectionText>
             <Item>
-              I'm a <Bold>Manchester-based junior developer</Bold>.
+              I'm a <Bold>Manchester-based Junior Developer</Bold>.
             </Item>
             <Item> 
-              I'm seeking my first <Bold>Full-Time Position</Bold> as a <Bold>Software Engineer</Bold>.
+              I'm seeking my first <Bold>Full-Time Position</Bold> as a <Bold>Junior Full-Stack Web Developer</Bold>.
             </Item>
             <Item>
-              I've worked with <Bold>React</Bold>, <Bold>Express</Bold>, <Bold>MySQL</Bold>, <Bold>Heroku</Bold>, <Bold>React Testing Library</Bold> and other [contemporary] technologies.
+              I've worked with <Bold>React</Bold>, <Bold>Express</Bold>, <Bold>MySQL</Bold>, <Bold>Heroku</Bold>, <Bold>React Testing Library</Bold> and other current technologies.
             </Item>
             <Item>
-              I've undertaken <Bold>Intensive Self-Training</Bold> using <Bold>Contemporary Resources</Bold> to ensure [relevance] of skills.
+              I've undertaken <Bold>Intensive Self-Training</Bold> using <Bold>Contemporary Resources</Bold> to ensure relevance of skills.
             </Item>
             <Item>
               I come from a career in <Bold>Chemical Research and Development</Bold>. I possess strong executive skills including <Bold>Project Management</Bold>, <Bold>Troubleshooting</Bold>, <Bold>Independent Learning</Bold> and <Bold>Collaborative Working</Bold>.

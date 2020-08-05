@@ -20,14 +20,14 @@ const LeftProjectContainer = styled(HalfWidthContainer)`
 `;
 
 const TitleText = styled.h1`
-  font-size: 5em;
+  font-size: 4em;
   color: ${props => props.featureTextColor};
   padding: 0;
-  margin: 30px 0 0 0;
+  margin: 40px 0 0 0;
 `;
 
 const SummaryText = styled.h2`
-  font-size: 3em;
+  font-size: 2.6em;
   color: ${props => props.featureTextColor};
   padding:0;
   margin: 20px 0 0 0;

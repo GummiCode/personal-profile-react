@@ -4,6 +4,7 @@ import Header from "./Header";
 import Intro from "./Intro";
 import About from "./About";
 import Experience from "./Experience";
+import ProjectsBanner from "./ProjectsBanner";
 import ProjectRenderer from "./ProjectRenderer";
 import Contact from "./Contact";
 
@@ -26,7 +27,10 @@ function App() {
         nextSection="experience"
       />
       <Experience
-        nextSection="project0" 
+        nextSection="projects-banner" 
+      />
+      <ProjectsBanner
+        nextSection="project0"
       />
       <ProjectRenderer 
         projectData={projectData}

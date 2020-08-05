@@ -13,7 +13,7 @@ const projectData = [
     gitHub: "https://github.com/GummiCode/spacefrens",
     url: "https://spacefrens.herokuapp.com/",
     image: "./images/spacefrens-demo.png",
-    featureTextColor: "#DEDDE3",
+    featureTextColor: "#FFFFFF",
     backgroundColor: "#687697"
   },
 

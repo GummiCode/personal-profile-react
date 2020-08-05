@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-
+import { FaCompass as ExpIcon, FaCode as TechIcon } from "react-icons/fa";
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';
+
+import techList from "../assets/techList";
 
 const SkillsContainer = styled(FullWidthContainer)`
   background-color: #DAD9DE;
@@ -20,11 +22,23 @@ const TechContainer = styled(HalfWidthContainer)`
 `;
 
 const TitleText = styled.h1`
-  font-size: 5em;
-  color: #434B60;
+  font-size: 4em;
+  color: #000000;
   padding: 0;
-  margin: 30px 0 0 0;
+  margin:  50px 0 0 0;
 `;
+
+const StyledExpIcon = styled(ExpIcon)`
+  height: .8em; 
+  width: auto;
+  margin: 0 1vw 0 2vw;
+`
+
+const StyledTechIcon = styled(TechIcon)`
+  height: .8em; 
+  width: auto;
+  margin: 0 1vw 0 0;
+`
 
 const SectionText = styled.ul`
   font-size: 2em;
@@ -62,32 +76,7 @@ const TechBlock = styled.span`
 
 const Experience  = ({ nextSection }) => {
 
-  const techList = [
-    "JavaScript",
-    "CSS",
-    "HTML5",
-    "styled-components",
-    "React",
-    "Node.js",
-    "VSCode",
-    "Express",
-    "MySQL",
-    "MongoDB",
-    "API Development",
-    "Jest",
-    "Chai",
-    "Mocha",
-    "supertest",
-    "React Testing Library",
-    "Axios",
-    "Docker",
-    "FontAwesome",
-    "react-icons",
-    "NPM",
-    "Heroku",
-    "react-scroll",
-    "Responsive Design"
-  ];
+
 
   const displayTechnologies = (technologies) => {
     const orderedTech = technologies.sort();
@@ -109,11 +98,14 @@ const Experience  = ({ nextSection }) => {
         id="experience"
       >
           <ExpContainer>
-            <TitleText>Experience:</TitleText>
+            <TitleText>
+              <StyledExpIcon/>
+              Experience
+            </TitleText>
             <SectionText>
               <Item>
-                <Bold>React App Development:</Bold><br />
-                React, components, styled-components
+                <Bold>Front-End Development:</Bold><br />
+                React, JavaScript, CSS, HTML, dynamic web pages, responsive web pages
               </Item>
               <Item>
                 <Bold>Test-Driven Development:</Bold><br />
@@ -125,7 +117,7 @@ const Experience  = ({ nextSection }) => {
               </Item>
               <Item>
                 <Bold>Database Management:</Bold><br />
-                MySQL, Sequelize, MongoDB
+                MySQL, Sequelize, MongoDB, Docker
               </Item>
               <Item>
                 <Bold>Hosting:</Bold><br />
@@ -135,7 +127,10 @@ const Experience  = ({ nextSection }) => {
           </ExpContainer>
 
           <TechContainer>
-            <TitleText>Technologies:</TitleText>
+            <TitleText>
+              <StyledTechIcon/>
+              Technologies
+            </TitleText>
             <TechBlockContainer>
               {displayTechnologies(techList)}
             </TechBlockContainer>
