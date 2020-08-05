@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
-import { Dropdown } from "react-bootstrap";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 
 
@@ -33,7 +33,6 @@ const Menu = styled(Dropdown.Menu)`
   height: 60px;
   width: 15vw;
   background: rgba(0, 0, 0, 0);
-  transition: .5s;
 `
 
 const Item = styled(Dropdown.Item)`
@@ -67,7 +66,6 @@ const NavLink = styled(scrollLink)`
     transition: 0.2s;
   }
 `;
-
 
 const NavLinkRenderer = ({ projectData }) => {
 
