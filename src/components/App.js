@@ -5,6 +5,7 @@ import Intro from "./Intro";
 import About from "./About";
 import Experience from "./Experience";
 import ProjectRenderer from "./ProjectRenderer";
+import Contact from "./Contact";
 
 import projectData from "../assets/projectData"
 
@@ -25,18 +26,14 @@ function App() {
         nextSection="experience"
       />
       <Experience
-        nextSection="project0" />
+        nextSection="project0" 
+      />
       <ProjectRenderer 
         projectData={projectData}
       />
-      <header>
-        <h1>
-          DAVID ARROWSMITH
-        </h1>
-        <h2> 
-          JUNIOR WEB DEVELOPER 
-        </h2>
-      </header>
+      <Contact
+        nextSection="header" 
+      />
     </div>
   );
 }
