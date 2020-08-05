@@ -123,7 +123,7 @@ const NavBar = ({ projectData }) => {
 
           <NavItem
             activeClass="active"
-            to="experience"
+            to="contact"
             spy={true}
             smooth={true}
             offset={-50}
