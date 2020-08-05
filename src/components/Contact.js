@@ -54,6 +54,10 @@ const LinkContainer = styled.a`
 
 `;
 
+const LinkedinContainer = styled(LinkContainer)`
+  border-radius: 10px 50px 50px 10px;
+`
+
 const EmailIcon = styled(FaAt)`
     margin: 0 0 0 1%;
     fill: #000000;
@@ -61,10 +65,10 @@ const EmailIcon = styled(FaAt)`
     width: auto;
 `;
 
-const LinkedinIcon = styled(TiLinkedin)`
-      margin: 0 0 0 -0.8%;
+const LinkedinIcon = styled(FaLinkedin)`
+      margin: 0 0 0 1%;
     fill: #000000;
-    height: 120%;
+    height: 89%;
     width: auto;
 `;
 
@@ -111,7 +115,7 @@ const Contact  = ({ nextSection }) => {
           <LinkText>Email: dtarrowsmith@gmail.com</LinkText>
         </LinkContainer>
 
-        <LinkContainer
+        <LinkedinContainer
           data-testid="nav-linkedin-link"
           href="https://github.com/gummicode" 
           target="_blank" 
@@ -119,7 +123,7 @@ const Contact  = ({ nextSection }) => {
         >       
           <LinkedinIcon />
           <LinkText>Linkedin: TBC</LinkText>
-        </LinkContainer>
+        </LinkedinContainer>
 
         <LinkContainer
           data-testid="nav-github-link"
