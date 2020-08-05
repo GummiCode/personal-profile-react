@@ -21,10 +21,10 @@ const projectData = [
     title: "Queer Family Tea",
     summary: "Social Event News & Information Site",
     aspects: [
-      "Collaborative project to create a new site for a monthly social event",
+      "Collaborative project to create a new site for a weekly social event",
       "Created using React with styled-components",
       "Blog articles procedurally generated using objects fetched from extrenal API",
-      "Heavy styling"
+      "Extensive styling"
     ],
     gitHub: "https://github.com/ian-antking/q-family-dinner",
     url: "https://queerfamilytea.com/#/",

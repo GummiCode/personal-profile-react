@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { Dropdown } from "react-bootstrap";
 import { IconContext } from "react-icons";
-import { FaCaretDown } from 'react-icons/fa';
+import { FaCaretDown, FaGithub, FaAt } from 'react-icons/fa';
 
 const ProjectsDropdown = styled(Dropdown)`
   height: 100%;
@@ -19,6 +19,7 @@ const ProjectsDropdown = styled(Dropdown)`
 
 const Caret = styled(FaCaretDown)`
 `;
+
 
 const Title = styled.span`
   margin: 0 3% 0 0;
