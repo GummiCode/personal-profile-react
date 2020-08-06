@@ -2,6 +2,7 @@ import React from "react";
 import { Link as scrollLink } from "react-scroll";
 import { bool } from "prop-types";
 import styled from "styled-components";
+import ProjectsBurgerMenu from "./ProjectsBurgerMenu";
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -9,6 +10,7 @@ const StyledMenu = styled.nav`
   justify-content: center;
   background: rgba(0, 0, 0, 0.9);
   height: 100vh;
+  width: 20vw;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -72,16 +74,7 @@ const Menu = ({ open }) => {
       >
         Experience
       </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="projects-banner"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        Projects
-      </MenuLink>
+      <ProjectsBurgerMenu />
       <MenuLink
         activeClass="active"
         to="contact"
