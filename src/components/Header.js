@@ -6,7 +6,6 @@ import HalfWidthContainer from './HalfWidthContainer';
 const HeaderImageContainer = styled(FullWidthContainer)`
   height: 65vh;
   width: 100vw;
-  padding: 0;
   background-image: url('./images/profile-picture.jpg');
   background-position: -20% 10%;
   background-attachment: fixed;
@@ -25,7 +24,6 @@ const HeaderText = styled(HalfWidthContainer)`
 const HeaderName = styled.h1`
   font-size: 5em;
   color: #FFD9B4;
-  padding: 0;
   margin: 0 0 0 8vw;
 `;
 

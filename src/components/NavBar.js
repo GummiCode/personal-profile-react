@@ -23,23 +23,20 @@ const SideSection = styled.div`
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
-`
+`;
 
 const NavList = styled.div`
   width: 100%;
   height: 100%;
   font-size: 1.3em;
-  list-style: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
-`
+`;
 
 const NavItem = styled(scrollLink)`
     margin: 0 0 0 1.5vw;
-    display: flex;
-    flex-flow: row nowrap;
     
     &:hover {
       color: #FFD2AE;

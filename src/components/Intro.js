@@ -7,8 +7,6 @@ import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';
 
 const ProfileContainer = styled(FullWidthContainer)`
-  flex-flow: row nowrap;
-  justify-content: space-between;
   height: 27vh;
   background-color: #C9512F;
 `;
@@ -17,13 +15,10 @@ const TextContainer = styled(HalfWidthContainer)`
   padding: 40px 0 0 40px;
   width: calc(50% - 40px);
   height: calc(100% - 40px);
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-`
+`;
 
-const ProfileText = styled.p`
+const IntroText = styled.p`
   margin: 0;
-  padding: 0;
   font-weight: bold;
   font-size: 2.2em;
 `;
@@ -80,15 +75,15 @@ const Intro = ({ nextSection }) => {
   return (
     <ProfileContainer data-testid="intro">
       <TextContainer>
-        <ProfileText>
+        <IntroText>
           Self-Trained Web Developer.
-        </ProfileText>
-        <ProfileText>
+        </IntroText>
+        <IntroText>
           Experienced in REACT, Full-Stack
-        </ProfileText>
-        <ProfileText>
+        </IntroText>
+        <IntroText>
           & Test-Driven Development.
-        </ProfileText>
+        </IntroText>
       </TextContainer>
 
       <LinksContainer>

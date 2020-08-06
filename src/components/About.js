@@ -37,7 +37,6 @@ const RightSideScreen = styled(HalfWidthContainer)`
 const TitleText = styled.h1`
   font-size: 4em;
   color: #000000;
-  padding: 0;
   margin:  50px 0 0 0;
 `;
 
@@ -59,8 +58,6 @@ const Item = styled.li`
 const Bold = styled.span`
   font-weight: bold;
 `;
-
-
 
 const About  = ({ nextSection }) => {
   return (

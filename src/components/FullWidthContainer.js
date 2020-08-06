@@ -4,8 +4,6 @@ const FullWidthContainer = styled.div`
   position: relative;
   height: calc(100vh - 60px);
   width: 100vw;
-  margin: 0;
-  padding: 0;
   background: none;
   display: flex;
   flex-flow: row nowrap;

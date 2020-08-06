@@ -33,7 +33,7 @@ function App() {
         nextSection="header" 
       />
     </div>
-  );
-}
+  )
+};
 
 export default App;
