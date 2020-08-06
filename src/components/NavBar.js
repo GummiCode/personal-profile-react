@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
-
 import FullWidthContainer from './FullWidthContainer';
 import NavLinkRenderer from "./NavLinkRenderer";
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 

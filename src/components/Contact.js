@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import { TiSocialLinkedinCircular as TiLinkedin } from "react-icons/ti";
-
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 import HomeArrow from './HomeArrow';

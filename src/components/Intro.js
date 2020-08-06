@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
-
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';

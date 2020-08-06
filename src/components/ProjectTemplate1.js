@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { FaGlobe } from 'react-icons/fa';
 import { FaGithub } from "react-icons/fa";
-
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';

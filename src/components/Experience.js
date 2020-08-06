@@ -5,7 +5,6 @@ import { FaCompass as ExpIcon, FaCode as TechIcon } from "react-icons/fa";
 import FullWidthContainer from './FullWidthContainer';
 import HalfWidthContainer from './HalfWidthContainer';
 import SectionArrow from './SectionArrow';
-
 import techList from "../assets/techList";
 
 const SkillsContainer = styled(FullWidthContainer)`
