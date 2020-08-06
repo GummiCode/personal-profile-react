@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectTemplate1 from "./ProjectTemplate1";
 import ProjectTemplate2 from "./ProjectTemplate2";
-import projectData from "../assets/projectData";
+import projectData from "../../assets/projectData";
 
 const ProjectRenderer = () => {
   const determineFinal = (index, max) => {

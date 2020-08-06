@@ -1,5 +1,5 @@
 import React from "react";
-import { bool, func } from 'prop-types';
+import { bool, func } from "prop-types";
 import styled from "styled-components";
 
 const StyledBurger = styled.button`
@@ -20,25 +20,29 @@ const StyledBurger = styled.button`
   &:focus {
     outline: none;
   }
+`;
 
-  div {
-    width: 2rem;
-    height: 0.25rem;
-    background: #FFFFFF;
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
+const Slice = styled.div`
+  width: 2rem;
+  height: 0.25rem;
+  background: #ffffff;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
 
+  ${StyledBurger}:hover & {
+    background: #ffd2ae;
+    transition: 0.2s;
   }
 `;
 
 const Burger = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
+      <Slice />
+      <Slice />
+      <Slice />
     </StyledBurger>
   );
 };

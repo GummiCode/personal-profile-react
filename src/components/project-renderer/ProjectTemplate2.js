@@ -3,19 +3,18 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { FaGlobe, FaGithub } from "react-icons/fa";
-
-import FullWidthContainer from "./FullWidthContainer";
-import HalfWidthContainer from "./HalfWidthContainer";
-import SectionArrow from "./SectionArrow";
+import FullWidthContainer from "../FullWidthContainer";
+import HalfWidthContainer from "../HalfWidthContainer";
+import SectionArrow from "../SectionArrow";
 
 const ProjectContainer = styled(FullWidthContainer)`
   background-color: ${(props) => props.backgroundColor};
 `;
 
-const LeftProjectContainer = styled(HalfWidthContainer)`
+const RightProjectContainer = styled(HalfWidthContainer)`
   position: relative;
-  width: calc(55% - 40px);
-  padding: 0 0 0 40px;
+  width: calc(50% - 40px);
+  padding: 0 40px 0 0;
 `;
 
 const TitleText = styled.h1`
@@ -25,7 +24,7 @@ const TitleText = styled.h1`
 `;
 
 const SummaryText = styled.h2`
-  font-size: 2.6em;
+  font-size: 3em;
   color: ${(props) => props.featureTextColor};
   margin: 20px 0 0 0;
 `;
@@ -38,15 +37,15 @@ const Item = styled.li`
   margin: 0 0 4vh 0;
 `;
 
-const RightProjectContainer = styled.div`
+const LeftProjectContainer = styled.div`
   width: 45%;
   height: 100%;
   background-attachment: fixed;
   background-color: rgba(10, 10, 10, 0.3);
   background-image: url(${(props) => props.image});
-  background-position: top 60px right 0px;
+  background-position: top 60px left 0px;
   background-size: contain;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 `;
 
 const LinkBanner = styled.div`
@@ -89,7 +88,7 @@ const StyledFaGlobe = styled(FaGlobe)`
   }
 `;
 
-const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
+const ProjectTemplate2 = ({ projectData, projectId, nextSection }) => {
   const {
     title,
     summary,
@@ -113,7 +112,9 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
       id={projectId}
       backgroundColor={backgroundColor}
     >
-      <LeftProjectContainer>
+      <LeftProjectContainer image={image} />
+
+      <RightProjectContainer>
         <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
         <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
         <SectionText>{mapAspects(aspects)}</SectionText>
@@ -145,16 +146,14 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
             </IconContext.Provider>
           </LinkBannerLink>
         </LinkBanner>
-      </LeftProjectContainer>
-
-      <RightProjectContainer image={image} />
+      </RightProjectContainer>
 
       <SectionArrow nextSectionId={nextSection} />
     </ProjectContainer>
   );
 };
 
-ProjectTemplate1.propTypes = {
+ProjectTemplate2.propTypes = {
   projectData: PropTypes.shape({
     title: PropTypes.string.isRequired,
     key: PropTypes.string.isRequired,
@@ -170,4 +169,4 @@ ProjectTemplate1.propTypes = {
   nextSection: PropTypes.string.isRequired,
 };
 
-export default ProjectTemplate1;
+export default ProjectTemplate2;

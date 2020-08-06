@@ -1,12 +1,10 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
-import Burger from "./Burger";
-import Menu from "./Menu";
 import DropdownMenu from "./DropdownMenu";
-import useOnClickOutside from "./hooks";
+import BurgerMenu from "./burger-menu/BurgerMenu";
 
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
@@ -99,21 +97,14 @@ const LinkedinIcon = styled(FaLinkedin)`
   }
 `;
 
+
+
 const NavBar = () => {
-  const [open, setOpen] = useState(false);
-
-  const node = useRef();
-
-  useOnClickOutside(node, () => setOpen(false));
-
   return (
     <NavBarContainer data-testid="nav-bar">
       <PageLinksContainer>
         <NavList>
-          <div ref={node}>
-            <Burger open={open} setOpen={setOpen} />
-            <Menu open={open} setOpen={setOpen}/>
-          </div>
+          <BurgerMenu />
           <NavItem
             activeClass="active"
             to="header"

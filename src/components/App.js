@@ -5,7 +5,7 @@ import Intro from "./Intro";
 import About from "./About";
 import Experience from "./Experience";
 import ProjectsBanner from "./ProjectsBanner";
-import ProjectRenderer from "./ProjectRenderer";
+import ProjectRenderer from "./project-renderer/ProjectRenderer";
 import Contact from "./Contact";
 
 function App() {

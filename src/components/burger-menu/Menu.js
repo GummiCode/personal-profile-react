@@ -6,7 +6,7 @@ const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.9);
   height: 100vh;
   text-align: left;
   padding: 2rem;
@@ -16,8 +16,9 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+  span {
+    height: 100%;
+    padding: 0 30px 0 0;
   }
 
   a {
@@ -25,50 +26,26 @@ const StyledMenu = styled.nav`
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #ffffff;
     letter-spacing: 0.5rem;
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
     &:hover {
-    color: #ffd2ae;
-    transition: 0.2s;
-  }
+      color: #ffd2ae;
+      transition: 0.2s;
+    }
   }
 `;
 
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">
-        <span role="img" aria-label="about">
-        [icon]
-        </span>
-        About
-      </a>
-      <a href="/">
-        <span role="img" aria-label="experience">
-        [icon]
-        </span>
-        Experience
-      </a>
-      <a href="/">
-        <span role="img" aria-label="projects">
-        [icon]
-        </span>
-        Projects
-      </a>
-      <a href="/">
-        <span role="img" aria-label="contact">
-          [icon]
-        </span>
-        Contact
-      </a>
+      <a href="/">Home</a>
+      <a href="/">About</a>
+      <a href="/">Experience</a>
+      <a href="/">Projects</a>
+      <a href="/">Contact</a>
     </StyledMenu>
   );
 };
