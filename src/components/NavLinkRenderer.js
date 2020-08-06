@@ -70,8 +70,8 @@ const NavLink = styled(scrollLink)`
   align-items: center;
 
   &:hover{    
-    background-color: ${props => props.linkBackground};
-    color: ${props => props.linkText};
+    background-color: ${props => props.linkbackground};
+    color: ${props => props.linktext};
     transition: 0.2s;
   }
 `;
@@ -117,8 +117,8 @@ const NavLinkRenderer = () => {
                 smooth={true}
                 offset={-50}
                 duration={500}
-                linkBackground={backgroundColor}
-                linkText={featureTextColor}
+                linkbackground={backgroundColor}
+                linktext={featureTextColor}
                 style={{textDecoration: "none !important",}}
               >
                 {title}
