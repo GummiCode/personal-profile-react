@@ -41,7 +41,7 @@ const SectionArrow = ({ nextSectionId }) => {
 };
 
 SectionArrow.propTypes = {
-  nextSectionId: PropTypes.string,
+  nextSectionId: PropTypes.string.isRequired,
 };
 
 export default SectionArrow;

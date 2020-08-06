@@ -115,7 +115,7 @@ const Intro = ({ nextSection }) => {
 };
 
 Intro.propTypes = {
-  nextSection: PropTypes.string,
+  nextSection: PropTypes.string.isRequired,
 };
 
 export default Intro;

@@ -41,7 +41,7 @@ const HomeArrow = ({ homeSectionId }) => {
 };
 
 HomeArrow.propTypes = {
-  homeSectionId: PropTypes.string,
+  homeSectionId: PropTypes.string.isRequired,
 };
 
 export default HomeArrow;

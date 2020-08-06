@@ -155,9 +155,19 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
 };
 
 ProjectTemplate1.propTypes = {
-  projectData: PropTypes.object,
-  projectId: PropTypes.string,
-  nextSection: PropTypes.string,
+  projectData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    key: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    aspects: PropTypes.array.isRequired,
+    gitHub: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    featureTextColor: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string.isRequired,
+  }).isRequired,
+  projectId: PropTypes.string.isRequired,
+  nextSection: PropTypes.string.isRequired,
 };
 
 export default ProjectTemplate1;

@@ -118,7 +118,7 @@ const Contact = ({ nextSection }) => {
 };
 
 Contact.propTypes = {
-  nextSection: PropTypes.string,
+  nextSection: PropTypes.string.isRequired,
 };
 
 export default Contact;

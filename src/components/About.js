@@ -71,7 +71,7 @@ const About = ({ nextSection }) => {
 };
 
 About.propTypes = {
-  nextSection: PropTypes.string,
+  nextSection: PropTypes.string.isRequired,
 };
 
 export default About;

@@ -96,7 +96,7 @@ const Experience = ({ nextSection }) => {
 };
 
 Experience.propTypes = {
-  nextSection: PropTypes.string,
+  nextSection: PropTypes.string.isRequired,
 };
 
 export default Experience;
