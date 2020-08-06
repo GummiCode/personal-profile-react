@@ -42,37 +42,56 @@ const MenuLink = styled(scrollLink)`
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <MenuLink 
-                  activeClass="active"
-                  to="header"
-                  spy
-                  smooth
-                  offset={-60}
-                  duration={500}>Home</MenuLink>
-      <MenuLink             activeClass="active"
-            to="about"
-            spy
-            smooth
-            offset={-50}
-            duration={500}>About</MenuLink>
-      <MenuLink            activeClass="active"
-            to="experience"
-            spy
-            smooth
-            offset={-50}
-            duration={500}>Experience</MenuLink>
-      <MenuLink             activeClass="active"
-            to="projects-banner"
-            spy
-            smooth
-            offset={-50}
-            duration={500}>Projects</MenuLink>
-      <MenuLink             activeClass="active"
-            to="contact"
-            spy
-            smooth
-            offset={-50}
-            duration={500}>Contact</MenuLink>
+      <MenuLink
+        activeClass="active"
+        to="header"
+        spy
+        smooth
+        offset={-60}
+        duration={500}
+      >
+        Home
+      </MenuLink>
+      <MenuLink
+        activeClass="active"
+        to="about"
+        spy
+        smooth
+        offset={-50}
+        duration={500}
+      >
+        About
+      </MenuLink>
+      <MenuLink
+        activeClass="active"
+        to="experience"
+        spy
+        smooth
+        offset={-50}
+        duration={500}
+      >
+        Experience
+      </MenuLink>
+      <MenuLink
+        activeClass="active"
+        to="projects-banner"
+        spy
+        smooth
+        offset={-50}
+        duration={500}
+      >
+        Projects
+      </MenuLink>
+      <MenuLink
+        activeClass="active"
+        to="contact"
+        spy
+        smooth
+        offset={-50}
+        duration={500}
+      >
+        Contact
+      </MenuLink>
     </StyledMenu>
   );
 };
