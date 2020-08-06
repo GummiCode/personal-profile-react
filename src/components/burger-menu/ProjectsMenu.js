@@ -2,6 +2,7 @@ import React from "react";
 import { Link as scrollLink } from "react-scroll";
 import { bool } from "prop-types";
 import styled from "styled-components";
+import ProjectLinks from "./ProjectLinks";
 
 const StyledMenu = styled.nav`
   height: 100vh;
@@ -43,56 +44,7 @@ const MenuLink = styled(scrollLink)`
 const ProjectsMenu = ({ projectsOpen }) => {
   return (
     <StyledMenu open={projectsOpen}>
-      <MenuLink
-        activeClass="active"
-        to="header"
-        spy
-        smooth
-        offset={-60}
-        duration={500}
-      >
-        Home
-      </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="about"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        About
-      </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="experience"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        Experience
-      </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="projects-banner"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        Projects
-      </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="contact"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        Contact
-      </MenuLink>
+      <ProjectLinks />
     </StyledMenu>
   );
 };
