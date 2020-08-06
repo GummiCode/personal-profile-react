@@ -14,7 +14,6 @@ const ProjectContainer = styled(FullWidthContainer)`
 
 const LeftProjectContainer = styled(HalfWidthContainer)`
   position: relative;
-  height: 100%;
   width: calc(55% - 40px);
   padding: 0 0 0 40px;
 `;
@@ -22,14 +21,12 @@ const LeftProjectContainer = styled(HalfWidthContainer)`
 const TitleText = styled.h1`
   font-size: 4em;
   color: ${props => props.featureTextColor};
-  padding: 0;
   margin: 40px 0 0 0;
 `;
 
 const SummaryText = styled.h2`
   font-size: 2.6em;
   color: ${props => props.featureTextColor};
-  padding:0;
   margin: 20px 0 0 0;
 `
 
@@ -50,10 +47,6 @@ const RightProjectContainer = styled.div`
   background-position: top 60px right 0px;
   background-size: contain;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: start;
-  align-items: center;
   `;
 
 const LinkBanner = styled.div`
@@ -74,7 +67,6 @@ const LinkBannerText = styled.span`
   font-size: 3em;
   font-weight: bold;
   font-style: italic;
-  color: #000000;
 `;
 
 const LinkBannerLink = styled.a`
@@ -110,10 +102,15 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
     backgroundColor
   } = projectData;
 
-  const mapAspects = (aspects) => {
+  const mapAspects = (aspects, title) => {
     return (
-      aspects.map(aspect => {
-        return ( <Item>{aspect}</Item> )
+      aspects.map((aspect, index) => {
+        return ( 
+        <Item
+          key={`${title}-aspect-${index}`}
+        >
+          {aspect}
+        </Item> )
       })
   )};
 
@@ -141,39 +138,38 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
         </SectionText>
 
         <LinkBanner>
-        <LinkBannerText>
-          VIEW PROJECT:
-        </LinkBannerText>
-        <LinkBannerLink 
-          href={gitHub}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <IconContext.Provider 
-            value={{ 
-              color: "#000000", 
-              size: "100%"
-            }}
+          <LinkBannerText>
+            VIEW PROJECT:
+          </LinkBannerText>
+          <LinkBannerLink 
+            href={gitHub}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <StyledFaGithub />
-          </IconContext.Provider>    
-        </LinkBannerLink>
-        <LinkBannerLink 
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <IconContext.Provider 
-            value={{ 
-              color: "#000000", 
-              size: "100%"
-            }}
+            <IconContext.Provider 
+              value={{ 
+                color: "#000000", 
+                size: "100%"
+              }}
+            >
+              <StyledFaGithub />
+            </IconContext.Provider>    
+          </LinkBannerLink>
+          <LinkBannerLink 
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <StyledFaGlobe />
-          </IconContext.Provider>
-        </LinkBannerLink>
-      </LinkBanner>
-        
+            <IconContext.Provider 
+              value={{ 
+                color: "#000000", 
+                size: "100%"
+              }}
+            >
+              <StyledFaGlobe />
+            </IconContext.Provider>
+          </LinkBannerLink>
+        </LinkBanner>
       </LeftProjectContainer>
 
       <RightProjectContainer
@@ -192,6 +188,6 @@ ProjectTemplate1.propTypes = {
   projectData: PropTypes.object,
   projectId: PropTypes.string,
   nextSection: PropTypes.string
-}
+};
 
 export default ProjectTemplate1;
