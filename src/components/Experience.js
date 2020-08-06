@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaCompass as ExpIcon, FaCode as TechIcon } from "react-icons/fa";
 import FullWidthContainer from './FullWidthContainer';
@@ -143,5 +144,9 @@ const Experience  = ({ nextSection }) => {
       </SkillsContainer>
   )
 };
+
+Experience.propTypes = {
+  nextSection: PropTypes.string
+}
 
 export default Experience;

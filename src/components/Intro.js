@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 
@@ -81,7 +82,7 @@ const Intro = ({ nextSection }) => {
     <ProfileContainer data-testid="intro">
       <TextContainer>
         <ProfileText>
-          Self-Trained Software Engineer.
+          Self-Trained Web Developer.
         </ProfileText>
         <ProfileText>
           Experienced in REACT, Full-Stack
@@ -126,5 +127,9 @@ const Intro = ({ nextSection }) => {
     </ProfileContainer>
   )
 };
+
+Intro.propTypes = {
+  nextSection: PropTypes.string
+}
 
 export default Intro;

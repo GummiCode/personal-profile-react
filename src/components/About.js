@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { BsPersonBoundingBox as AboutIcon  } from "react-icons/bs";
 import FullWidthContainer from './FullWidthContainer';
@@ -101,5 +102,9 @@ const About  = ({ nextSection }) => {
     </AboutContainer>
   )
 };
+
+About.propTypes = {
+  nextSection: PropTypes.string
+}
 
 export default About;

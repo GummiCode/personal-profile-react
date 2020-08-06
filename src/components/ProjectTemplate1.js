@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { FaGlobe } from 'react-icons/fa';
@@ -187,5 +188,11 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
     </ProjectContainer>
   )
 };
+
+ProjectTemplate1.propTypes = {
+  projectData: PropTypes.object,
+  projectId: PropTypes.string,
+  nextSection: PropTypes.string
+}
 
 export default ProjectTemplate1;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaPencilRuler as ProjectsIcon } from "react-icons/fa"
 import FullWidthContainer from './FullWidthContainer';
@@ -39,5 +40,9 @@ const ProjectsBanner = ({ nextSection }) => {
     </ProjectsContainer>
   )
 };
+
+ProjectsBanner.propTypes = {
+  nextSection: PropTypes.string
+}
 
 export default ProjectsBanner;

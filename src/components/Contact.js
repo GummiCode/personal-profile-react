@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import { TiSocialLinkedinCircular as TiLinkedin } from "react-icons/ti";
@@ -143,5 +144,9 @@ const Contact  = ({ nextSection }) => {
     </ContactContainer>
   )
 };
+
+Contact.propTypes = {
+  nextSection: PropTypes.string
+}
 
 export default Contact;

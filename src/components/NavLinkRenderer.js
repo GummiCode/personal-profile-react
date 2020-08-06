@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { Dropdown } from "react-bootstrap";
@@ -12,13 +13,11 @@ const ProjectsDropdown = styled(Dropdown)`
   background: rgba(0, 0, 0, 0);
   font-size: 5em;
   color: #FFFFFF;
-  
   border: none;
 `;
 
 const Caret = styled(FaCaretDown)`
 `;
-
 
 const Title = styled.span`
   margin: 0 10% 0 0;
@@ -143,5 +142,9 @@ const NavLinkRenderer = ({ projectData }) => {
     </ProjectsDropdown>
   )
 };
+
+NavLinkRenderer.propTypes = {
+  projectData: PropTypes.object
+}
 
 export default NavLinkRenderer;

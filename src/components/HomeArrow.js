@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from 'styled-components';
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
@@ -37,6 +38,10 @@ const HomeArrow = ({ homeSectionId }) => {
       </IconContext.Provider>
     </HomeArrowContainer>
   )
+}
+
+HomeArrow.propTypes = {
+  homeSectionId: PropTypes.string
 }
 
 export default HomeArrow;
