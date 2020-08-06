@@ -11,7 +11,7 @@ const StyledBurger = styled.button`
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
-  background: transparent;
+  background: #000000;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -29,6 +29,7 @@ const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+
   }
 `;
 
