@@ -5,6 +5,9 @@ import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from './FullWidthContainer';
 import NavLinkRenderer from "./NavLinkRenderer";
 
+import NavLinkRenderer2 from "./NavLinkRenderer2";
+
+
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
   top: 0px;
@@ -22,7 +25,7 @@ const SideSection = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
-  align-items: center;
+  align-items: top;
 `;
 
 const NavList = styled.div`
@@ -31,17 +34,21 @@ const NavList = styled.div`
   font-size: 1.3em;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 const NavItem = styled(scrollLink)`
-    margin: 0 0 0 1.5vw;
+  height: 100%;
+  margin: 0 0 0 1.5vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
     
-    &:hover {
-      color: #FFD2AE;
-      transition: 0.2s;
-    }
+  &:hover {
+    color: #FFD2AE;
+    transition: 0.2s;
+  }
 `;
 
 const LinkContainer = styled.a`
@@ -138,7 +145,9 @@ const NavBar = () => {
             Contact
           </NavItem>
 
+          <NavLinkRenderer2 />
         </NavList>
+
         </SideSection>
 
         <SideSection>
