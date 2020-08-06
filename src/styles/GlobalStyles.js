@@ -7,6 +7,6 @@ const GlobalStyle = createGlobalStyle`
     background: whitesmoke;
     font-family: 'Roboto', Helvetica, sans-serif;
   }
-`
+`;
 
 export default GlobalStyle;
