@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as scrollLink } from "react-scroll";
 import { bool } from "prop-types";
 import styled from "styled-components";
 
@@ -20,32 +21,58 @@ const StyledMenu = styled.nav`
     height: 100%;
     padding: 0 30px 0 0;
   }
+`;
 
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    color: #ffffff;
-    letter-spacing: 0.5rem;
-    text-decoration: none;
-    transition: color 0.3s linear;
+const MenuLink = styled(scrollLink)`
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  font-weight: bold;
+  color: #ffffff;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s linear;
 
-    &:hover {
-      color: #ffd2ae;
-      transition: 0.2s;
-    }
+  &:hover {
+    color: #ffd2ae;
+    transition: 0.2s;
   }
 `;
 
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">Home</a>
-      <a href="/">About</a>
-      <a href="/">Experience</a>
-      <a href="/">Projects</a>
-      <a href="/">Contact</a>
+      <MenuLink 
+                  activeClass="active"
+                  to="header"
+                  spy
+                  smooth
+                  offset={-60}
+                  duration={500}>Home</MenuLink>
+      <MenuLink             activeClass="active"
+            to="about"
+            spy
+            smooth
+            offset={-50}
+            duration={500}>About</MenuLink>
+      <MenuLink            activeClass="active"
+            to="experience"
+            spy
+            smooth
+            offset={-50}
+            duration={500}>Experience</MenuLink>
+      <MenuLink             activeClass="active"
+            to="projects-banner"
+            spy
+            smooth
+            offset={-50}
+            duration={500}>Projects</MenuLink>
+      <MenuLink             activeClass="active"
+            to="contact"
+            spy
+            smooth
+            offset={-50}
+            duration={500}>Contact</MenuLink>
     </StyledMenu>
   );
 };

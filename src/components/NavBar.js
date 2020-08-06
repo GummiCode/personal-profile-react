@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
+import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
 import DropdownMenu from "./DropdownMenu";
