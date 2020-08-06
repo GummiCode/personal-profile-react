@@ -6,9 +6,9 @@ import { FaCaretDown } from 'react-icons/fa';
 const DropdownContainer = styled.div`
   top: 0;
   height: fit-content;
-  width: 15vw;
+  width: auto;
   margin: 0 0 0 1.5vw;
-  background: rgba(0, 0, 100, 1);
+  background: none;
   font-size: 1em;
   color: #FFFFFF;
   border: none;
@@ -20,7 +20,7 @@ const DropdownContainer = styled.div`
 
 
 const DropdownTitle= styled.span`
- margin: 0 2% 0 0;
+  margin: 0 2% 0 0;
   color: #FFFFFF;
 `;
 
@@ -32,7 +32,7 @@ const DropdownHeader = styled.button`
   border: none;
   font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 1em;
-  background: rgba(100, 0, 0, 1);
+  background: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -53,10 +53,9 @@ const DropdownHeader = styled.button`
 `
 
 const DropdownBody = styled.div`
-
   height: auto;
-  width: 13.5vw;
-  background: rgba(0, 150, 0, 1);
+  width: auto;
+  background: none;
   display: none;
 
   ${DropdownContainer}:hover & {
@@ -70,7 +69,8 @@ const DropdownBody = styled.div`
 const Placeholder = styled.span`
   height: auto;
   width: 100%;
-  background: rgba(150, 150, 0, 1);
+  background: rgba(0, 0, 0, 0.9);
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
   padding: 1.2vh 0 1.2vh 2vw;
   margin: .75vh 0 0 0;
 
