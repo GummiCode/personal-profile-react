@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
@@ -23,10 +23,14 @@ const DropdownContainer = styled.div`
 const DropdownHeader = styled.div`
   height:  60px;
   background: rgba(100, 0, 0, 1);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
 `
 
 const DropdownTitle= styled.span`
-  height:  100%;
+ margin: 0 2% 0 0;
   color: #FFFFFF;
 `;
 
@@ -36,7 +40,6 @@ const Caret = styled(FaCaretDown)`
 const DropdownBody = styled.div`
   height: auto%;
   width: 13.5vw;
-  margin: 1.5vw;
   background: rgba(0, 150, 0, 1);
   display: flex;
   flex-flow: column nowrap;
@@ -45,13 +48,18 @@ const DropdownBody = styled.div`
 `
 
 const Placeholder = styled.span`
+  height: auto;
+  width: 100%;
+  background: rgba(150, 150, 0, 1);
+  padding: 1.2vh 0 1.2vh 2vw;
+  margin: .75vh 0 0 0;
 `
 
 const NavLink = styled(scrollLink)`
   height: auto;
   width: 100%;
   padding: 0 0 0 15%;
-  margin: 0.25vh 0;
+
   font-size: 1em;
   color: #FFFFFF;
   background: rgba(0, 0, 0, 0.9);
@@ -70,6 +78,17 @@ const NavLink = styled(scrollLink)`
 
 
 const NavLinkRenderer2 = () => {
+
+  
+  const [expand, setExpand] = useState (false);
+
+  const handleClickOutside = () => {
+    setExpand(false)
+  };
+
+  const toggleExpand = () => {
+    setExpand(!expand)
+  };
 
   return (
     <DropdownContainer>
