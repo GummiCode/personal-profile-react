@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { Dropdown } from "react-bootstrap";
 import { IconContext } from "react-icons";
-import { FaCaretDown, FaGithub, FaAt } from 'react-icons/fa';
+import { FaCaretDown } from 'react-icons/fa';
 import projectData from "../assets/projectData";
 
 const ProjectsDropdown = styled(Dropdown)`
@@ -55,18 +55,6 @@ const Menu = styled(Dropdown.Menu)`
   background: rgba(0, 0, 0, 0);
 `
 
-const Item = styled(Dropdown.Item)`
-
-  height: 55px;
-  width: 14.5vw;
-  margin: 0.2vh 0 0 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0);
-`
-
 const NavLink = styled(scrollLink)`
   height: 90%;
   width: 75%;
@@ -74,12 +62,11 @@ const NavLink = styled(scrollLink)`
   margin: 0.25vh 0;
   font-size: 0.20em;
   color: #FFFFFF;
-  text-decoration: none !important;
   background: rgba(0, 0, 0, 0.9);
   clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
   display: flex;
   flex-flow: row nowrap;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
 
   &:hover{    
@@ -90,8 +77,6 @@ const NavLink = styled(scrollLink)`
 `;
 
 const NavLinkRenderer = () => {
-
-  const [open, setOpen] = useState(false);
 
   return (
     <ProjectsDropdown>
@@ -116,12 +101,15 @@ const NavLinkRenderer = () => {
         {projectData.map((project, index) => {
           const {
             title,
+            key,
             featureTextColor,
             backgroundColor
           } = project;
 
           return (
-            <Dropdown.Item>
+            <Dropdown.Item
+              key={`${key}-navlink`}
+            >
               <NavLink
                 activeClass="active"
                 to={`project${index}`}

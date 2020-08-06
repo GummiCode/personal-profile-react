@@ -19,7 +19,6 @@ const ProjectRenderer = () => {
 
     return projectData.map((project, index) => {
       if(index%2 === 0) {
-        console.log(determineFinal(index, max));
         return (
           <ProjectTemplate1
             key={`${project.key}-render`}
@@ -29,7 +28,6 @@ const ProjectRenderer = () => {
         />
         )
       } else {
-        
         return (
           <ProjectTemplate2
             key={`${project.key}-render`}
