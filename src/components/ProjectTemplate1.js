@@ -102,8 +102,8 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
   } = projectData;
 
   const mapAspects = () => {
-    return aspects.map((aspect, index) => {
-      return <Item key={`${title}-aspect-${index}`}>{aspect}</Item>;
+    return aspects.map((aspect) => {
+      return <Item key={aspect}>{aspect}</Item>;
     });
   };
 
