@@ -14,7 +14,6 @@ const ProjectContainer = styled(FullWidthContainer)`
 
 const RightProjectContainer = styled(HalfWidthContainer)`
   position: relative;
-  height: 100%;
   width: calc(50% - 40px);
   padding: 0 40px 0 0;
 `;
@@ -22,14 +21,12 @@ const RightProjectContainer = styled(HalfWidthContainer)`
 const TitleText = styled.h1`
   font-size: 4em;
   color: ${props => props.featureTextColor};
-  padding: 0;
   margin: 40px 0 0 0;
 `;
 
 const SummaryText = styled.h2`
   font-size: 3em;
   color: ${props => props.featureTextColor};
-  padding:0;
   margin: 20px 0 0 0;
 `
 
@@ -50,10 +47,6 @@ const LeftProjectContainer = styled.div`
   background-position: top 60px left 0px;
   background-size: contain;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: end;
-  align-items: center;
   `;
 
 const LinkBanner = styled.div`
@@ -74,7 +67,6 @@ const LinkBannerText = styled.span`
   font-size: 3em;
   font-weight: bold;
   font-style: italic;
-  color: #000000;
 `;
 
 const LinkBannerLink = styled.a`
@@ -110,10 +102,15 @@ const ProjectTemplate2 = ({ projectData, projectId, nextSection }) => {
     backgroundColor
   } = projectData;
 
-  const mapAspects = (aspects) => {
+  const mapAspects = (aspects, title) => {
     return (
-      aspects.map(aspect => {
-        return ( <Item>{aspect}</Item> )
+      aspects.map((aspect, index) => {
+        return ( 
+        <Item
+          key={`${title}-aspect-${index}`}
+        >
+          {aspect}
+        </Item> )
       })
   )};
 
@@ -193,6 +190,6 @@ ProjectTemplate2.propTypes = {
   projectData: PropTypes.object,
   projectId: PropTypes.string,
   nextSection: PropTypes.string
-}
+};
 
 export default ProjectTemplate2;
