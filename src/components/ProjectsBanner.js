@@ -13,7 +13,6 @@ const ProjectsContainer = styled(FullWidthContainer)`
 `;
 
 const ProjectsHeading = styled.h1`
-  color: #000000;
   font-size: 5em;
   font-weight: bold;
 `;
@@ -22,7 +21,7 @@ const StyledProjectsIcon = styled(ProjectsIcon)`
   height: 7.5vh; 
   width: auto;
   margin: 0 1vw 0 2vw;
-`
+`;
 
 const ProjectsBanner = ({ nextSection }) => {
   return (
@@ -43,6 +42,6 @@ const ProjectsBanner = ({ nextSection }) => {
 
 ProjectsBanner.propTypes = {
   nextSection: PropTypes.string
-}
+};
 
 export default ProjectsBanner;
