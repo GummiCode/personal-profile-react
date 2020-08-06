@@ -8,15 +8,11 @@ import ProjectsBanner from "./ProjectsBanner";
 import ProjectRenderer from "./ProjectRenderer";
 import Contact from "./Contact";
 
-import projectData from "../assets/projectData"
-
 function App() {
 
   return (
     <div data-testid="app">
-      <NavBar
-        projectData={projectData}
-      />
+      <NavBar />
       <Header 
         nextSection="intro"
       />
@@ -32,9 +28,7 @@ function App() {
       <ProjectsBanner
         nextSection="project0"
       />
-      <ProjectRenderer 
-        projectData={projectData}
-      />
+      <ProjectRenderer />
       <Contact
         nextSection="header" 
       />

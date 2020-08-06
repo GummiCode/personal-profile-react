@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import ProjectTemplate1 from "./ProjectTemplate1";
 import ProjectTemplate2 from "./ProjectTemplate2";
+import projectData from "../assets/projectData";
 
-const ProjectRenderer = ({ projectData }) => {
+const ProjectRenderer = () => {
 
   const determineFinal = (index, max) => {
     if (index === (max - 1)) {

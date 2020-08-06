@@ -89,7 +89,7 @@ const LinkedinIcon = styled(FaLinkedin)`
 `;
 
 
-const NavBar = ({ projectData }) => {
+const NavBar = () => {
   return (
     <NavBarContainer
       data-testid="nav-bar"
@@ -129,9 +129,7 @@ const NavBar = ({ projectData }) => {
             Experience/Technologies
           </NavItem>
 
-          <NavLinkRenderer
-            projectData={projectData}
-          />
+          <NavLinkRenderer/>
 
           <NavItem
             activeClass="active"

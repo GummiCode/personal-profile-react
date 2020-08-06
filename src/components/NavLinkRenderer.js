@@ -5,6 +5,7 @@ import { Link as scrollLink } from "react-scroll";
 import { Dropdown } from "react-bootstrap";
 import { IconContext } from "react-icons";
 import { FaCaretDown, FaGithub, FaAt } from 'react-icons/fa';
+import projectData from "../assets/projectData";
 
 const ProjectsDropdown = styled(Dropdown)`
   height: 100%;
@@ -89,7 +90,7 @@ const NavLink = styled(scrollLink)`
   }
 `;
 
-const NavLinkRenderer = ({ projectData }) => {
+const NavLinkRenderer = () => {
 
   const [open, setOpen] = useState(false);
 
