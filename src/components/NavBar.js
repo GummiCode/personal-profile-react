@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link as scrollLink } from 'react-scroll';
-import { FaGithub, FaAt, FaLinkedin } from 'react-icons/fa';
-import FullWidthContainer from './FullWidthContainer';
-import DropdownMenu from './DropdownMenu';
+import React from "react";
+import styled from "styled-components";
+import { Link as scrollLink } from "react-scroll";
+import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
+import FullWidthContainer from "./FullWidthContainer";
+import DropdownMenu from "./DropdownMenu";
 
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
@@ -14,7 +14,7 @@ const NavBarContainer = styled(FullWidthContainer)`
   justify-content: space-between;
   align-items: center;
   z-index: 9;
-  `;
+`;
 
 const PageLinksContainer = styled.div`
   height: 100%;
@@ -40,66 +40,64 @@ const NavItem = styled(scrollLink)`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-    
+
   &:hover {
-    color: #FFD2AE;
+    color: #ffd2ae;
     transition: 0.2s;
   }
 `;
 
 const ExternalLinksContainer = styled.div`
-height: 100%;
-padding: 0 30px 0 0;
-display: flex;
-flex-flow: row nowrap;
-justify-content: start;
-align-items: center;
+  height: 100%;
+  padding: 0 30px 0 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
 `;
 
 const LinkContainer = styled.a`
   height: 5vh;
   width: 5vh;
   border-radius: 50%;
-  margin: 0 0 0 .5vw;
+  margin: 0 0 0 0.5vw;
 `;
 
 const EmailIcon = styled(FaAt)`
-    fill: #FFFFFF;
-    width: 100%;
-    height: 100%;
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
 
   &:hover {
-    fill: #C9512F;
+    fill: #c9512f;
     transition: 0.5s;
   }
 `;
 
 const GithubIcon = styled(FaGithub)`
-    fill: #FFFFFF;
-    width: 100%;
-    height: 100%;
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
 
   &:hover {
-    fill: #C9512F;
+    fill: #c9512f;
     transition: 0.5s;
   }
 `;
 
 const LinkedinIcon = styled(FaLinkedin)`
-    fill: #FFFFFF;
-    width: 100%;
-    height: 100%;
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
 
   &:hover {
-    fill: #C9512F;
+    fill: #c9512f;
     transition: 0.5s;
   }
 `;
 
 const NavBar = () => (
-  <NavBarContainer
-    data-testid="nav-bar"
-  >
+  <NavBarContainer data-testid="nav-bar">
     <PageLinksContainer>
       <NavList>
         <NavItem
@@ -135,9 +133,7 @@ const NavBar = () => (
           Experience/Technologies
         </NavItem>
 
-        <DropdownMenu
-          title="Projects"
-        />
+        <DropdownMenu />
 
         <NavItem
           activeClass="active"
@@ -149,9 +145,7 @@ const NavBar = () => (
         >
           Contact
         </NavItem>
-
       </NavList>
-
     </PageLinksContainer>
 
     <ExternalLinksContainer>
@@ -182,7 +176,6 @@ const NavBar = () => (
         <LinkedinIcon />
       </LinkContainer>
     </ExternalLinksContainer>
-
   </NavBarContainer>
 );
 

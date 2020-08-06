@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
-import { FaCaretDown } from 'react-icons/fa';
+import { FaCaretDown } from "react-icons/fa";
 
 const SectionArrowContainer = styled(scrollLink)`
   position: absolute;
@@ -16,32 +16,32 @@ const SectionArrowContainer = styled(scrollLink)`
   flex-flow: column nowrap;
   justify-content: start;
   align-items: center;
-`
+`;
 
 const SectionArrow = ({ nextSectionId }) => {
   return (
     <SectionArrowContainer
       activeClass="active"
       to={nextSectionId}
-      spy={true}
-      smooth={true}
+      spy
+      smooth
       offset={-50}
       duration={500}
     >
-      <IconContext.Provider 
-        value={{ 
-          color: "#000000", 
-          size: "5em"
+      <IconContext.Provider
+        value={{
+          color: "#000000",
+          size: "5em",
         }}
       >
         <FaCaretDown />
       </IconContext.Provider>
     </SectionArrowContainer>
-  )
+  );
 };
 
 SectionArrow.propTypes = {
-  nextSectionId: PropTypes.string
+  nextSectionId: PropTypes.string,
 };
 
 export default SectionArrow;

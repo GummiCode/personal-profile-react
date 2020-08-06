@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import NavBar from "./NavBar";
 import Header from "./Header";
 import Intro from "./Intro";
@@ -9,31 +9,18 @@ import ProjectRenderer from "./ProjectRenderer";
 import Contact from "./Contact";
 
 function App() {
-
   return (
     <div data-testid="app">
       <NavBar />
-      <Header 
-        nextSection="intro"
-      />
-      <Intro 
-        nextSection="about"
-      />
-      <About 
-        nextSection="experience"
-      />
-      <Experience
-        nextSection="projects-banner" 
-      />
-      <ProjectsBanner
-        nextSection="project0"
-      />
+      <Header nextSection="intro" />
+      <Intro nextSection="about" />
+      <About nextSection="experience" />
+      <Experience nextSection="projects-banner" />
+      <ProjectsBanner nextSection="project0" />
       <ProjectRenderer />
-      <Contact
-        nextSection="header" 
-      />
+      <Contact nextSection="header" />
     </div>
-  )
-};
+  );
+}
 
 export default App;

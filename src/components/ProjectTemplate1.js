@@ -2,15 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
-import { FaGlobe } from 'react-icons/fa';
-import { FaGithub } from "react-icons/fa";
-import FullWidthContainer from './FullWidthContainer';
-import HalfWidthContainer from './HalfWidthContainer';
-import SectionArrow from './SectionArrow';
+import { FaGlobe, FaGithub } from "react-icons/fa";
+
+import FullWidthContainer from "./FullWidthContainer";
+import HalfWidthContainer from "./HalfWidthContainer";
+import SectionArrow from "./SectionArrow";
 
 const ProjectContainer = styled(FullWidthContainer)`
-  background-color: ${props => props.backgroundColor};
-  `;
+  background-color: ${(props) => props.backgroundColor};
+`;
 
 const LeftProjectContainer = styled(HalfWidthContainer)`
   position: relative;
@@ -20,15 +20,15 @@ const LeftProjectContainer = styled(HalfWidthContainer)`
 
 const TitleText = styled.h1`
   font-size: 4em;
-  color: ${props => props.featureTextColor};
+  color: ${(props) => props.featureTextColor};
   margin: 40px 0 0 0;
 `;
 
 const SummaryText = styled.h2`
   font-size: 2.6em;
-  color: ${props => props.featureTextColor};
+  color: ${(props) => props.featureTextColor};
   margin: 20px 0 0 0;
-`
+`;
 
 const SectionText = styled.ul`
   font-size: 2em;
@@ -43,11 +43,11 @@ const RightProjectContainer = styled.div`
   height: 100%;
   background-attachment: fixed;
   background-color: rgba(10, 10, 10, 0.3);
-  background-image: url(${props => props.image});
+  background-image: url(${(props) => props.image});
   background-position: top 60px right 0px;
   background-size: contain;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-  `;
+`;
 
 const LinkBanner = styled.div`
   position: absolute;
@@ -76,21 +76,20 @@ const LinkBannerLink = styled.a`
 `;
 
 const StyledFaGithub = styled(FaGithub)`
-${LinkBanner}:hover & {
-    fill: #C9512F;
+  ${LinkBanner}:hover & {
+    fill: #c9512f;
     transition: 0.5s;
   }
 `;
 
 const StyledFaGlobe = styled(FaGlobe)`
   ${LinkBanner}:hover & {
-    fill: #F6A65D;
+    fill: #f6a65d;
     transition: 0.5s;
   }
 `;
 
 const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
-
   const {
     title,
     summary,
@@ -99,20 +98,14 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
     url,
     image,
     featureTextColor,
-    backgroundColor
+    backgroundColor,
   } = projectData;
 
-  const mapAspects = (aspects, title) => {
-    return (
-      aspects.map((aspect, index) => {
-        return ( 
-        <Item
-          key={`${title}-aspect-${index}`}
-        >
-          {aspect}
-        </Item> )
-      })
-  )};
+  const mapAspects = () => {
+    return aspects.map((aspect, index) => {
+      return <Item key={`${title}-aspect-${index}`}>{aspect}</Item>;
+    });
+  };
 
   return (
     <ProjectContainer
@@ -120,50 +113,32 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
       id={projectId}
       backgroundColor={backgroundColor}
     >
-
       <LeftProjectContainer>
-
-        <TitleText
-          featureTextColor={featureTextColor}
-        >
-          {title}
-        </TitleText>
-        <SummaryText
-          featureTextColor={featureTextColor}
-        >
-          {summary}
-        </SummaryText>
-        <SectionText>
-          {mapAspects(aspects)}
-        </SectionText>
+        <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
+        <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
+        <SectionText>{mapAspects(aspects)}</SectionText>
 
         <LinkBanner>
-          <LinkBannerText>
-            VIEW PROJECT:
-          </LinkBannerText>
-          <LinkBannerLink 
+          <LinkBannerText>VIEW PROJECT:</LinkBannerText>
+          <LinkBannerLink
             href={gitHub}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconContext.Provider 
-              value={{ 
-                color: "#000000", 
-                size: "100%"
+            <IconContext.Provider
+              value={{
+                color: "#000000",
+                size: "100%",
               }}
             >
               <StyledFaGithub />
-            </IconContext.Provider>    
+            </IconContext.Provider>
           </LinkBannerLink>
-          <LinkBannerLink 
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconContext.Provider 
-              value={{ 
-                color: "#000000", 
-                size: "100%"
+          <LinkBannerLink href={url} target="_blank" rel="noopener noreferrer">
+            <IconContext.Provider
+              value={{
+                color: "#000000",
+                size: "100%",
               }}
             >
               <StyledFaGlobe />
@@ -172,22 +147,17 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
         </LinkBanner>
       </LeftProjectContainer>
 
-      <RightProjectContainer
-        image={image}
-      >
-      </RightProjectContainer>
+      <RightProjectContainer image={image} />
 
-      <SectionArrow 
-        nextSectionId={nextSection}
-      />
+      <SectionArrow nextSectionId={nextSection} />
     </ProjectContainer>
-  )
+  );
 };
 
 ProjectTemplate1.propTypes = {
   projectData: PropTypes.object,
   projectId: PropTypes.string,
-  nextSection: PropTypes.string
+  nextSection: PropTypes.string,
 };
 
 export default ProjectTemplate1;
