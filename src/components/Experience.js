@@ -23,8 +23,6 @@ const TechContainer = styled(HalfWidthContainer)`
 
 const TitleText = styled.h1`
   font-size: 4em;
-  color: #000000;
-  padding: 0;
   margin:  50px 0 0 0;
 `;
 
@@ -60,7 +58,6 @@ const TechBlockContainer = styled.div`
   font-size: 2em;
   display: flex;
   flex-flow: row wrap;
-  justify-content: start;
   align-items: start;
 `
 
@@ -76,12 +73,9 @@ const TechBlock = styled.span`
 
 const Experience  = ({ nextSection }) => {
 
-
-
   const displayTechnologies = (technologies) => {
-    const orderedTech = technologies.sort();
-    return orderedTech.map((tech) => {
-      
+    const sortedTech = technologies.sort();
+    return sortedTech.map((tech) => {
       return (
         <TechBlock
           key={tech+"Exp"}
@@ -146,6 +140,6 @@ const Experience  = ({ nextSection }) => {
 
 Experience.propTypes = {
   nextSection: PropTypes.string
-}
+};
 
 export default Experience;
