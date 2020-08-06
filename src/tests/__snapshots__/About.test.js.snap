@@ -3,143 +3,127 @@
 exports[`About component screenshot test 1`] = `
 <DocumentFragment>
   <div
-    class="sc-AxjAm sc-AxhCb letZQW"
+    class="sc-AxjAm sc-AxhCb ggZEaN"
     data-testid="about"
     id="about"
   >
     <div
-      class="sc-AxirZ sc-AxhUy glbHQz"
+      class="sc-AxirZ sc-AxhUy gxynyp"
     >
       <h1
-        class="sc-AxheI hIYWiO"
+        class="sc-Axmtr csYLkj"
       >
-        About:
+        <svg
+          class="sc-AxmLO iBavLN"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M1.5 1a.5.5 0 00-.5.5v3a.5.5 0 01-1 0v-3A1.5 1.5 0 011.5 0h3a.5.5 0 010 1h-3zM11 .5a.5.5 0 01.5-.5h3A1.5 1.5 0 0116 1.5v3a.5.5 0 01-1 0v-3a.5.5 0 00-.5-.5h-3a.5.5 0 01-.5-.5zM.5 11a.5.5 0 01.5.5v3a.5.5 0 00.5.5h3a.5.5 0 010 1h-3A1.5 1.5 0 010 14.5v-3a.5.5 0 01.5-.5zm15 0a.5.5 0 01.5.5v3a1.5 1.5 0 01-1.5 1.5h-3a.5.5 0 010-1h3a.5.5 0 00.5-.5v-3a.5.5 0 01.5-.5z"
+            fill-rule="evenodd"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        About
       </h1>
-      <ul
-        class="sc-Axmtr fvVXkl"
+      <div
+        class="sc-fzozJi fUorFV"
       >
-        <li
-          class="sc-AxmLO fyzVOQ"
-        >
+        <p>
           I'm a 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
-            Manchester-based junior developer
-          </span>
+          <strong>
+            Manchester-based Junior Developer
+          </strong>
           .
-        </li>
-        <li
-          class="sc-AxmLO fyzVOQ"
-        >
+        </p>
+        <p>
           I'm seeking my first 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Full-Time Position
-          </span>
+          </strong>
            as a 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
-            Software Engineer
-          </span>
+          <strong>
+            Junior Full-Stack Web Developer
+          </strong>
           .
-        </li>
-        <li
-          class="sc-AxmLO fyzVOQ"
-        >
+        </p>
+        <p>
           I've worked with 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             React
-          </span>
+          </strong>
           , 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Express
-          </span>
+          </strong>
           , 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             MySQL
-          </span>
+          </strong>
           , 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Heroku
-          </span>
+          </strong>
           , 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             React Testing Library
-          </span>
-           and other [contemporary] technologies.
-        </li>
-        <li
-          class="sc-AxmLO fyzVOQ"
-        >
+          </strong>
+           and other current technologies.
+        </p>
+        <p>
           I've undertaken 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Intensive Self-Training
-          </span>
+          </strong>
            using 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Contemporary Resources
-          </span>
-           to ensure [relevance] of skills.
-        </li>
-        <li
-          class="sc-AxmLO fyzVOQ"
-        >
+          </strong>
+           to ensure relevance of skills.
+        </p>
+        <p>
           I come from a career in 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Chemical Research and Development
-          </span>
-          . I possess strong executive skills including 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          </strong>
+          .I posess strong executive skills including 
+          <strong>
             Project Management
-          </span>
+          </strong>
           , 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Troubleshooting
-          </span>
+          </strong>
           , 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
-            Independent Learning
-          </span>
+          <strong>
+            Independant Learning
+          </strong>
            and 
-          <span
-            class="sc-fzozJi eWsAKO"
-          >
+          <strong>
             Collaborative Working
-          </span>
+          </strong>
           .
-        </li>
-      </ul>
+        </p>
+      </div>
     </div>
     <div
-      class="sc-AxirZ sc-AxgMl jsusbt"
+      class="sc-AxirZ sc-AxgMl hIicdk"
+    />
+    <div
+      class="sc-AxirZ sc-AxheI isBMtZ"
     />
     <a
-      class="sc-AxiKw ixvQq"
+      class="sc-AxiKw cQqArd"
     >
       <svg
         fill="currentColor"

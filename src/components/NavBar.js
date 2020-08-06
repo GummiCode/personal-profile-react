@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
+import Burger from "./Burger";
+import Menu from "./Menu";
 import DropdownMenu from "./DropdownMenu";
 
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
   top: 0px;
-  height: 60px;
+  height: 10vh;
   color: white;
   background: black;
   justify-content: space-between;
@@ -96,87 +98,95 @@ const LinkedinIcon = styled(FaLinkedin)`
   }
 `;
 
-const NavBar = () => (
-  <NavBarContainer data-testid="nav-bar">
-    <PageLinksContainer>
-      <NavList>
-        <NavItem
-          activeClass="active"
-          to="header"
-          spy
-          smooth
-          offset={-60}
-          duration={500}
+const NavBar = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <NavBarContainer data-testid="nav-bar">
+      <PageLinksContainer>
+        <NavList>
+          <div>
+            <Burger open={open} setOpen={setOpen} />
+            <Menu open={open} setOpen={setOpen}/>
+          </div>
+          <NavItem
+            activeClass="active"
+            to="header"
+            spy
+            smooth
+            offset={-60}
+            duration={500}
+          >
+            Home
+          </NavItem>
+
+          <NavItem
+            activeClass="active"
+            to="about"
+            spy
+            smooth
+            offset={-50}
+            duration={500}
+          >
+            About
+          </NavItem>
+
+          <NavItem
+            activeClass="active"
+            to="experience"
+            spy
+            smooth
+            offset={-50}
+            duration={500}
+          >
+            Experience/Technologies
+          </NavItem>
+
+          <DropdownMenu />
+
+          <NavItem
+            activeClass="active"
+            to="contact"
+            spy
+            smooth
+            offset={-50}
+            duration={500}
+          >
+            Contact
+          </NavItem>
+        </NavList>
+      </PageLinksContainer>
+
+      <ExternalLinksContainer>
+        <LinkContainer
+          data-testid="nav-email-link"
+          href="mailto:gummicodeblog@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Home
-        </NavItem>
+          <EmailIcon />
+        </LinkContainer>
 
-        <NavItem
-          activeClass="active"
-          to="about"
-          spy
-          smooth
-          offset={-50}
-          duration={500}
+        <LinkContainer
+          data-testid="nav-github-link"
+          href="https://github.com/gummicode"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          About
-        </NavItem>
+          <GithubIcon />
+        </LinkContainer>
 
-        <NavItem
-          activeClass="active"
-          to="experience"
-          spy
-          smooth
-          offset={-50}
-          duration={500}
+        <LinkContainer
+          data-testid="nav-linkedin-link"
+          href="https://www.linkedin.com/in/david-arrowsmith/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Experience/Technologies
-        </NavItem>
-
-        <DropdownMenu />
-
-        <NavItem
-          activeClass="active"
-          to="contact"
-          spy
-          smooth
-          offset={-50}
-          duration={500}
-        >
-          Contact
-        </NavItem>
-      </NavList>
-    </PageLinksContainer>
-
-    <ExternalLinksContainer>
-      <LinkContainer
-        data-testid="nav-email-link"
-        href="mailto:gummicodeblog@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <EmailIcon />
-      </LinkContainer>
-
-      <LinkContainer
-        data-testid="nav-github-link"
-        href="https://github.com/gummicode"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <GithubIcon />
-      </LinkContainer>
-
-      <LinkContainer
-        data-testid="nav-linkedin-link"
-        href="https://www.linkedin.com/in/david-arrowsmith/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <LinkedinIcon />
-      </LinkContainer>
-    </ExternalLinksContainer>
-  </NavBarContainer>
-);
+          <LinkedinIcon />
+        </LinkContainer>
+      </ExternalLinksContainer>
+    </NavBarContainer>
+  );
+};
 
 export default NavBar;
