@@ -22,6 +22,7 @@ const ProjectRenderer = () => {
         console.log(determineFinal(index, max));
         return (
           <ProjectTemplate1
+            key={`${project.key}-render`}
             projectData={project}
             projectId={`project${index}`}
             nextSection={determineFinal(index, max)}
@@ -31,6 +32,7 @@ const ProjectRenderer = () => {
         
         return (
           <ProjectTemplate2
+            key={`${project.key}-render`}
             projectData={project}
             projectId={`project${index}`}
             nextSection={determineFinal(index, max)}

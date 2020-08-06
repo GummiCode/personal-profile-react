@@ -10,7 +10,7 @@ const SectionArrowContainer = styled(scrollLink)`
   bottom: 0;
   left: 0;
   right: 0;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   width: 4vw;
   display: flex;
   flex-flow: column nowrap;

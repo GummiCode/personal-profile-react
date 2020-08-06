@@ -2,6 +2,7 @@ const projectData = [
 
   {
     title: "SpaceFrens",
+    key:"SpaceFrens",
     summary: "Graphical representation of API data",
     aspects: [
       "Scripted API calls to fetch live data on people currently in space",
@@ -19,6 +20,7 @@ const projectData = [
 
   {
     title: "Queer Family Tea",
+    key:"QFT",
     summary: "Social Event News & Information Site",
     aspects: [
       "Collaborative project to create a new site for a weekly social event",
