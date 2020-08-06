@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { Link as scrollLink } from "react-scroll";
-import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
+import React from 'react';
+import styled from 'styled-components';
+import { Link as scrollLink } from 'react-scroll';
+import { FaGithub, FaAt, FaLinkedin } from 'react-icons/fa';
 import FullWidthContainer from './FullWidthContainer';
-import DropdownMenu from "./DropdownMenu";
-
+import DropdownMenu from './DropdownMenu';
 
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
@@ -17,9 +16,8 @@ const NavBarContainer = styled(FullWidthContainer)`
   z-index: 9;
   `;
 
-const SideSection = styled.div`
+const PageLinksContainer = styled.div`
   height: 100%;
-  padding: 0 30px 0 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
@@ -47,6 +45,15 @@ const NavItem = styled(scrollLink)`
     color: #FFD2AE;
     transition: 0.2s;
   }
+`;
+
+const ExternalLinksContainer = styled.div`
+height: 100%;
+padding: 0 30px 0 0;
+display: flex;
+flex-flow: row nowrap;
+justify-content: start;
+align-items: center;
 `;
 
 const LinkContainer = styled.a`
@@ -89,97 +96,94 @@ const LinkedinIcon = styled(FaLinkedin)`
   }
 `;
 
+const NavBar = () => (
+  <NavBarContainer
+    data-testid="nav-bar"
+  >
+    <PageLinksContainer>
+      <NavList>
+        <NavItem
+          activeClass="active"
+          to="header"
+          spy
+          smooth
+          offset={-60}
+          duration={500}
+        >
+          Home
+        </NavItem>
 
-const NavBar = () => {
-  return (
-    <NavBarContainer
-      data-testid="nav-bar"
-    >
-      <SideSection>
-        <NavList>
-          <NavItem
-            activeClass="active"
-            to="header"
-            spy={true}
-            smooth={true}
-            offset={-60}
-            duration={500}
-          >
-            Home
-          </NavItem>
+        <NavItem
+          activeClass="active"
+          to="about"
+          spy
+          smooth
+          offset={-50}
+          duration={500}
+        >
+          About
+        </NavItem>
 
-          <NavItem
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-          >
-            About
-          </NavItem>
+        <NavItem
+          activeClass="active"
+          to="experience"
+          spy
+          smooth
+          offset={-50}
+          duration={500}
+        >
+          Experience/Technologies
+        </NavItem>
 
-          <NavItem
-            activeClass="active"
-            to="experience"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-          >
-            Experience/Technologies
-          </NavItem>
+        <DropdownMenu
+          title="Projects"
+        />
 
-          <DropdownMenu
-           title="Projects"
-          />
+        <NavItem
+          activeClass="active"
+          to="contact"
+          spy
+          smooth
+          offset={-50}
+          duration={500}
+        >
+          Contact
+        </NavItem>
 
-          <NavItem
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-          >
-            Contact
-          </NavItem>
+      </NavList>
 
-        </NavList>
+    </PageLinksContainer>
 
-      </SideSection>
+    <ExternalLinksContainer>
+      <LinkContainer
+        data-testid="nav-email-link"
+        href="mailto:gummicodeblog@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <EmailIcon />
+      </LinkContainer>
 
-      <SideSection>
-        <LinkContainer
-            data-testid="nav-email-link"
-            href="mailto:gummicodeblog@gmail.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >       
-          <EmailIcon />
-        </LinkContainer>
+      <LinkContainer
+        data-testid="nav-github-link"
+        href="https://github.com/gummicode"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GithubIcon />
+      </LinkContainer>
 
-        <LinkContainer
-          data-testid="nav-github-link"
-          href="https://github.com/gummicode" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >       
-          <GithubIcon />
-        </LinkContainer>
+      <LinkContainer
+        data-testid="nav-linkedin-link"
+        href="https://www.linkedin.com/in/david-arrowsmith/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkedinIcon />
+      </LinkContainer>
+    </ExternalLinksContainer>
 
-        <LinkContainer
-          data-testid="nav-linkedin-link"
-          href="https://www.linkedin.com/in/david-arrowsmith/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >       
-          <LinkedinIcon />
-        </LinkContainer>
-      </SideSection>
-
-    </NavBarContainer>
-  )
-};
+  </NavBarContainer>
+);
 
 export default NavBar;

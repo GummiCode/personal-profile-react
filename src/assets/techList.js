@@ -22,7 +22,7 @@ const techList = [
   "NPM",
   "Heroku",
   "react-scroll",
-  "Responsive Design"
+  "Responsive Design",
 ];
 
 export default techList;
