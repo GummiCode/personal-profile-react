@@ -5,30 +5,30 @@ import styled from "styled-components";
 import ProjectsBurgerMenu from "./ProjectsBurgerMenu";
 
 const StyledMenu = styled.nav`
+  height: calc(100vh - 80px);
+  width: 20vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   background: rgba(0, 0, 0, 0.9);
-  height: 100vh;
-  width: 20vw;
   text-align: left;
-  padding: 2rem;
   position: absolute;
   top: 0;
   left: 0;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
+  cursor: pointer;
+  transform: ${({ open }) => (open ? "translateY(80px)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
 
   span {
     height: 100%;
-    padding: 0 30px 0 0;
+    padding: 0 0 0 30px;
   }
 `;
 
 const MenuLink = styled(scrollLink)`
   font-size: 2rem;
   text-transform: uppercase;
-  padding: 2rem 0;
+  padding: 2rem 0 2rem 30px;
   font-weight: bold;
   color: #ffffff;
   letter-spacing: 0.5rem;

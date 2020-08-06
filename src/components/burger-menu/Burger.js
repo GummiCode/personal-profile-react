@@ -3,19 +3,16 @@ import { bool, func } from "prop-types";
 import styled from "styled-components";
 
 const StyledBurger = styled.button`
-  position: absolute;
-  top: 5%;
-  left: 2rem;
+  width: 6.5vh;
+  height: 6vh;
+  margin: 1.5vw;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: #000000;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
+
 
   &:focus {
     outline: none;
@@ -23,8 +20,8 @@ const StyledBurger = styled.button`
 `;
 
 const Slice = styled.div`
-  width: 2rem;
-  height: 0.25rem;
+  width: 100%;
+  height: 15%;
   background: #ffffff;
   border-radius: 10px;
   transition: all 0.3s linear;

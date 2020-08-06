@@ -17,37 +17,6 @@ const NavBarContainer = styled(FullWidthContainer)`
   z-index: 9;
 `;
 
-const PageLinksContainer = styled.div`
-  height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: start;
-  align-items: top;
-`;
-
-const NavList = styled.div`
-  width: 100%;
-  height: 100%;
-  font-size: 1.3em;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-`;
-
-const NavItem = styled(scrollLink)`
-  height: 100%;
-  margin: 0 0 0 2vw;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-
-  &:hover {
-    color: #ffd2ae;
-    transition: 0.2s;
-  }
-`;
-
 const ExternalLinksContainer = styled.div`
   height: 100%;
   padding: 0 30px 0 0;
@@ -102,56 +71,7 @@ const LinkedinIcon = styled(FaLinkedin)`
 const NavBar = () => {
   return (
     <NavBarContainer data-testid="nav-bar">
-      <PageLinksContainer>
-        <NavList>
-          <BurgerMenu />
-          <NavItem
-            activeClass="active"
-            to="header"
-            spy
-            smooth
-            offset={-60}
-            duration={500}
-          >
-            Home
-          </NavItem>
-
-          <NavItem
-            activeClass="active"
-            to="about"
-            spy
-            smooth
-            offset={-50}
-            duration={500}
-          >
-            About
-          </NavItem>
-
-          <NavItem
-            activeClass="active"
-            to="experience"
-            spy
-            smooth
-            offset={-50}
-            duration={500}
-          >
-            Experience/Technologies
-          </NavItem>
-
-          <DropdownMenu />
-
-          <NavItem
-            activeClass="active"
-            to="contact"
-            spy
-            smooth
-            offset={-50}
-            duration={500}
-          >
-            Contact
-          </NavItem>
-        </NavList>
-      </PageLinksContainer>
+                <BurgerMenu />
 
       <ExternalLinksContainer>
         <LinkContainer

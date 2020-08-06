@@ -4,22 +4,23 @@ import { bool } from "prop-types";
 import styled from "styled-components";
 
 const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.9);
   height: 100vh;
+  display: flex;
+  padding: 40px 0 0 0;
+  flex-direction: column;
+  justify-content: start;
+  background: rgba(0, 0, 0, 0.9);
   text-align: left;
-  padding: 2rem;
   position: absolute;
   top: 0;
   left: 20vw;
+  cursor: pointer;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
 
   span {
     height: 100%;
-    padding: 0 30px 0 0;
+    padding: 0 30px 0 2rem;
   }
 `;
 
