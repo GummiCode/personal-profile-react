@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from './FullWidthContainer';
-import NavLinkRenderer from "./NavLinkRenderer";
-
 import DropdownMenu from "./DropdownMenu";
 
 
@@ -40,7 +38,7 @@ const NavList = styled.div`
 
 const NavItem = styled(scrollLink)`
   height: 100%;
-  margin: 0 0 0 1.5vw;
+  margin: 0 0 0 2vw;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
 import { FaCaretDown } from 'react-icons/fa';
+import projectData from "../assets/projectData";
 
 const DropdownContainer = styled.div`
-  top: 0;
   height: fit-content;
-  width: auto;
-  margin: 0 0 0 1.5vw;
+  width: 110px;
+  margin: 0 0 0 2vw;
   background: none;
   font-size: 1em;
   color: #FFFFFF;
@@ -18,17 +19,17 @@ const DropdownContainer = styled.div`
   align-items: left;
 `
 
-
 const DropdownTitle= styled.span`
-  margin: 0 2% 0 0;
   color: #FFFFFF;
 `;
 
 const Caret = styled(FaCaretDown)`
+  margin: 0 0 0 5px;
 `;
 
 const DropdownHeader = styled.button`
   height:  60px;
+  width: fit-content;
   border: none;
   font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 1em;
@@ -53,8 +54,6 @@ const DropdownHeader = styled.button`
 `
 
 const DropdownBody = styled.div`
-  height: auto;
-  width: auto;
   background: none;
   display: none;
 
@@ -64,11 +63,12 @@ const DropdownBody = styled.div`
     justify-content: flex-start;
     align-items: left;
   }
-`
+`;
 
-const Placeholder = styled.span`
+const DropdownLink = styled(scrollLink)`
   height: auto;
-  width: 100%;
+  width: 16vw;
+  padding: 0 0 0 2vw;
   background: rgba(0, 0, 0, 0.9);
   clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
   padding: 1.2vh 0 1.2vh 2vw;
@@ -82,6 +82,31 @@ const Placeholder = styled.span`
 
 const DropdownMenu = ({ title }) => {
   
+  const RenderLinks = (projectData) => {
+    return (  
+      projectData.map((project, index) => {
+
+        const {
+          title,
+          key
+        } = project;
+
+        return (
+          <DropdownLink
+            key={`${key}-navlink`}
+            activeClass="active"
+            to={`project${index}`}
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            {title}
+          </DropdownLink>
+        )
+      })
+    )
+  };
 
   return (
     <DropdownContainer>
@@ -92,7 +117,7 @@ const DropdownMenu = ({ title }) => {
         <IconContext.Provider 
           value={{ 
             color: "#FFFFFF", 
-            size: "1.2em"
+            size: "1.4em"
           }}
         >
           <Caret />
@@ -100,10 +125,7 @@ const DropdownMenu = ({ title }) => {
       </DropdownHeader> 
 
       <DropdownBody>
-        <Placeholder>Link A</Placeholder>
-        <Placeholder>Link B</Placeholder>
-        <Placeholder>Link C</Placeholder>
-        <Placeholder>Link D</Placeholder>
+        {RenderLinks(projectData)}
       </DropdownBody>
 
     </DropdownContainer>
