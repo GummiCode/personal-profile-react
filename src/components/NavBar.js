@@ -5,7 +5,7 @@ import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from './FullWidthContainer';
 import NavLinkRenderer from "./NavLinkRenderer";
 
-import NavLinkRenderer2 from "./NavLinkRenderer2";
+import DropdownMenu from "./DropdownMenu";
 
 
 const NavBarContainer = styled(FullWidthContainer)`
@@ -132,7 +132,9 @@ const NavBar = () => {
             Experience/Technologies
           </NavItem>
 
-          <NavLinkRenderer/>
+          <DropdownMenu
+           title="Projects"
+          />
 
           <NavItem
             activeClass="active"
@@ -145,39 +147,38 @@ const NavBar = () => {
             Contact
           </NavItem>
 
-          <NavLinkRenderer2 />
         </NavList>
 
-        </SideSection>
+      </SideSection>
 
-        <SideSection>
+      <SideSection>
         <LinkContainer
             data-testid="nav-email-link"
             href="mailto:gummicodeblog@gmail.com" 
             target="_blank" 
             rel="noopener noreferrer"
           >       
-            <EmailIcon />
-          </LinkContainer>
+          <EmailIcon />
+        </LinkContainer>
 
-          <LinkContainer
-            data-testid="nav-github-link"
-            href="https://github.com/gummicode" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >       
-            <GithubIcon />
-          </LinkContainer>
+        <LinkContainer
+          data-testid="nav-github-link"
+          href="https://github.com/gummicode" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >       
+          <GithubIcon />
+        </LinkContainer>
 
-          <LinkContainer
-            data-testid="nav-linkedin-link"
-            href="https://www.linkedin.com/in/david-arrowsmith/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >       
-            <LinkedinIcon />
-          </LinkContainer>
-        </SideSection>
+        <LinkContainer
+          data-testid="nav-linkedin-link"
+          href="https://www.linkedin.com/in/david-arrowsmith/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >       
+          <LinkedinIcon />
+        </LinkContainer>
+      </SideSection>
 
     </NavBarContainer>
   )

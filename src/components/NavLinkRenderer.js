@@ -38,6 +38,7 @@ const DropdownTitle = styled(Dropdown.Toggle)`
   &:hover {
       color: #FFD2AE;
       transition: 0.2s;
+
     };
 
   &:hover ${Caret} {

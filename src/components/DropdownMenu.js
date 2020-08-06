@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { FaCaretDown } from 'react-icons/fa';
@@ -18,14 +18,6 @@ const DropdownContainer = styled.div`
   align-items: left;
 `
 
-const DropdownHeader = styled.div`
-  height:  60px;
-  background: rgba(100, 0, 0, 1);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-`
 
 const DropdownTitle= styled.span`
  margin: 0 2% 0 0;
@@ -35,14 +27,44 @@ const DropdownTitle= styled.span`
 const Caret = styled(FaCaretDown)`
 `;
 
+const DropdownHeader = styled.button`
+  height:  60px;
+  border: none;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  font-size: 1em;
+  background: rgba(100, 0, 0, 1);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:hover ${DropdownTitle} {
+      color: #FFD2AE;
+      transition: 0.2s;
+    };
+
+  &:hover ${Caret} {
+      fill: #FFD2AE;
+      transition: 0.2s;
+  };
+  &:focus {
+    outline: none;
+  };
+`
+
 const DropdownBody = styled.div`
-  height: auto%;
+
+  height: auto;
   width: 13.5vw;
   background: rgba(0, 150, 0, 1);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: left;
+  display: none;
+
+  ${DropdownContainer}:hover & {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: left;
+  }
 `
 
 const Placeholder = styled.span`
@@ -51,26 +73,21 @@ const Placeholder = styled.span`
   background: rgba(150, 150, 0, 1);
   padding: 1.2vh 0 1.2vh 2vw;
   margin: .75vh 0 0 0;
+
+  &:hover {
+      color: #FFD2AE;
+      transition: 0.2s;
+    };
 `;
 
-const NavLinkRenderer2 = () => {
+const DropdownMenu = ({ title }) => {
   
-  const [expand, setExpand] = useState (false);
-
-  const handleClickOutside = () => {
-    setExpand(false)
-  };
-
-  const toggleExpand = () => {
-    setExpand(!expand)
-  };
 
   return (
     <DropdownContainer>
-
       <DropdownHeader>
         <DropdownTitle>
-          Projects
+          {title}
         </DropdownTitle>
         <IconContext.Provider 
           value={{ 
@@ -93,4 +110,4 @@ const NavLinkRenderer2 = () => {
   )
 };
 
-export default NavLinkRenderer2;
+export default DropdownMenu;
