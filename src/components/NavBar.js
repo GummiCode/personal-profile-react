@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
@@ -177,9 +176,5 @@ const NavBar = () => {
     </NavBarContainer>
   )
 };
-
-NavBar.propTypes = {
-  projectData: PropTypes.object
-}
 
 export default NavBar;
