@@ -14,7 +14,7 @@ const MenuLink = styled(scrollLink)`
   transition: color 0.3s linear;
 
   &:hover {
-    color: #ffd2ae;
+    color: #ffd400;
     transition: 0.2s;
   }
 `;

@@ -6,9 +6,9 @@ import FullWidthContainer from "./FullWidthContainer";
 import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
 const ContactContainer = styled(FullWidthContainer)`
-  height: calc(100vh - 60px - 80px);
-  width: calc(100vw - 80px);
-  padding: 80px 0 0 80px;
+  height: 74vh;
+  width: 86vw;
+  padding: 8vh 7vw;
   background-color: #ffffff;
   flex-flow: column nowrap;
   justify-content: start;
@@ -16,29 +16,39 @@ const ContactContainer = styled(FullWidthContainer)`
 
 const Name = styled.h1`
   margin: 0 0 3vh 0;
-  font-size: 2.6em;
+  font-size: 1.5em;
 `;
 
 const Title = styled.h2`
   margin: 0 0 6vh 0;
-  font-size: 2em;
+  font-size: 1.2em;
 `;
 
 const LinkContainer = styled.a`
   height: 8vh;
-  width: 35vw;
-  border-radius: 50px;
+  width: 100%;
   margin: 0 0 3vh 0;
   text-decoration: none;
-  background: #ffffff;
+  background: #f2f2f2;
+  border-radius: 50px;
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 
-  &:hover {
-    background: #f2f2f2;
+  &:active {
+    background: #AFFC41;
+
     transition: 0.5s;
+  }
+
+  span {
+    margin: 0 0 0 3%;
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
   }
 `;
 
@@ -49,31 +59,25 @@ const LinkedinContainer = styled(LinkContainer)`
 const EmailIcon = styled(FaAt)`
   margin: 0 0 0 1%;
   fill: #000000;
-  height: 89%;
+  height: 95%;
   width: auto;
 `;
 
 const LinkedinIcon = styled(FaLinkedin)`
   margin: 0 0 0 1%;
   fill: #000000;
-  height: 89%;
+  height: 95%;
   width: auto;
 `;
 
 const GithubIcon = styled(FaGithub)`
   margin: 0 0 0 1%;
   fill: #000000;
-  height: 89%;
+  height: 95%;
   width: auto;
 `;
 
-const LinkText = styled.span`
-  margin: 0 0 0 3%;
-  font-size: 2em;
-  font-weight: bold;
-  font-style: italic;
-  color: #000000;
-`;
+
 
 const Contact = ({ lastSection }) => {
   return (
@@ -89,7 +93,7 @@ const Contact = ({ lastSection }) => {
         rel="noopener noreferrer"
       >
         <EmailIcon />
-        <LinkText>Email: dtarrowsmith@gmail.com</LinkText>
+        <span>wemakearrows@gmail.com</span>
       </LinkContainer>
 
       <LinkedinContainer
@@ -99,7 +103,7 @@ const Contact = ({ lastSection }) => {
         rel="noopener noreferrer"
       >
         <LinkedinIcon />
-        <LinkText>Linkedin: david-arrowsmith</LinkText>
+        <span>david-arrowsmith</span>
       </LinkedinContainer>
 
       <LinkContainer
@@ -109,7 +113,7 @@ const Contact = ({ lastSection }) => {
         rel="noopener noreferrer"
       >
         <GithubIcon />
-        <LinkText>GitHub: GummiCode</LinkText>
+        <span>GummiCode</span>
       </LinkContainer>
 
       <SectionArrowUp lastSectionId={lastSection} />

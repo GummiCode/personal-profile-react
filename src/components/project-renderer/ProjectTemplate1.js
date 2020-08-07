@@ -25,7 +25,6 @@ const IconContainer = styled.div`
   min-width: 7.5vh;
 `;
 
-
 const ContentContainer = styled.div`
   height: 75vh;
   width: 100%;
@@ -83,7 +82,6 @@ const ExtLink = styled.a`
   justify-content: center;
   align-items: center;
   opacity: 1;
-
 `;
 
 const Github = styled(FaGithub)`
@@ -93,7 +91,7 @@ const Github = styled(FaGithub)`
   fill: #000000;
 
   ${ExtLink}:active & {
-    fill: #FE4A49;
+    fill: #fe4a49;
     transition: 0.5s;
   }
 `;
@@ -104,8 +102,8 @@ const WebApp = styled(FaGlobe)`
   border-radius: 4vh;
   fill: #000000;
 
-  ${ExtLink}:active & { 
-    fill: #2AB7CA;
+  ${ExtLink}:active & {
+    fill: #2ab7ca;
     transition: 0.5s;
   }
 `;
@@ -141,34 +139,26 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
       id={projectId}
       backgroundColor={backgroundColor}
     >
-      <ContentContainer >
-      <IconContainer>  
-      <Icon size="7.5vh" color={featureTextColor} />
-      </IconContainer>
-      <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
+      <ContentContainer>
+        <IconContainer>
+          <Icon size="7.5vh" color={featureTextColor} />
+        </IconContainer>
+        <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
 
-      <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
-      <ImageContainer image={image}>
+        <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
+        <ImageContainer image={image}>
           <div>
-            <ExtLink
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <ExtLink href={url} target="_blank" rel="noopener noreferrer">
               <Github />
             </ExtLink>
           </div>
           <div>
-            <ExtLink
-                href={gitHub}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <ExtLink href={gitHub} target="_blank" rel="noopener noreferrer">
               <WebApp />
             </ExtLink>
           </div>
-      </ImageContainer>
-      <SectionArrowDown nextSectionId={nextSection} />
+        </ImageContainer>
+        <SectionArrowDown nextSectionId={nextSection} />
       </ContentContainer>
     </ProjectContainer>
   );

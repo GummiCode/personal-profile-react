@@ -28,7 +28,7 @@ const Slice = styled.div`
   transform-origin: 1px;
 
   ${StyledBurger}:hover & {
-    background: #ffd2ae;
+    background: #ffd400;
     transition: 0.2s;
   }
 `;

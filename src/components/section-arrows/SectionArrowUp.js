@@ -7,7 +7,7 @@ import { FaCaretUp } from "react-icons/fa";
 
 const SectionArrowContainer = styled(scrollLink)`
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -18,11 +18,11 @@ const SectionArrowContainer = styled(scrollLink)`
   align-items: center;
 `;
 
-const SectionArrowUp = ({ lastSectionId }) => {
+const SectionArrowUp = () => {
   return (
     <SectionArrowContainer
       activeClass="active"
-      to={lastSectionId}
+      to="header"
       spy
       smooth
       offset={-60}
@@ -31,7 +31,7 @@ const SectionArrowUp = ({ lastSectionId }) => {
       <IconContext.Provider
         value={{
           color: "#000000",
-          size: "5em",
+          size: "4em",
         }}
       >
         <FaCaretUp />

@@ -19,7 +19,7 @@ function App() {
       <Skills lastSection="about" nextSection="projects-banner" />
       <ProjectsBanner lastSection="skills" nextSection="project0" />
       <ProjectRenderer />
-      <Contact lastSection={`project${projectData.length - 1}`} />
+      <Contact />
     </div>
   );
 }
