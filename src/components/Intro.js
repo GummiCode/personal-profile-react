@@ -6,21 +6,21 @@ import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
-const ProfileContainer = styled(FullWidthContainer)`
-  height: 27vh;
-  background-color: #c9512f;
+const IntroContainer = styled(FullWidthContainer)`
+  height: 40vh;
+  background-color: #FF5B1B;
 `;
 
 const TextContainer = styled(HalfWidthContainer)`
-  padding: 40px 0 0 40px;
-  width: calc(50% - 40px);
-  height: calc(100% - 40px);
+  padding: 2vh 5vw;
+  width: 100%;
+  height: 100%;
 `;
 
 const IntroText = styled.p`
   margin: 0;
   font-weight: bold;
-  font-size: 2.2em;
+  font-size: 1.3em;
 `;
 
 const LinksContainer = styled(HalfWidthContainer)`
@@ -73,44 +73,15 @@ const GithubIcon = styled(FaGithub)`
 
 const Intro = ({ nextSection }) => {
   return (
-    <ProfileContainer data-testid="intro">
+    <IntroContainer data-testid="intro">
       <TextContainer>
         <IntroText>Self-Trained Web Developer.</IntroText>
         <IntroText>Experienced in REACT, Full-Stack</IntroText>
         <IntroText>& Test-Driven Development.</IntroText>
       </TextContainer>
 
-      <LinksContainer>
-        <SingleLinkContainer
-          data-testid="intro-email-link"
-          href="mailto:gummicodeblog@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <EmailIcon />
-        </SingleLinkContainer>
-
-        <SingleLinkContainer
-          data-testid="intro-github-link"
-          href="https://github.com/gummicode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon />
-        </SingleLinkContainer>
-
-        <SingleLinkContainer
-          data-testid="intro-linkiedin-link"
-          href="https://www.linkedin.com/in/david-arrowsmith/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon />
-        </SingleLinkContainer>
-      </LinksContainer>
-
       <SectionArrowDown nextSectionId={nextSection} />
-    </ProfileContainer>
+    </IntroContainer>
   );
 };
 

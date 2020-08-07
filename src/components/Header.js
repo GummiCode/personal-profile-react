@@ -4,33 +4,36 @@ import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
 
 const HeaderImageContainer = styled(FullWidthContainer)`
-  height: 65vh;
+  height: 50vh;
   width: 100vw;
+  margin: 10vh 0 0 0;
   background-image: url("./images/profile-picture.jpg");
-  background-position: -20% 10%;
+  background-position: -48% 5%;
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: 82% auto;
+  flex-flow: column nowrap;
 `;
 
 const HeaderText = styled(HalfWidthContainer)`
-  height: 100%;
-  width: 60vw;
+  height: 40vh;
+  width: 100vw;
   flex-flow: column nowrap;
   justify-content: flex-end;
+  align-items: flex-end;
   background: rgba(10, 10, 10, 0.3);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 `;
 
 const HeaderName = styled.h1`
-  font-size: 5em;
-  color: #ffd9b4;
-  margin: 0 0 0 8vw;
+  font-size: 1.5em;
+  color: #ffffff;
+  margin: 0 3vw;
 `;
 
 const HeaderTitle = styled.h2`
-  font-size: 4.2em;
-  color: #c9512f;
-  margin: 0 0 4vh 8vw;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  margin: 0 3vw 4vh 0;
 `;
 
 const Header = () => {

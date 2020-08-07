@@ -9,7 +9,7 @@ const NavBarContainer = styled(FullWidthContainer)`
   top: 0;
   left: 0;
   height: 10vh;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #000000;
   justify-content: space-between;
   align-items: center;
