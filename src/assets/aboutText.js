@@ -1,9 +1,8 @@
-export default `I'm a **Manchester-based Junior Developer**.
+export default `I'm a Manchester-based **Junior Web Developer**. I'm seeking my first **Full-Time Position** in the industry.
 
-I'm seeking my first **Full-Time Position** as a **Junior Full-Stack Web Developer**.
+I work with **React**, **Express**, **MySQL**, **Heroku**, **React Testing Library** and other technologies. I've trained using the most current resources to ensure my skills are suitable for cutting-edge development work.
 
-I've worked with **React**, **Express**, **MySQL**, **Heroku**, **React Testing Library** and other current technologies.
+I come from a [solid] career as a Senior R&D Chemist. My executive skills are well-developed and include project management, [customer interaction], [troubleshooting] and [collab?].
+`
 
-I've undertaken **Intensive Self-Training** using **Contemporary Resources** to ensure relevance of skills.
-
-I come from a career in **Chemical Research and Development**.I posess strong executive skills including **Project Management**, **Troubleshooting**, **Independant Learning** and **Collaborative Working**.`;
+;

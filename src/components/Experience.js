@@ -2,48 +2,49 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
-import { FaCompass as ExpIcon, FaCode as TechIcon } from "react-icons/fa";
+import { FaCode as SkillsIcon } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
-import SectionArrowUp from "./section-arrows/SectionArrowUp";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import techList from "../assets/techList";
 import expText from "../assets/expText";
 
 const SkillsContainer = styled(FullWidthContainer)`
+  height: 83vh;
+  width: 84vw;
+  padding: 4.5vh 8vw;
+  position: relative;
   background-color: #dad9de;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
 `;
 
 const ExpContainer = styled(HalfWidthContainer)`
-  width: calc(50% - 40px);
-  padding: 0 0 0 40px;
+  width: 100%;
+  height: auto;
 `;
 
 const TechContainer = styled(HalfWidthContainer)`
-  width: calc(50% - 40px);
-  padding: 0 40px 0 0;
+  width: 100%;
+  height: auto;
 `;
 
 const TitleText = styled.h1`
-  font-size: 4em;
-  margin: 50px 0 0 0;
+  margin: 0;
+  font-size: 2.8em;
 `;
 
-const StyledExpIcon = styled(ExpIcon)`
+const StyledSkillsIcon = styled(SkillsIcon)`
   height: 0.8em;
   width: auto;
-  margin: 0 1vw 0 2vw;
-`;
-
-const StyledTechIcon = styled(TechIcon)`
-  height: 0.8em;
-  width: auto;
-  margin: 0 1vw 0 0;
+  margin: 0 5vw 0 2vw;
 `;
 
 const StyledMD = styled(ReactMarkdown)`
-  margin: 0 0 0 40px;
-  font-size: 2em;
+  margin: 0 0 0 2vw;
+  font-size: 1em;
 `;
 
 const TechBlockContainer = styled.div`
@@ -65,7 +66,7 @@ const TechBlock = styled.span`
   border-radius: 4px;
 `;
 
-const Experience = ({ lastSection, nextSection }) => {
+const Experience = ({ nextSection }) => {
   const displayTechnologies = (technologies) => {
     const sortedTech = technologies.sort();
     return sortedTech.map((tech) => {
@@ -77,28 +78,22 @@ const Experience = ({ lastSection, nextSection }) => {
     <SkillsContainer data-testid="experience" id="experience">
       <ExpContainer>
         <TitleText>
-          <StyledExpIcon />
-          Experience
+          <StyledSkillsIcon />
+          Skills
         </TitleText>
         <StyledMD source={expText} />
       </ExpContainer>
 
       <TechContainer>
-        <TitleText>
-          <StyledTechIcon />
-          Technologies
-        </TitleText>
         <TechBlockContainer>{displayTechnologies(techList)}</TechBlockContainer>
       </TechContainer>
 
-      <SectionArrowUp lastSectionId={lastSection} />
       <SectionArrowDown nextSectionId={nextSection} />
     </SkillsContainer>
   );
 };
 
 Experience.propTypes = {
-  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 

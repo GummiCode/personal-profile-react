@@ -6,19 +6,20 @@ import { BsPersonBoundingBox as AboutIcon } from "react-icons/bs";
 import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
-import SectionArrowUp from "./section-arrows/SectionArrowUp";
 import aboutText from "../assets/aboutText";
 
 const AboutContainer = styled(FullWidthContainer)`
-  background-color: #e5b168;
+  height: 83vh;
+  width: 84vw;
+  padding: 4.5vh 8vw;
+  position: relative;
+  background-color: #ff5d73;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
-const LeftAboutContainer = styled(HalfWidthContainer)`
-  width: calc(50% - 40px);
-  padding: 0 0 0 40px;
-`;
-
-const RightSideImage = styled(HalfWidthContainer)`
+const BackgroundImage = styled(HalfWidthContainer)`
   position: absolute;
   right: 0;
   width: 40vw;
@@ -28,52 +29,37 @@ const RightSideImage = styled(HalfWidthContainer)`
   z-index: 7;
 `;
 
-const RightSideScreen = styled(HalfWidthContainer)`
-  position: absolute;
-  right: 0;
-  width: 40vw;
-  background: rgba(10, 10, 10, 0.3);
-  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 8;
-`;
-
 const TitleText = styled.h1`
-  font-size: 4em;
-  color: #000000;
-  margin: 50px 0 0 0;
+  margin: 0;
+  font-size: 2.8em;
 `;
 
 const StyledAboutIcon = styled(AboutIcon)`
   height: 0.8em;
   width: auto;
-  margin: 0 1vw 0 2vw;
+  margin: 0 5vw 0 2vw;
 `;
 
 const StyledMD = styled(ReactMarkdown)`
-  margin: 0 0 0 40px;
-  font-size: 2em;
+  margin: 0 0 0 2vw;
+  font-size: 1em;
 `;
 
-const About = ({ lastSection, nextSection }) => {
+const About = ({ nextSection }) => {
   return (
     <AboutContainer data-testid="about" id="about">
-      <LeftAboutContainer>
-        <TitleText>
-          <StyledAboutIcon />
-          About
-        </TitleText>
-        <StyledMD source={aboutText} />
-      </LeftAboutContainer>
-      <RightSideImage />
-      <RightSideScreen />
-      <SectionArrowUp lastSectionId={lastSection} />
-      <SectionArrowDown nextSectionId={nextSection} />
+      <TitleText>
+        <StyledAboutIcon />
+        About
+      </TitleText>
+      <StyledMD source={aboutText} />
+      <SectionArrowDown
+      nextSectionId={nextSection} />
     </AboutContainer>
   );
 };
 
 About.propTypes = {
-  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 
