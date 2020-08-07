@@ -4,7 +4,7 @@ const projectData = [
   {
     title: "SpaceFrens",
     key: "SpaceFrens",
-    summary: "API call with animated display",
+    summary: "API call with animated display.",
     aspects: [
       "Scripted API calls to fetch live data on people currently in space",
       "Produced an application to display this information in a cute way",
@@ -34,7 +34,7 @@ const projectData = [
     url: "https://queerfamilytea.com/#/",
     image: "./images/qft-demo.png",
     featureTextColor: "#171226",
-    backgroundColor: "rgba(255, 93, 115)",
+    backgroundColor: "#EAB39F",
     Icon: FaTransgenderAlt,
   },
 ];

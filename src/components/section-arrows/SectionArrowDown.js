@@ -31,7 +31,7 @@ const SectionArrowDown = ({ nextSectionId }) => {
       <IconContext.Provider
         value={{
           color: "#000000",
-          size: "5em",
+          size: "4em",
         }}
       >
         <FaCaretDown />
