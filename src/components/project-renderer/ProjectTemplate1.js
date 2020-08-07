@@ -148,12 +148,12 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
         <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
         <ImageContainer image={image}>
           <div>
-            <ExtLink href={url} target="_blank" rel="noopener noreferrer">
+            <ExtLink href={gitHub} target="_blank" rel="noopener noreferrer">
               <Github />
             </ExtLink>
           </div>
           <div>
-            <ExtLink href={gitHub} target="_blank" rel="noopener noreferrer">
+            <ExtLink href={url} target="_blank" rel="noopener noreferrer">
               <WebApp />
             </ExtLink>
           </div>

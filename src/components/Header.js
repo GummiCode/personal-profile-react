@@ -8,14 +8,15 @@ const HeaderImageContainer = styled(FullWidthContainer)`
   width: 100vw;
   margin: 10vh 0 0 0;
   background-image: url("./images/profile-picture.jpg");
-  background-position: -160% 8%;
+  background-position: -15vw 10vh;
   background-attachment: fixed;
-  background-size: 95% auto;
+  background-size: auto 50%;
   flex-flow: column nowrap;
+  justify-content: flex-end;
 `;
 
 const HeaderText = styled(HalfWidthContainer)`
-  height: 40vh;
+  height: 25vh;
   width: 100vw;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -32,14 +33,13 @@ const HeaderName = styled.h1`
 
 const HeaderTitle = styled.h2`
   font-size: 1.5em;
-  color: #FFFFFF;
+  color: #ffd400;
   margin: 0 3vw 4vh 0;
 `;
 
 const Header = () => {
   return (
     <HeaderImageContainer data-testid="header" id="header">
-      <HalfWidthContainer />
       <HeaderText>
         <HeaderName> DAVID ARROWSMITH</HeaderName>
         <HeaderTitle>JUNIOR DEVELOPER</HeaderTitle>

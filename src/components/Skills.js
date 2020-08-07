@@ -50,7 +50,6 @@ const TechBlockContainer = styled.div`
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    overflow: scroll;
   }
 `;
 
