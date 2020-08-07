@@ -40,7 +40,7 @@ const EmailIcon = styled(FaAt)`
   height: 100%;
 
   &:hover {
-    fill: #FF5B1B;
+    fill: #ff5b1b;
     transition: 0.5s;
   }
 `;
@@ -51,7 +51,7 @@ const GithubIcon = styled(FaGithub)`
   height: 100%;
 
   &:hover {
-    fill: #AFFC41;
+    fill: #affc41;
     transition: 0.5s;
   }
 `;
@@ -62,7 +62,7 @@ const LinkedinIcon = styled(FaLinkedin)`
   height: 100%;
 
   &:hover {
-    fill: #2AB7CA;
+    fill: #2ab7ca;
     transition: 0.5s;
   }
 `;
@@ -71,7 +71,6 @@ const NavBar = () => {
   return (
     <NavBarContainer data-testid="nav-bar">
       <BurgerMenu />
-
       <LinksContainer>
         <a
           data-testid="nav-email-link"
@@ -81,7 +80,6 @@ const NavBar = () => {
         >
           <EmailIcon />
         </a>
-
         <a
           data-testid="nav-github-link"
           href="https://github.com/gummicode"
@@ -90,7 +88,6 @@ const NavBar = () => {
         >
           <GithubIcon />
         </a>
-
         <a
           data-testid="nav-linkedin-link"
           href="https://www.linkedin.com/in/david-arrowsmith/"
