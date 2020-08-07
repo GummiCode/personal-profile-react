@@ -164,7 +164,7 @@ ProjectTemplate2.propTypes = {
     title: PropTypes.string.isRequired,
     key: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
-    aspects: PropTypes.array.isRequired,
+    aspects: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     gitHub: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
