@@ -31,7 +31,7 @@ const LinksContainer = styled.div`
     width: 5vh;
     border-radius: 50%;
     margin: 0 0 0 8vw;
-
+  }
 `;
 
 const EmailIcon = styled(FaAt)`
