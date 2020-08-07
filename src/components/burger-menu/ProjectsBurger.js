@@ -6,19 +6,19 @@ const ProjectsButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 4vh 0;
 
   &:focus {
     outline: none;
   }
 
   span {
-    font-size: 2rem;
+
+    font-size: 1.1em;
     text-transform: uppercase;
-    padding: 2rem 0;
     font-weight: bold;
     color: #ffffff;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.25em;
     text-decoration: none;
     transition: color 0.3s linear;
   }

@@ -4,7 +4,7 @@ import { Link as scrollLink } from "react-scroll";
 import projectData from "../../assets/projectData";
 
 const MenuLink = styled(scrollLink)`
-  font-size: 2rem;
+  font-size: 1rem;
   text-transform: uppercase;
   padding: 2rem 0;
   font-weight: bold;
