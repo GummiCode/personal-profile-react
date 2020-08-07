@@ -1,8 +1,10 @@
+import { FaUserAstronaut, FaTransgenderAlt  } from "react-icons/fa";
+
 const projectData = [
   {
     title: "SpaceFrens",
     key: "SpaceFrens",
-    summary: "Graphical representation of API data",
+    summary: "API call with animated display",
     aspects: [
       "Scripted API calls to fetch live data on people currently in space",
       "Produced an application to display this information in a cute way",
@@ -12,15 +14,16 @@ const projectData = [
     ],
     gitHub: "https://github.com/GummiCode/spacefrens",
     url: "https://spacefrens.herokuapp.com/",
-    image: "./images/spacefrens-demo.png",
-    featureTextColor: "#FFFFFF",
-    backgroundColor: "#687697",
+    image: "./images/spacefrens-demo.jpg",
+    featureTextColor: "#272635",
+    backgroundColor: "#E8E9F3",
+    Icon: FaUserAstronaut,
   },
 
   {
     title: "Queer Family Tea",
     key: "QFT",
-    summary: "Social Event News & Information Site",
+    summary: "Event blog with procedurally generated content",
     aspects: [
       "Collaborative project to create a new site for a weekly social event",
       "Created using React with styled-components",
@@ -31,7 +34,8 @@ const projectData = [
     url: "https://queerfamilytea.com/#/",
     image: "./images/qft-demo.png",
     featureTextColor: "#171226",
-    backgroundColor: "#EAB39F",
+    backgroundColor: "rgba(255, 93, 115)",
+    Icon: FaTransgenderAlt,
   },
 ];
 

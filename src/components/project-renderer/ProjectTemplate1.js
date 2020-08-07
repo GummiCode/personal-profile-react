@@ -4,51 +4,47 @@ import styled from "styled-components";
 import { IconContext } from "react-icons";
 import { FaGlobe, FaGithub } from "react-icons/fa";
 
+import Banner from "./Banner";
 import FullWidthContainer from "../FullWidthContainer";
-import HalfWidthContainer from "../HalfWidthContainer";
-import SectionArrowUp from "../section-arrows/SectionArrowUp";
 import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled(FullWidthContainer)`
+  height: 83vh;
+  width: 84vw;
+  padding: 4.5vh 8vw;
   background-color: ${(props) => props.backgroundColor};
-`;
-
-const LeftProjectContainer = styled(HalfWidthContainer)`
-  position: relative;
-  width: calc(55% - 40px);
-  padding: 0 0 0 40px;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
 const TitleText = styled.h1`
-  font-size: 4em;
+  font-size: 1.5em;
+  text-transform: uppercase;
   color: ${(props) => props.featureTextColor};
-  margin: 40px 0 0 0;
+  margin: 2vh 0 0 0;
 `;
 
 const SummaryText = styled.h2`
-  font-size: 2.6em;
+  width: 75vw;
+  font-size: 1em;
   color: ${(props) => props.featureTextColor};
-  margin: 20px 0 0 0;
+  margin: 1vh 0 2vh 0;
+  text-align: center;
 `;
 
-const SectionText = styled.ul`
-  font-size: 2em;
-`;
+// Insert a banner here composed of two long thin rounded divs and a FA astronaut. Think about how to pass that in! React Font Awesome Props
 
-const Item = styled.li`
-  margin: 0 0 4vh 0;
-`;
-
-const RightProjectContainer = styled.div`
-  width: 45%;
-  height: 100%;
-  background-attachment: fixed;
-  background-color: rgba(10, 10, 10, 0.3);
+const ImageContainer = styled.div`
+  height: 50vh;
+  width: 75vw;
   background-image: url(${(props) => props.image});
-  background-position: top 60px right 0px;
-  background-size: contain;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  background-size: cover;
+  border-radius: 4px;
+  box-shadow: 3px 3px 3px 3px rgba(80, 40, 60, 0.2);
 `;
+
+/*
 
 const LinkBanner = styled.div`
   position: absolute;
@@ -90,71 +86,44 @@ const StyledFaGlobe = styled(FaGlobe)`
   }
 `;
 
-const ProjectTemplate1 = ({
-  projectData,
-  projectId,
-  lastSection,
-  nextSection,
-}) => {
+*/
+
+const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
   const {
     title,
     summary,
-    aspects,
     gitHub,
     url,
     image,
     featureTextColor,
     backgroundColor,
+    Icon,
   } = projectData;
 
+  /*
   const mapAspects = () => {
     return aspects.map((aspect) => {
       return <Item key={aspect}>{aspect}</Item>;
     });
   };
-
+*/
   return (
     <ProjectContainer
       data-testid={projectId}
       id={projectId}
       backgroundColor={backgroundColor}
     >
-      <LeftProjectContainer>
-        <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
-        <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
-        <SectionText>{mapAspects(aspects)}</SectionText>
+            <Icon 
+             size="7.5vh"
+             color={featureTextColor}
+            />
 
-        <LinkBanner>
-          <LinkBannerText>VIEW PROJECT:</LinkBannerText>
-          <LinkBannerLink
-            href={gitHub}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <IconContext.Provider
-              value={{
-                color: "#000000",
-                size: "100%",
-              }}
-            >
-              <StyledFaGithub />
-            </IconContext.Provider>
-          </LinkBannerLink>
-          <LinkBannerLink href={url} target="_blank" rel="noopener noreferrer">
-            <IconContext.Provider
-              value={{
-                color: "#000000",
-                size: "100%",
-              }}
-            >
-              <StyledFaGlobe />
-            </IconContext.Provider>
-          </LinkBannerLink>
-        </LinkBanner>
-      </LeftProjectContainer>
+      <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
 
-      <RightProjectContainer image={image} />
-      <SectionArrowUp lastSectionId={lastSection} />
+
+
+      <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
+      <ImageContainer image={image} />
       <SectionArrowDown nextSectionId={nextSection} />
     </ProjectContainer>
   );
@@ -173,7 +142,6 @@ ProjectTemplate1.propTypes = {
     backgroundColor: PropTypes.string.isRequired,
   }).isRequired,
   projectId: PropTypes.string.isRequired,
-  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 

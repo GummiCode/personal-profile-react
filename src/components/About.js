@@ -18,6 +18,12 @@ const AboutContainer = styled(FullWidthContainer)`
   align-items: flex-start;
 `;
 
+
+const StyledAboutIcon = styled(AboutIcon)`
+  height: 0.8em;
+  width: auto;
+`;
+
 const TitleContainer = styled.div`
   width: 100%;
   height: 10vh;
@@ -26,11 +32,6 @@ const TitleContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-`;
-
-const StyledAboutIcon = styled(AboutIcon)`
-  height: 0.8em;
-  width: auto;
 `;
 
 const StyledMD = styled(ReactMarkdown)`

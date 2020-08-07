@@ -7,7 +7,7 @@ import SectionArrowUp from "./section-arrows/SectionArrowUp";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled(FullWidthContainer)`
-  height: 90vh;
+  height: 92vh;
   background: #ffffff;
   flex-flow: column;
   justify-content: center;
@@ -25,19 +25,17 @@ const StyledProjectsIcon = styled(ProjectsIcon)`
   margin: 0 1vw 0 2vw;
 `;
 
-const ProjectsBanner = ({ lastSection, nextSection }) => {
+const ProjectsBanner = ({ nextSection }) => {
   return (
     <ProjectsContainer data-testid="projects-banner" id="projects-banner">
       <StyledProjectsIcon />
       <ProjectsHeading>Projects</ProjectsHeading>
-      <SectionArrowUp lastSectionId={lastSection} />
       <SectionArrowDown nextSectionId={nextSection} />
     </ProjectsContainer>
   );
 };
 
 ProjectsBanner.propTypes = {
-  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 

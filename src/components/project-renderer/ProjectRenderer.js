@@ -22,19 +22,8 @@ const ProjectRenderer = () => {
     const max = projectData.length;
 
     return projectData.map((project, index) => {
-      if (index % 2 === 0) {
-        return (
-          <ProjectTemplate1
-            key={`${project.key}-render`}
-            projectData={project}
-            projectId={`project${index}`}
-            lastSection={determineLast(index)}
-            nextSection={determineNext(index, max)}
-          />
-        );
-      }
       return (
-        <ProjectTemplate2
+        <ProjectTemplate1
           key={`${project.key}-render`}
           projectData={project}
           projectId={`project${index}`}
@@ -42,7 +31,7 @@ const ProjectRenderer = () => {
           nextSection={determineNext(index, max)}
         />
       );
-    });
+    })
   };
 
   return <>{renderProjects(projectData)}</>;
