@@ -62,13 +62,13 @@ const Menu = ({ open }) => {
       </MenuLink>
       <MenuLink
         activeClass="active"
-        to="experience"
+        to="skills"
         spy
         smooth
         offset={-50}
         duration={500}
       >
-        Experience
+        Skills
       </MenuLink>
       <ProjectsBurgerMenu />
       <MenuLink

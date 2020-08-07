@@ -8,9 +8,9 @@ const HeaderImageContainer = styled(FullWidthContainer)`
   width: 100vw;
   margin: 10vh 0 0 0;
   background-image: url("./images/profile-picture.jpg");
-  background-position: -48% 5%;
+  background-position: -160% 8%;
   background-attachment: fixed;
-  background-size: 82% auto;
+  background-size: 95% auto;
   flex-flow: column nowrap;
 `;
 

@@ -7,6 +7,7 @@ import SectionArrowUp from "./section-arrows/SectionArrowUp";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled(FullWidthContainer)`
+  height: 90vh;
   background: #ffffff;
   flex-flow: column;
   justify-content: center;
@@ -14,7 +15,7 @@ const ProjectsContainer = styled(FullWidthContainer)`
 `;
 
 const ProjectsHeading = styled.h1`
-  font-size: 5em;
+  font-size: 3em;
   font-weight: bold;
 `;
 

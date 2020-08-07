@@ -12,32 +12,25 @@ const AboutContainer = styled(FullWidthContainer)`
   height: 83vh;
   width: 84vw;
   padding: 4.5vh 8vw;
-  position: relative;
-  background-color: #ff5d73;
+  background-color: rgba(255, 93, 115);
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
 `;
 
-const BackgroundImage = styled(HalfWidthContainer)`
-  position: absolute;
-  right: 0;
-  width: 40vw;
-  background-image: url("./images/about-picture.jpg");
-  background-size: auto 100%;
-  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 7;
-`;
-
-const TitleText = styled.h1`
-  margin: 0;
-  font-size: 2.8em;
+const TitleContainer = styled.div`
+  width: 100%;
+  height: 10vh;
+  font-size: 4em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 `;
 
 const StyledAboutIcon = styled(AboutIcon)`
   height: 0.8em;
   width: auto;
-  margin: 0 5vw 0 2vw;
 `;
 
 const StyledMD = styled(ReactMarkdown)`
@@ -48,13 +41,11 @@ const StyledMD = styled(ReactMarkdown)`
 const About = ({ nextSection }) => {
   return (
     <AboutContainer data-testid="about" id="about">
-      <TitleText>
+      <TitleContainer>
         <StyledAboutIcon />
-        About
-      </TitleText>
+      </TitleContainer>
       <StyledMD source={aboutText} />
-      <SectionArrowDown
-      nextSectionId={nextSection} />
+      <SectionArrowDown nextSectionId={nextSection} />
     </AboutContainer>
   );
 };
