@@ -6,10 +6,11 @@ import BurgerMenu from "./burger-menu/BurgerMenu";
 
 const NavBarContainer = styled(FullWidthContainer)`
   position: fixed;
-  top: 0px;
+  top: 0;
+  left: 0;
   height: 10vh;
-  color: white;
-  background: black;
+  color: #FFFFFF;
+  background: #000000;
   justify-content: space-between;
   align-items: center;
   z-index: 9;
@@ -17,7 +18,7 @@ const NavBarContainer = styled(FullWidthContainer)`
 
 const ExternalLinksContainer = styled.div`
   height: 100%;
-  padding: 0 30px 0 0;
+  padding: 0 5vw 0 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
@@ -27,7 +28,7 @@ const ExternalLinksContainer = styled.div`
     height: 5vh;
     width: 5vh;
     border-radius: 50%;
-    margin: 0 0 0 0.5vw;
+    margin: 0 0 0 8vw;
   }
 `;
 

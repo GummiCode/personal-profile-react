@@ -3,7 +3,7 @@ import { bool, func } from "prop-types";
 import styled from "styled-components";
 
 const StyledBurger = styled.button`
-  width: 6.5vh;
+  width: 7vh;
   height: 6vh;
   margin: 1.5vw;
   background: transparent;
