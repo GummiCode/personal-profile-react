@@ -4,24 +4,20 @@ import styled from "styled-components";
 import ProjectLinks from "./ProjectLinks";
 
 const StyledMenu = styled.nav`
-  height: 100vh;
+  position: absolute;
+  top: -10vh;
+  left: 50vw;
+  height: 60vh;
+  width: 45vw;
+  padding: 0 0 0 5vw;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
-  padding: 40px 0 0 0;
   flex-direction: column;
   justify-content: start;
-  background: rgba(0, 0, 0, 0.9);
-  text-align: left;
-  position: absolute;
-  top: 0;
-  left: 20vw;
   cursor: pointer;
-  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
+  transform: ${({ open }) => (open ? "translateY(10vh)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
-
-  span {
-    height: 100%;
-    padding: 0 30px 0 2rem;
-  }
 `;
 
 const ProjectsMenu = ({ projectsOpen }) => {
