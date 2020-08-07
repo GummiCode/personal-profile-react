@@ -5,7 +5,8 @@ import ReactMarkdown from "react-markdown";
 import { FaCompass as ExpIcon, FaCode as TechIcon } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
-import SectionArrow from "./SectionArrow";
+import SectionArrowUp from "./section-arrows/SectionArrowUp";
+import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import techList from "../assets/techList";
 import expText from "../assets/expText";
 
@@ -64,7 +65,7 @@ const TechBlock = styled.span`
   border-radius: 4px;
 `;
 
-const Experience = ({ nextSection }) => {
+const Experience = ({ lastSection, nextSection }) => {
   const displayTechnologies = (technologies) => {
     const sortedTech = technologies.sort();
     return sortedTech.map((tech) => {
@@ -90,7 +91,8 @@ const Experience = ({ nextSection }) => {
         <TechBlockContainer>{displayTechnologies(techList)}</TechBlockContainer>
       </TechContainer>
 
-      <SectionArrow nextSectionId={nextSection} />
+      <SectionArrowUp lastSectionId={lastSection} />
+      <SectionArrowDown nextSectionId={nextSection} />
     </SkillsContainer>
   );
 };

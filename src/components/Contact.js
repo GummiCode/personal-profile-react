@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
-import HomeArrow from "./HomeArrow";
+import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
 const ContactContainer = styled(FullWidthContainer)`
   height: calc(100vh - 60px - 80px);
@@ -75,7 +75,7 @@ const LinkText = styled.span`
   color: #000000;
 `;
 
-const Contact = ({ nextSection }) => {
+const Contact = ({ lastSection }) => {
   return (
     <ContactContainer data-testid="contact" id="contact">
       <Name>DAVID ARROWSMITH</Name>
@@ -112,13 +112,13 @@ const Contact = ({ nextSection }) => {
         <LinkText>GitHub: GummiCode</LinkText>
       </LinkContainer>
 
-      <HomeArrow homeSectionId={nextSection} />
+      <SectionArrowUp lastSectionId={lastSection} />
     </ContactContainer>
   );
 };
 
 Contact.propTypes = {
-  nextSection: PropTypes.string.isRequired,
+  lastSection: PropTypes.string.isRequired,
 };
 
 export default Contact;

@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
-import { FaCaretUp } from "react-icons/fa";
+import { FaCaretDown } from "react-icons/fa";
 
-const HomeArrowContainer = styled(scrollLink)`
+const SectionArrowContainer = styled(scrollLink)`
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -18,14 +18,14 @@ const HomeArrowContainer = styled(scrollLink)`
   align-items: center;
 `;
 
-const HomeArrow = ({ homeSectionId }) => {
+const SectionArrowDown = ({ nextSectionId }) => {
   return (
-    <HomeArrowContainer
+    <SectionArrowContainer
       activeClass="active"
-      to={homeSectionId}
+      to={nextSectionId}
       spy
       smooth
-      offset={-60}
+      offset={-50}
       duration={500}
     >
       <IconContext.Provider
@@ -34,14 +34,14 @@ const HomeArrow = ({ homeSectionId }) => {
           size: "5em",
         }}
       >
-        <FaCaretUp />
+        <FaCaretDown />
       </IconContext.Provider>
-    </HomeArrowContainer>
+    </SectionArrowContainer>
   );
 };
 
-HomeArrow.propTypes = {
-  homeSectionId: PropTypes.string.isRequired,
+SectionArrowDown.propTypes = {
+  nextSectionId: PropTypes.string.isRequired,
 };
 
-export default HomeArrow;
+export default SectionArrowDown;

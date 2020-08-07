@@ -6,7 +6,8 @@ import { FaGlobe, FaGithub } from "react-icons/fa";
 
 import FullWidthContainer from "../FullWidthContainer";
 import HalfWidthContainer from "../HalfWidthContainer";
-import SectionArrow from "../SectionArrow";
+import SectionArrowUp from "../section-arrows/SectionArrowUp";
+import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled(FullWidthContainer)`
   background-color: ${(props) => props.backgroundColor};
@@ -89,7 +90,7 @@ const StyledFaGlobe = styled(FaGlobe)`
   }
 `;
 
-const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
+const ProjectTemplate1 = ({ projectData, projectId, lastSection, nextSection }) => {
   const {
     title,
     summary,
@@ -148,8 +149,8 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
       </LeftProjectContainer>
 
       <RightProjectContainer image={image} />
-
-      <SectionArrow nextSectionId={nextSection} />
+      <SectionArrowUp lastSectionId={lastSection} />
+      <SectionArrowDown nextSectionId={nextSection} />
     </ProjectContainer>
   );
 };

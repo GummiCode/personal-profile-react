@@ -7,18 +7,19 @@ import Experience from "./Experience";
 import ProjectsBanner from "./ProjectsBanner";
 import ProjectRenderer from "./project-renderer/ProjectRenderer";
 import Contact from "./Contact";
+import projectData from "../assets/projectData";
 
 function App() {
   return (
     <div data-testid="app">
       <NavBar />
-      <Header nextSection="intro" />
+      <Header />
       <Intro nextSection="about" />
-      <About nextSection="experience" />
-      <Experience nextSection="projects-banner" />
-      <ProjectsBanner nextSection="project0" />
+      <About lastSection="header" nextSection="experience" />
+      <Experience lastSection="about" nextSection="projects-banner" />
+      <ProjectsBanner lastSection="experience" nextSection="project0" />
       <ProjectRenderer />
-      <Contact nextSection="header" />
+      <Contact lastSection={`project${projectData.length - 1}`} />
     </div>
   );
 }

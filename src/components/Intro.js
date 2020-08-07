@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
-import SectionArrow from "./SectionArrow";
+import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProfileContainer = styled(FullWidthContainer)`
   height: 27vh;
@@ -109,7 +109,7 @@ const Intro = ({ nextSection }) => {
         </SingleLinkContainer>
       </LinksContainer>
 
-      <SectionArrow nextSectionId={nextSection} />
+      <SectionArrowDown nextSectionId={nextSection} />
     </ProfileContainer>
   );
 };

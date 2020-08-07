@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
-import { FaCaretDown } from "react-icons/fa";
+import { FaCaretUp } from "react-icons/fa";
 
 const SectionArrowContainer = styled(scrollLink)`
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -18,14 +18,14 @@ const SectionArrowContainer = styled(scrollLink)`
   align-items: center;
 `;
 
-const SectionArrow = ({ nextSectionId }) => {
+const SectionArrowUp = ({ lastSectionId }) => {
   return (
     <SectionArrowContainer
       activeClass="active"
-      to={nextSectionId}
+      to={lastSectionId}
       spy
       smooth
-      offset={-50}
+      offset={-60}
       duration={500}
     >
       <IconContext.Provider
@@ -34,14 +34,14 @@ const SectionArrow = ({ nextSectionId }) => {
           size: "5em",
         }}
       >
-        <FaCaretDown />
+        <FaCaretUp />
       </IconContext.Provider>
     </SectionArrowContainer>
   );
 };
 
-SectionArrow.propTypes = {
-  nextSectionId: PropTypes.string.isRequired,
+SectionArrowUp.propTypes = {
+  lastSectionId: PropTypes.string.isRequired,
 };
 
-export default SectionArrow;
+export default SectionArrowUp;

@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaPencilRuler as ProjectsIcon } from "react-icons/fa";
 import FullWidthContainer from "./FullWidthContainer";
-import SectionArrow from "./SectionArrow";
+import SectionArrowUp from "./section-arrows/SectionArrowUp";
+import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled(FullWidthContainer)`
   background: #ffffff;
@@ -23,12 +24,13 @@ const StyledProjectsIcon = styled(ProjectsIcon)`
   margin: 0 1vw 0 2vw;
 `;
 
-const ProjectsBanner = ({ nextSection }) => {
+const ProjectsBanner = ({ lastSection, nextSection }) => {
   return (
     <ProjectsContainer data-testid="projects-banner" id="projects-banner">
       <StyledProjectsIcon />
       <ProjectsHeading>Projects</ProjectsHeading>
-      <SectionArrow nextSectionId={nextSection} />
+      <SectionArrowUp lastSectionId={lastSection} />
+      <SectionArrowDown nextSectionId={nextSection} />
     </ProjectsContainer>
   );
 };

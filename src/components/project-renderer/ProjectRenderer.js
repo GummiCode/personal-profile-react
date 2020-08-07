@@ -4,7 +4,14 @@ import ProjectTemplate2 from "./ProjectTemplate2";
 import projectData from "../../assets/projectData";
 
 const ProjectRenderer = () => {
-  const determineFinal = (index, max) => {
+  const determineLast = (index) => {
+    if (index === 0) {
+      return "projects-banner";
+    }
+    return `project${index - 1}`;
+  };
+
+  const determineNext = (index, max) => {
     if (index === max - 1) {
       return "contact";
     }
@@ -21,7 +28,8 @@ const ProjectRenderer = () => {
             key={`${project.key}-render`}
             projectData={project}
             projectId={`project${index}`}
-            nextSection={determineFinal(index, max)}
+            lastSection={determineLast(index)}
+            nextSection={determineNext(index, max)}
           />
         );
       }
@@ -30,7 +38,8 @@ const ProjectRenderer = () => {
           key={`${project.key}-render`}
           projectData={project}
           projectId={`project${index}`}
-          nextSection={determineFinal(index, max)}
+          lastSection={determineLast(index)}
+          nextSection={determineNext(index, max)}
         />
       );
     });

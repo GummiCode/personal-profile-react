@@ -5,7 +5,8 @@ import ReactMarkdown from "react-markdown";
 import { BsPersonBoundingBox as AboutIcon } from "react-icons/bs";
 import FullWidthContainer from "./FullWidthContainer";
 import HalfWidthContainer from "./HalfWidthContainer";
-import SectionArrow from "./SectionArrow";
+import SectionArrowDown from "./section-arrows/SectionArrowDown";
+import SectionArrowUp from "./section-arrows/SectionArrowUp";
 import aboutText from "../assets/aboutText";
 
 const AboutContainer = styled(FullWidthContainer)`
@@ -53,7 +54,7 @@ const StyledMD = styled(ReactMarkdown)`
   font-size: 2em;
 `;
 
-const About = ({ nextSection }) => {
+const About = ({ lastSection, nextSection }) => {
   return (
     <AboutContainer data-testid="about" id="about">
       <LeftAboutContainer>
@@ -65,7 +66,8 @@ const About = ({ nextSection }) => {
       </LeftAboutContainer>
       <RightSideImage />
       <RightSideScreen />
-      <SectionArrow nextSectionId={nextSection} />
+      <SectionArrowUp lastSectionId={lastSection} />
+      <SectionArrowDown nextSectionId={nextSection} />
     </AboutContainer>
   );
 };
