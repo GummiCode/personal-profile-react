@@ -13,7 +13,6 @@ const StyledBurger = styled.button`
   flex-direction: column;
   justify-content: space-around;
 
-
   &:focus {
     outline: none;
   }

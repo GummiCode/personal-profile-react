@@ -89,7 +89,12 @@ const StyledFaGlobe = styled(FaGlobe)`
   }
 `;
 
-const ProjectTemplate2 = ({ projectData, projectId, lastSection, nextSection }) => {
+const ProjectTemplate2 = ({
+  projectData,
+  projectId,
+  lastSection,
+  nextSection,
+}) => {
   const {
     title,
     summary,
