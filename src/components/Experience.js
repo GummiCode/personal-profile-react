@@ -98,6 +98,7 @@ const Experience = ({ lastSection, nextSection }) => {
 };
 
 Experience.propTypes = {
+  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 

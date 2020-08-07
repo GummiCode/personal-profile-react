@@ -73,6 +73,7 @@ const About = ({ lastSection, nextSection }) => {
 };
 
 About.propTypes = {
+  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 

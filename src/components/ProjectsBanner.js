@@ -36,6 +36,7 @@ const ProjectsBanner = ({ lastSection, nextSection }) => {
 };
 
 ProjectsBanner.propTypes = {
+  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 

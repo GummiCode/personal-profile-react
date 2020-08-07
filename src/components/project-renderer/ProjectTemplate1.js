@@ -168,6 +168,7 @@ ProjectTemplate1.propTypes = {
     backgroundColor: PropTypes.string.isRequired,
   }).isRequired,
   projectId: PropTypes.string.isRequired,
+  lastSection: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
 };
 
