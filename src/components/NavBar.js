@@ -1,22 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
-import FullWidthContainer from "./FullWidthContainer";
 import BurgerMenu from "./burger-menu/BurgerMenu";
 
-const NavBarContainer = styled(FullWidthContainer)`
+const NavBarContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   height: 10vh;
+  width: 100vw;
   color: #ffffff;
   background: #000000;
+  display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
   z-index: 9;
 `;
 
-const ExternalLinksContainer = styled.div`
+const LinksContainer = styled.div`
   height: 100%;
   padding: 0 5vw 0 0;
   display: flex;
@@ -38,7 +40,7 @@ const EmailIcon = styled(FaAt)`
   height: 100%;
 
   &:hover {
-    fill: #c9512f;
+    fill: #FF5B1B;
     transition: 0.5s;
   }
 `;
@@ -49,7 +51,7 @@ const GithubIcon = styled(FaGithub)`
   height: 100%;
 
   &:hover {
-    fill: #c9512f;
+    fill: #AFFC41;
     transition: 0.5s;
   }
 `;
@@ -60,7 +62,7 @@ const LinkedinIcon = styled(FaLinkedin)`
   height: 100%;
 
   &:hover {
-    fill: #c9512f;
+    fill: #2AB7CA;
     transition: 0.5s;
   }
 `;
@@ -70,7 +72,7 @@ const NavBar = () => {
     <NavBarContainer data-testid="nav-bar">
       <BurgerMenu />
 
-      <ExternalLinksContainer>
+      <LinksContainer>
         <a
           data-testid="nav-email-link"
           href="mailto:gummicodeblog@gmail.com"
@@ -97,7 +99,7 @@ const NavBar = () => {
         >
           <LinkedinIcon />
         </a>
-      </ExternalLinksContainer>
+      </LinksContainer>
     </NavBarContainer>
   );
 };
