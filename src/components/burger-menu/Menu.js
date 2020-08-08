@@ -1,14 +1,16 @@
 import React from "react";
 import { Link as scrollLink } from "react-scroll";
 import { bool } from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
+import breakpoints from "../../styles/breakpoints";
 import ProjectsBurgerMenu from "./ProjectsBurgerMenu";
 
 const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  height: 52vh;
+  height: 50vh;
   width: 45vw;
   padding: 0 0 0 5vw;
   text-align: left;
@@ -19,6 +21,11 @@ const StyledMenu = styled.nav`
   cursor: pointer;
   transform: ${({ open }) => (open ? "translateY(10vh)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
+
+  ${up("sm")} {
+    width: 190px;
+    padding: 0 0 0 24px;
+  }
 `;
 
 const MenuLink = styled(scrollLink)`
@@ -39,49 +46,51 @@ const MenuLink = styled(scrollLink)`
 
 const Menu = ({ open }) => {
   return (
-    <StyledMenu open={open}>
-      <MenuLink
-        activeClass="active"
-        to="header"
-        spy
-        smooth
-        offset={-60}
-        duration={500}
-      >
-        Home
-      </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="about"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        About
-      </MenuLink>
-      <MenuLink
-        activeClass="active"
-        to="skills"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        Skills
-      </MenuLink>
-      <ProjectsBurgerMenu />
-      <MenuLink
-        activeClass="active"
-        to="contact"
-        spy
-        smooth
-        offset={-50}
-        duration={500}
-      >
-        Contact
-      </MenuLink>
-    </StyledMenu>
+    <ThemeProvider theme={breakpoints}>
+      <StyledMenu open={open}>
+        <MenuLink
+          activeClass="active"
+          to="header"
+          spy
+          smooth
+          offset={-60}
+          duration={500}
+        >
+          Home
+        </MenuLink>
+        <MenuLink
+          activeClass="active"
+          to="about"
+          spy
+          smooth
+          offset={-50}
+          duration={500}
+        >
+          About
+        </MenuLink>
+        <MenuLink
+          activeClass="active"
+          to="skills"
+          spy
+          smooth
+          offset={-50}
+          duration={500}
+        >
+          Skills
+        </MenuLink>
+        <ProjectsBurgerMenu />
+        <MenuLink
+          activeClass="active"
+          to="contact"
+          spy
+          smooth
+          offset={-50}
+          duration={500}
+        >
+          Contact
+        </MenuLink>
+      </StyledMenu>
+    </ThemeProvider>
   );
 };
 

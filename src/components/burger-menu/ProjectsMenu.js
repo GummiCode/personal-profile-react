@@ -1,13 +1,15 @@
 import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import { bool } from "prop-types";
-import styled from "styled-components";
+import breakpoints from "../../styles/breakpoints";
 import ProjectLinks from "./ProjectLinks";
 
 const StyledMenu = styled.nav`
   position: absolute;
   top: -10vh;
   left: 50vw;
-  height: 52vh;
+  height: 50vh;
   width: 45vw;
   padding: 0 0 0 5vw;
   text-align: left;
@@ -18,13 +20,21 @@ const StyledMenu = styled.nav`
   cursor: pointer;
   transform: ${({ open }) => (open ? "translateY(10vh)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
+
+  ${up("sm")} {
+    left: 212.5px;
+    width: 190px;
+    padding: 0 0 0 24px;
+  }
 `;
 
 const ProjectsMenu = ({ projectsOpen }) => {
   return (
-    <StyledMenu open={projectsOpen}>
-      <ProjectLinks />
-    </StyledMenu>
+    <ThemeProvider theme={breakpoints}>
+      <StyledMenu open={projectsOpen}>
+        <ProjectLinks />
+      </StyledMenu>
+    </ThemeProvider>
   );
 };
 
