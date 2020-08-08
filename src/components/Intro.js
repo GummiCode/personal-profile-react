@@ -8,25 +8,31 @@ import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import introText from "../assets/introText";
 
 const IntroContainer = styled.div`
-  height: 40vh;
+  height: 36vh;
   width: 100vw;
+  padding: 3vh 0 0 0;
   background-color: #ff5b1b;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: start;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
 `;
 
 const TextContainer = styled.div`
-  width: auto;
-  height: auto;
-  padding: 2vh 5vw;
+  height: 80%;
+  width: 90%;
   display: flex;
   flex-flow: column nowrap;
-  align-items: left;
+  justify-content: start;
+
+  ${up("sm")} {
+    padding: 0 6vw;
+  }
+  
 `;
 
 const IntroText = styled(ReactMarkdown)`
+  width: 90%;
   margin: 0;
   padding: 0;
   font-weight: bold;
@@ -37,7 +43,7 @@ const IntroText = styled(ReactMarkdown)`
   align-items: center;
 
   ${up("sm")} {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
 `;
 

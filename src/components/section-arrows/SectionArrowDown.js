@@ -7,7 +7,7 @@ import { FaCaretDown } from "react-icons/fa";
 
 const SectionArrowContainer = styled(scrollLink)`
   position: absolute;
-  bottom: 0;
+  bottom: 1vh;
   left: 0;
   right: 0;
   margin: 0 auto;

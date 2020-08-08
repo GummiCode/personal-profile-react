@@ -16,6 +16,7 @@ const AboutContainer = styled.div`
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
+
 `;
 
 const TitleContainer = styled.div`
@@ -36,7 +37,7 @@ const StyledAboutIcon = styled(AboutIcon)`
 `;
 
 const AboutText = styled(ReactMarkdown)`
-  margin: 0 0 0 2vw;
+  margin: 2vh 0 0 2vw;
   font-size: 1em;
 `;
 

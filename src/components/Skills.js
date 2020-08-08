@@ -37,7 +37,7 @@ const StyledSkillsIcon = styled(SkillsIcon)`
 const TechBlockContainer = styled.div`
   width: 100vw;
   height: 60vh;
-  margin: 3vh 0 0 0;
+  margin: 4vh 0 0 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
