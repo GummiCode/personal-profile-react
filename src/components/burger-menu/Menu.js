@@ -8,7 +8,7 @@ const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  height: 60vh;
+  height: 52vh;
   width: 45vw;
   padding: 0 0 0 5vw;
   text-align: left;
