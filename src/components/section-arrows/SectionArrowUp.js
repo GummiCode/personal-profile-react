@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
@@ -38,10 +37,6 @@ const SectionArrowUp = () => {
       </IconContext.Provider>
     </SectionArrowContainer>
   );
-};
-
-SectionArrowUp.propTypes = {
-  lastSectionId: PropTypes.string.isRequired,
 };
 
 export default SectionArrowUp;

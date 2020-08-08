@@ -7,7 +7,6 @@ import Skills from "./Skills";
 import ProjectsBanner from "./ProjectsBanner";
 import ProjectRenderer from "./project-renderer/ProjectRenderer";
 import Contact from "./Contact";
-import projectData from "../assets/projectData";
 
 function App() {
   return (

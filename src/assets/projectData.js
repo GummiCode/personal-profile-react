@@ -1,4 +1,4 @@
-import { FaUserAstronaut, FaTransgenderAlt  } from "react-icons/fa";
+import { FaUserAstronaut, FaTransgenderAlt } from "react-icons/fa";
 
 const projectData = [
   {
