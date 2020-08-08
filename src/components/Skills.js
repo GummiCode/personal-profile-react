@@ -10,7 +10,7 @@ const SkillsContainer = styled.div`
   height: 83vh;
   width: 100vw;
   padding: 4.5vh 0;
-  background-color: #FF5B1B;
+  background-color: #ff5b1b;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -60,7 +60,7 @@ const TechBlock = styled.span`
   padding: 5px;
   margin: 5px;
   font-size: 1em;
-  background: #E6E6E6;
+  background: #e6e6e6;
   border-radius: 4px;
   box-shadow: 3px 3px 3px 3px rgba(80, 40, 60, 0.2);
 `;
