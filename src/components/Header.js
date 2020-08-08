@@ -34,7 +34,7 @@ const HeaderText = styled.div`
   ${up("sm")} {
     height: 30vh;
     clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 100%);
-    }
+  }
 
   h1 {
     font-size: 1.7em;

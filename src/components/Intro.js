@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import ReactMarkdown from "react-markdown";
+import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import introText from "../assets/introText";
 
@@ -22,6 +24,7 @@ const TextContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: left;
+
 `;
 
 const IntroText = styled(ReactMarkdown)`
@@ -33,16 +36,22 @@ const IntroText = styled(ReactMarkdown)`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+
+  ${up("sm")} {
+    font-size: 1.75em;
+  }
 `;
 
 const Intro = ({ nextSection }) => {
   return (
-    <IntroContainer data-testid="intro">
-      <TextContainer>
-        <IntroText source={introText} />
-      </TextContainer>
-      <SectionArrowDown nextSectionId={nextSection} />
-    </IntroContainer>
+    <ThemeProvider theme={breakpoints}>
+      <IntroContainer data-testid="intro">
+        <TextContainer>
+          <IntroText source={introText} />
+        </TextContainer>
+        <SectionArrowDown nextSectionId={nextSection} />
+      </IntroContainer>
+    </ThemeProvider>
   );
 };
 
