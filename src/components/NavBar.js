@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { up } from "styled-breakpoints";
-import breakpoints from "../styles/breakpoints";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
+import breakpoints from "../styles/breakpoints";
 import BurgerMenu from "./burger-menu/BurgerMenu";
 
 const NavBarContainer = styled.div`

@@ -20,6 +20,7 @@ const StyledMenu = styled.nav`
   cursor: pointer;
   transform: ${({ open }) => (open ? "translateY(10vh)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
+  z-index: 6;
 
   ${up("sm")} {
     left: 212.5px;
