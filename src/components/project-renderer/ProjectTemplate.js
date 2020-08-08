@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { IconContext } from "react-icons";
 import { FaGlobe, FaGithub } from "react-icons/fa";
-
-import Banner from "./Banner";
 import FullWidthContainer from "../FullWidthContainer";
 import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
-const ProjectContainer = styled(FullWidthContainer)`
+const ProjectContainer = styled.div`
+  position: relative;
   height: 83vh;
   width: 84vw;
   padding: 4.5vh 8vw;
   background-color: ${(props) => props.backgroundColor};
+  display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
@@ -48,8 +47,6 @@ const SummaryText = styled.h2`
   margin: 1vh 0 2vh 0;
   text-align: center;
 `;
-
-// Insert a banner here composed of two long thin rounded divs and a FA astronaut. Think about how to pass that in! React Font Awesome Props
 
 const ImageContainer = styled.div`
   height: 56vh;
@@ -108,12 +105,6 @@ const WebApp = styled(FaGlobe)`
   }
 `;
 
-/*
-
-
-
-*/
-
 const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
   const {
     title,
@@ -126,13 +117,6 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
     Icon,
   } = projectData;
 
-  /*
-  const mapAspects = () => {
-    return aspects.map((aspect) => {
-      return <Item key={aspect}>{aspect}</Item>;
-    });
-  };
-*/
   return (
     <ProjectContainer
       data-testid={projectId}
