@@ -114,7 +114,7 @@ const WebApp = styled(FaGlobe)`
 
 */
 
-const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
+const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
   const {
     title,
     summary,
@@ -164,7 +164,7 @@ const ProjectTemplate1 = ({ projectData, projectId, nextSection }) => {
   );
 };
 
-ProjectTemplate1.propTypes = {
+ProjectTemplate.propTypes = {
   projectData: PropTypes.shape({
     title: PropTypes.string.isRequired,
     key: PropTypes.string.isRequired,
@@ -180,4 +180,4 @@ ProjectTemplate1.propTypes = {
   nextSection: PropTypes.string.isRequired,
 };
 
-export default ProjectTemplate1;
+export default ProjectTemplate;

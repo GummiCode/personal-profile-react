@@ -1,6 +1,5 @@
 import React from "react";
-import ProjectTemplate1 from "./ProjectTemplate1";
-import ProjectTemplate2 from "./ProjectTemplate2";
+import ProjectTemplate from "./ProjectTemplate";
 import projectData from "../../assets/projectData";
 
 const ProjectRenderer = () => {
@@ -23,7 +22,7 @@ const ProjectRenderer = () => {
 
     return projectData.map((project, index) => {
       return (
-        <ProjectTemplate1
+        <ProjectTemplate
           key={`${project.key}-render`}
           projectData={project}
           projectId={`project${index}`}
