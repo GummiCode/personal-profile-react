@@ -18,13 +18,12 @@ const IntroContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   padding: 2vh 5vw;
   display: flex;
   flex-flow: column nowrap;
   align-items: left;
-
 `;
 
 const IntroText = styled(ReactMarkdown)`

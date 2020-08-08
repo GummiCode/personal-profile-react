@@ -29,7 +29,9 @@ const TitleContainer = styled.div`
 `;
 
 const StyledAboutIcon = styled(AboutIcon)`
-  height: 0.8em;
+  height: 10vh;
+  min-height: 0.8em;
+  max-height: 3em;
   width: auto;
 `;
 

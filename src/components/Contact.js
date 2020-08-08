@@ -36,7 +36,6 @@ const LinkContainer = styled.a`
   text-decoration: none;
   background: #f2f2f2;
   border-radius: 50px;
-
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -44,7 +43,6 @@ const LinkContainer = styled.a`
 
   &:active {
     background: #affc41;
-
     transition: 0.5s;
   }
 

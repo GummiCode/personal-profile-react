@@ -1,4 +1,1 @@
-const techAdditional = [
-  styled-breakpoints,
-
-];
+const techAdditional = [styled - breakpoints];
