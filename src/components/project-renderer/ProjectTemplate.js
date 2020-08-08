@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import { FaGlobe, FaGithub } from "react-icons/fa";
+import breakpoints from "../../styles/breakpoints";
 import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled.div`
@@ -16,6 +18,19 @@ const ProjectContainer = styled.div`
   align-items: center;
 `;
 
+const ContentContainer = styled.div`
+  height: 77vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  ${up("smmd")} {
+      height: 79vh;
+    }
+`;
+
 const IconContainer = styled.div`
   height: 7.5vh;
   min-height: 7.5vh;
@@ -23,32 +38,40 @@ const IconContainer = styled.div`
   min-width: 7.5vh;
 `;
 
-const ContentContainer = styled.div`
-  height: 75vh;
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
 const TitleText = styled.h1`
   font-size: 1.5em;
   text-transform: uppercase;
   color: ${(props) => props.featureTextColor};
   margin: 2vh 0 0 0;
+
+  ${up("sm")} {
+      font-size: 1.8em;
+    }
+
+    ${up("smmd")} {
+      font-size: 2.0em;
+    }
+
 `;
 
 const SummaryText = styled.h2`
   width: 75vw;
-  font-size: 1em;
+  font-size: 1.15em;
   color: ${(props) => props.featureTextColor};
-  margin: 1vh 0 2vh 0;
+  margin: 1vh 0 3vh 0;
   text-align: center;
+
+  ${up("sm")} {
+      font-size: 1.4em;
+    }
+
+    ${up("smmd")} {
+      font-size: 1.8em;
+    }
 `;
 
 const ImageContainer = styled.div`
-  height: 56vh;
+  height: 100%;
   width: 75vw;
   background-image: url(${(props) => props.image});
   background-size: cover;
@@ -117,33 +140,37 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
   } = projectData;
 
   return (
-    <ProjectContainer
-      data-testid={projectId}
-      id={projectId}
-      backgroundColor={backgroundColor}
-    >
-      <ContentContainer>
-        <IconContainer>
-          <Icon size="7.5vh" color={featureTextColor} />
-        </IconContainer>
-        <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
+    <ThemeProvider theme={breakpoints}>
+      <ProjectContainer
+        data-testid={projectId}
+        id={projectId}
+        backgroundColor={backgroundColor}
+      >
+        <ContentContainer>
+          <IconContainer>
+            <Icon size="7.5vh" color={featureTextColor} />
+          </IconContainer>
+          <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
 
-        <SummaryText featureTextColor={featureTextColor}>{summary}</SummaryText>
-        <ImageContainer image={image}>
-          <div>
-            <ExtLink href={gitHub} target="_blank" rel="noopener noreferrer">
-              <Github />
-            </ExtLink>
-          </div>
-          <div>
-            <ExtLink href={url} target="_blank" rel="noopener noreferrer">
-              <WebApp />
-            </ExtLink>
-          </div>
-        </ImageContainer>
-        <SectionArrowDown nextSectionId={nextSection} />
-      </ContentContainer>
-    </ProjectContainer>
+          <SummaryText featureTextColor={featureTextColor}>
+            {summary}
+          </SummaryText>
+          <ImageContainer image={image}>
+            <div>
+              <ExtLink href={gitHub} target="_blank" rel="noopener noreferrer">
+                <Github />
+              </ExtLink>
+            </div>
+            <div>
+              <ExtLink href={url} target="_blank" rel="noopener noreferrer">
+                <WebApp />
+              </ExtLink>
+            </div>
+          </ImageContainer>
+          <SectionArrowDown nextSectionId={nextSection} />
+        </ContentContainer>
+      </ProjectContainer>
+    </ThemeProvider>
   );
 };
 
