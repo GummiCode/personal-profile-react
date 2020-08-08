@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import { BsPersonBoundingBox as AboutIcon } from "react-icons/bs";
-import FullWidthContainer from "./FullWidthContainer";
-import HalfWidthContainer from "./HalfWidthContainer";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import aboutText from "../assets/aboutText";
 
-const AboutContainer = styled(FullWidthContainer)`
+const AboutContainer = styled.div`
+  position: relative;
   height: 83vh;
   width: 84vw;
   padding: 4.5vh 8vw;
   background-color: rgba(255, 93, 115);
+  display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -33,7 +33,7 @@ const StyledAboutIcon = styled(AboutIcon)`
   width: auto;
 `;
 
-const StyledMD = styled(ReactMarkdown)`
+const AboutText = styled(ReactMarkdown)`
   margin: 0 0 0 2vw;
   font-size: 1em;
 `;
@@ -44,7 +44,7 @@ const About = ({ nextSection }) => {
       <TitleContainer>
         <StyledAboutIcon />
       </TitleContainer>
-      <StyledMD source={aboutText} />
+      <AboutText source={aboutText} />
       <SectionArrowDown nextSectionId={nextSection} />
     </AboutContainer>
   );

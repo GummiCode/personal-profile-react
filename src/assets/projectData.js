@@ -23,7 +23,7 @@ const projectData = [
   {
     title: "Queer Family Tea",
     key: "QFT",
-    summary: "Event blog with procedurally generated content",
+    summary: "Event blog with procedurally generated pages.",
     aspects: [
       "Collaborative project to create a new site for a weekly social event",
       "Created using React with styled-components",
