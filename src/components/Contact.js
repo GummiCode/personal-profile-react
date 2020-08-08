@@ -83,7 +83,7 @@ const GithubIcon = styled(githubIcon)`
   width: auto;
 `;
 
-const Contact = ({ lastSection }) => {
+const Contact = () => {
   return (
     <ContactContainer data-testid="contact" id="contact">
       <Name>DAVID ARROWSMITH</Name>
@@ -120,13 +120,9 @@ const Contact = ({ lastSection }) => {
         <span>GummiCode</span>
       </LinkContainer>
 
-      <SectionArrowUp lastSectionId={lastSection} />
+      <SectionArrowUp />
     </ContactContainer>
   );
-};
-
-Contact.propTypes = {
-  lastSection: PropTypes.string.isRequired,
 };
 
 export default Contact;
