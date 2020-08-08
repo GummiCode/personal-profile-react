@@ -1,17 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
-import FullWidthContainer from "./FullWidthContainer";
+import {
+  FaGithub as githubIcon,
+  FaAt as emailIcon,
+  FaLinkedin as linkedinIcon,
+} from "react-icons/fa";
 import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
-const ContactContainer = styled(FullWidthContainer)`
+const ContactContainer = styled.div`
+  position: relative;
   height: 74vh;
   width: 86vw;
   padding: 8vh 7vw;
   background-color: #ffffff;
+  display: flex;
   flex-flow: column nowrap;
-  justify-content: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 const Name = styled.h1`
@@ -38,7 +44,7 @@ const LinkContainer = styled.a`
   align-items: center;
 
   &:active {
-    background: #AFFC41;
+    background: #affc41;
 
     transition: 0.5s;
   }
@@ -56,28 +62,26 @@ const LinkedinContainer = styled(LinkContainer)`
   border-radius: 10px 50px 50px 10px;
 `;
 
-const EmailIcon = styled(FaAt)`
+const EmailIcon = styled(emailIcon)`
   margin: 0 0 0 1%;
   fill: #000000;
   height: 95%;
   width: auto;
 `;
 
-const LinkedinIcon = styled(FaLinkedin)`
+const LinkedinIcon = styled(linkedinIcon)`
   margin: 0 0 0 1%;
   fill: #000000;
   height: 95%;
   width: auto;
 `;
 
-const GithubIcon = styled(FaGithub)`
+const GithubIcon = styled(githubIcon)`
   margin: 0 0 0 1%;
   fill: #000000;
   height: 95%;
   width: auto;
 `;
-
-
 
 const Contact = ({ lastSection }) => {
   return (
