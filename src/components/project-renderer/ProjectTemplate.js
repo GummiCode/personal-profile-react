@@ -159,6 +159,7 @@ ProjectTemplate.propTypes = {
     image: PropTypes.string.isRequired,
     featureTextColor: PropTypes.string.isRequired,
     backgroundColor: PropTypes.string.isRequired,
+    Icon: PropTypes.func.isRequired,
   }).isRequired,
   projectId: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
