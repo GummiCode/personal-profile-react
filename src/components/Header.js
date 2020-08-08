@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import FullWidthContainer from "./FullWidthContainer";
-import HalfWidthContainer from "./HalfWidthContainer";
 
-const HeaderImageContainer = styled(FullWidthContainer)`
+const HeaderImageContainer = styled.div`
   height: 50vh;
   width: 100vw;
   margin: 10vh 0 0 0;
@@ -11,13 +9,15 @@ const HeaderImageContainer = styled(FullWidthContainer)`
   background-position: -15vw 10vh;
   background-attachment: fixed;
   background-size: auto 50%;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
 `;
 
-const HeaderText = styled(HalfWidthContainer)`
+const HeaderText = styled.div`
   height: 25vh;
   width: 100vw;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: flex-end;
