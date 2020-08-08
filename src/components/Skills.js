@@ -2,15 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { FaCode as SkillsIcon } from "react-icons/fa";
-import FullWidthContainer from "./FullWidthContainer";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import techList from "../assets/techList";
 
-const SkillsContainer = styled(FullWidthContainer)`
+const SkillsContainer = styled.div`
+  position: relative;
   height: 83vh;
   width: 100vw;
   padding: 4.5vh 0;
   background-color: #FF5B1B;
+  display: flex;
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
