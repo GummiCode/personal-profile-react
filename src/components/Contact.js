@@ -32,6 +32,8 @@ const Name = styled.h1`
   ${up("smmd")} {
     font-size: 1.9em;
   }
+
+  
 `;
 
 const Title = styled.h2`
@@ -61,6 +63,18 @@ const LinkContainer = styled.a`
 
   ${up("sm")} {
     width: 366px;
+    height: 56px;
+  }
+
+  ${up("smmd")} {
+      width: 413px;
+      height: 70px;
+
+    }
+
+  ${up("md")} {
+    width: 470px;
+    height: 84px;
   }
 
   &:active {
@@ -77,6 +91,14 @@ const LinkContainer = styled.a`
 
     ${up("sm")} {
       font-size: 1.25em;
+    }
+
+    ${up("smmd")} {
+      font-size: 1.45em;
+    }
+
+    ${up("md")} {
+      font-size: 1.65em;
     }
   }
 `;

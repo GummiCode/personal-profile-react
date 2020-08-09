@@ -37,24 +37,19 @@ const HeaderText = styled.div`
   }
 
   h1 {
-    font-size: 1.7em;
+    font-size: calc(100vw / 13);
     color: #ffffff;
     margin: 0 5vw;
 
-    ${up("sm")} {
-      font-size: 2.2em;
-    }
+
   }
 
   h2 {
-    font-size: 1.7em;
+    font-size: calc(100vw / 13);
     color: #ffd400;
     margin: 0 5vw 4vh 0;
 
-    ${up("sm")} {
-      font-size: 2.2em;
-      margin: 0 5vw 3vh 0;
-    }
+
   }
 `;
 

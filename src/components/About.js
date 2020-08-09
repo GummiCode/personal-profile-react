@@ -43,12 +43,13 @@ const AboutText = styled(ReactMarkdown)`
   margin: 2vh 0 0 2vw;
   font-size: 1em;
 
+
   ${up("sm")} {
     font-size: 1.2em;
   }
 
   ${up("smmd")} {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
 `;
 
