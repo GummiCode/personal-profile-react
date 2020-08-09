@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import { up } from "styled-breakpoints";
-import breakpoints from "../styles/breakpoints";
 import { FaCode as SkillsIcon } from "react-icons/fa";
+import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import techList from "../assets/techList";
 
@@ -45,7 +45,6 @@ const TechBlockContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-
   div {
     height: auto;
     max-height: 60vh;
@@ -69,18 +68,17 @@ const TechBlock = styled.span`
   border-radius: 4px;
   box-shadow: 3px 3px 3px 3px rgba(80, 40, 60, 0.2);
 
-  
   ${up("sm")} {
-      font-size: 1.4em;
-    }
+    font-size: 1.4em;
+  }
 
-    ${up("smmd")} {
-      font-size: 1.6em;
-    }
+  ${up("smmd")} {
+    font-size: 1.6em;
+  }
 
-    ${up("md")} {
-      font-size: 1.6em;
-    }
+  ${up("md")} {
+    font-size: 1.6em;
+  }
 `;
 
 const Skills = ({ nextSection }) => {
@@ -92,15 +90,15 @@ const Skills = ({ nextSection }) => {
 
   return (
     <ThemeProvider theme={breakpoints}>
-    <SkillsContainer data-testid="skills" id="skills">
-      <TitleContainer>
-        <StyledSkillsIcon />
-      </TitleContainer>
-      <TechBlockContainer>
-        <div>{displayTechnologies(techList)}</div>
-      </TechBlockContainer>
-      <SectionArrowDown nextSectionId={nextSection} />
-    </SkillsContainer>
+      <SkillsContainer data-testid="skills" id="skills">
+        <TitleContainer>
+          <StyledSkillsIcon />
+        </TitleContainer>
+        <TechBlockContainer>
+          <div>{displayTechnologies(techList)}</div>
+        </TechBlockContainer>
+        <SectionArrowDown nextSectionId={nextSection} />
+      </SkillsContainer>
     </ThemeProvider>
   );
 };

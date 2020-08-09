@@ -28,7 +28,6 @@ const TextContainer = styled.div`
   ${up("sm")} {
     padding: 0 6vw;
   }
-  
 `;
 
 const IntroText = styled(ReactMarkdown)`

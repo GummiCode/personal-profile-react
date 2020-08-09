@@ -1,1 +1,0 @@
-const techAdditional = [styled - breakpoints];

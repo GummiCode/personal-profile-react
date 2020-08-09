@@ -27,8 +27,8 @@ const ContentContainer = styled.div`
   align-items: center;
 
   ${up("smmd")} {
-      height: 79vh;
-    }
+    height: 79vh;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -39,13 +39,11 @@ const IconContainer = styled.div`
 
   ${up("md")} {
     height: 75px;
-  min-height: 75px;
-  width: 75px;
-  min-width: 75px;
-    }
+    min-height: 75px;
+    width: 75px;
+    min-width: 75px;
+  }
 `;
-
-
 
 const TitleText = styled.h1`
   font-size: 1.5em;
@@ -54,13 +52,12 @@ const TitleText = styled.h1`
   margin: 2vh 0 0 0;
 
   ${up("sm")} {
-      font-size: 1.8em;
-    }
+    font-size: 1.8em;
+  }
 
-    ${up("smmd")} {
-      font-size: 2.0em;
-    }
-
+  ${up("smmd")} {
+    font-size: 2em;
+  }
 `;
 
 const SummaryText = styled.h2`
@@ -71,12 +68,12 @@ const SummaryText = styled.h2`
   text-align: center;
 
   ${up("sm")} {
-      font-size: 1.4em;
-    }
+    font-size: 1.4em;
+  }
 
-    ${up("smmd")} {
-      font-size: 1.8em;
-    }
+  ${up("smmd")} {
+    font-size: 1.8em;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -100,10 +97,11 @@ const ImageContainer = styled.div`
     box-shadow: 2px 2px 2px 2px rgba(80, 40, 60, 0.2);
 
     ${up("md")} {
-    height: 75px;
-    min-height: 75px;
-    width: 75px;
-    min-width: 75px;
+      height: 75px;
+      min-height: 75px;
+      width: 75px;
+      min-width: 75px;
+    }
   }
 `;
 

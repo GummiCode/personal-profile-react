@@ -39,7 +39,7 @@ const StyledAboutIcon = styled(AboutIcon)`
 `;
 
 const AboutText = styled(ReactMarkdown)`
-  width:70%
+  width: calc(100% - 2vw);
   margin: 2vh 0 0 2vw;
   font-size: 1em;
 
@@ -50,8 +50,6 @@ const AboutText = styled(ReactMarkdown)`
   ${up("smmd")} {
     font-size: 1.4em;
   }
-
-
 `;
 
 const About = ({ nextSection }) => {
