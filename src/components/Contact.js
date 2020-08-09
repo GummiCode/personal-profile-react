@@ -1,10 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import {
   FaGithub as githubIcon,
   FaAt as emailIcon,
   FaLinkedin as linkedinIcon,
 } from "react-icons/fa";
+import breakpoints from "../styles/breakpoints";
 import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
 const ContactContainer = styled.div`
@@ -22,11 +24,27 @@ const ContactContainer = styled.div`
 const Name = styled.h1`
   margin: 0 0 3vh 0;
   font-size: 1.5em;
+
+  ${up("sm")} {
+    font-size: 1.7em;
+  }
+
+  ${up("smmd")} {
+    font-size: 1.9em;
+  }
 `;
 
 const Title = styled.h2`
   margin: 0 0 6vh 0;
   font-size: 1.2em;
+
+  ${up("sm")} {
+    font-size: 1.4em;
+  }
+
+  ${up("smmd")} {
+    font-size: 1.6em;
+  }
 `;
 
 const LinkContainer = styled.a`
@@ -41,6 +59,10 @@ const LinkContainer = styled.a`
   justify-content: flex-start;
   align-items: center;
 
+  ${up("sm")} {
+    width: 366px;
+  }
+
   &:active {
     background: #affc41;
     transition: 0.5s;
@@ -52,6 +74,10 @@ const LinkContainer = styled.a`
     font-weight: bold;
     font-style: italic;
     color: #000000;
+
+    ${up("sm")} {
+    font-size: 1.25em;
+  }
   }
 `;
 
@@ -82,6 +108,7 @@ const GithubIcon = styled(githubIcon)`
 
 const Contact = () => {
   return (
+    <ThemeProvider theme={breakpoints}>
     <ContactContainer data-testid="contact" id="contact">
       <Name>DAVID ARROWSMITH</Name>
 
@@ -119,6 +146,7 @@ const Contact = () => {
 
       <SectionArrowUp />
     </ContactContainer>
+    </ThemeProvider>
   );
 };
 
