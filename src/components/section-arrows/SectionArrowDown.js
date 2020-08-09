@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Link as scrollLink } from "react-scroll";
-import { IconContext } from "react-icons";
 import { FaCaretDown } from "react-icons/fa";
 
 const SectionArrowContainer = styled(scrollLink)`
@@ -18,7 +17,7 @@ const SectionArrowContainer = styled(scrollLink)`
   align-items: center;
 `;
 
-const SectionArrowDown = ({ nextSectionId }) => {
+const SectionArrowDown = ({ nextSectionId, color }) => {
   return (
     <SectionArrowContainer
       activeClass="active"
@@ -28,20 +27,18 @@ const SectionArrowDown = ({ nextSectionId }) => {
       offset={-50}
       duration={500}
     >
-      <IconContext.Provider
-        value={{
-          color: "#000000",
-          size: "4em",
-        }}
-      >
-        <FaCaretDown />
-      </IconContext.Provider>
+
+        <FaCaretDown 
+        fill={color}
+        size="4em"
+        />
     </SectionArrowContainer>
   );
 };
 
 SectionArrowDown.propTypes = {
   nextSectionId: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default SectionArrowDown;

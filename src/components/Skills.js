@@ -104,7 +104,7 @@ const Skills = ({ nextSection }) => {
         <TechBlockContainer>
           <div>{displayTechnologies(techList)}</div>
         </TechBlockContainer>
-        <SectionArrowDown nextSectionId={nextSection} />
+        <SectionArrowDown nextSectionId={nextSection} color="#000000" />
         </FilterLayer>
       </SkillsContainer>
     </ThemeProvider>

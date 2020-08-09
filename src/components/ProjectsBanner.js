@@ -43,7 +43,7 @@ const ProjectsBanner = ({ nextSection }) => {
       <StyledProjectsIcon />
       <ProjectsHeading>Projects</ProjectsHeading>
       </FilterLayer>
-      <SectionArrowDown nextSectionId={nextSection} />
+      <SectionArrowDown nextSectionId={nextSection} color="#000000" />
     </ProjectsContainer>
   );
 };

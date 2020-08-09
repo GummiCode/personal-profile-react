@@ -80,7 +80,9 @@ const Intro = ({ nextSection }) => {
         <FilterLayer>
         <TextContainer>{introTextRenderer()}</TextContainer>
         </FilterLayer>
-        <SectionArrowDown nextSectionId={nextSection} />
+        <SectionArrowDown 
+          nextSectionId={nextSection}
+          color="#000000" />
       </IntroContainer>
     </ThemeProvider>
   );

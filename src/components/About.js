@@ -79,7 +79,7 @@ const About = ({ nextSection }) => {
         <TextContainer>
           {aboutTextRender()}
         </TextContainer>
-        <SectionArrowDown nextSectionId={nextSection} />
+        <SectionArrowDown nextSectionId={nextSection} color="#000000" />
         </FilterLayer>
       </AboutContainer>
     </ThemeProvider>

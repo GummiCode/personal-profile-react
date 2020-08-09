@@ -15,8 +15,9 @@ const projectData = [
     gitHub: "https://github.com/GummiCode/spacefrens",
     url: "https://spacefrens.herokuapp.com/",
     image: "./images/spacefrens-demo.jpg",
-    featureTextColor: "#272635",
-    backgroundColor: "#E8E9F3",
+    textColor: "#FDFDFF",
+    background: `url("./images/textures/spacefrens.jpg")`,
+    filter: "rgba(8, 8, 14, 0.5)",
     Icon: FaUserAstronaut,
   },
 
@@ -33,8 +34,9 @@ const projectData = [
     gitHub: "https://github.com/ian-antking/q-family-dinner",
     url: "https://queerfamilytea.com/#/",
     image: "./images/qft-demo.png",
-    featureTextColor: "#171226",
-    backgroundColor: "#FE4A49",
+    textColor: "#171226",
+    background: `url("./images/textures/qft.png")`,
+    filter: "rgba(254, 74, 73, 0.8)",
     Icon: FaTransgenderAlt,
   },
 ];

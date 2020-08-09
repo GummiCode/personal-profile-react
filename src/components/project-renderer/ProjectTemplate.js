@@ -8,10 +8,16 @@ import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled.div`
   position: relative;
+  height: 90vh;
+  width: 100vw;
+  background: ${(props) => props.background};
+`;
+
+const FilterLayer = styled.div`
   height: 83vh;
   width: 84vw;
   padding: 4.5vh 8vw;
-  background-color: ${(props) => props.backgroundColor};
+  background: ${(props) => props.filter};
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -41,7 +47,7 @@ const IconContainer = styled.div`
 const TitleText = styled.h1`
   font-size: 1.5em;
   text-transform: uppercase;
-  color: ${(props) => props.featureTextColor};
+  color: ${(props) => props.textColor};
   margin: 2vh 0 0 0;
 
   ${up("sm")} {
@@ -53,10 +59,10 @@ const TitleText = styled.h1`
   }
 `;
 
-const SummaryText = styled.h2`
+const SummaryText = styled.span`
   width: 75vw;
-  font-size: 1.15em;
-  color: ${(props) => props.featureTextColor};
+  font-size: 1em;
+  color: ${(props) => props.textColor};
   margin: 1vh 0 3vh 0;
   text-align: center;
 
@@ -101,7 +107,7 @@ const ImageContainer = styled.div`
 const ExtLink = styled.a`
   height: 100%;
   width: 100%;
-  border-radius: 45%;
+  border-radius: 50%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -115,7 +121,7 @@ const Github = styled(FaGithub)`
   border-radius: 4vh;
   fill: #000000;
 
-  ${ExtLink}:active & {
+  &: hover {
     fill: #fe4a49;
     transition: 0.5s;
   }
@@ -127,7 +133,7 @@ const WebApp = styled(FaGlobe)`
   border-radius: 4vh;
   fill: #000000;
 
-  ${ExtLink}:active & {
+  &: hover {
     fill: #2ab7ca;
     transition: 0.5s;
   }
@@ -140,8 +146,9 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
     gitHub,
     url,
     image,
-    featureTextColor,
-    backgroundColor,
+    textColor,
+    background,
+    filter,
     Icon,
   } = projectData;
 
@@ -150,15 +157,16 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
       <ProjectContainer
         data-testid={projectId}
         id={projectId}
-        backgroundColor={backgroundColor}
+        background={background}
       >
+        <FilterLayer filter={filter}>
         <ContentContainer>
           <IconContainer>
-            <Icon size="7.5vh" color={featureTextColor} />
+            <Icon size="7.5vh" color={textColor} />
           </IconContainer>
-          <TitleText featureTextColor={featureTextColor}>{title}</TitleText>
+          <TitleText textColor={textColor}>{title}</TitleText>
 
-          <SummaryText featureTextColor={featureTextColor}>
+          <SummaryText textColor={textColor}>
             {summary}
           </SummaryText>
           <ImageContainer image={image}>
@@ -173,8 +181,9 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
               </ExtLink>
             </div>
           </ImageContainer>
-          <SectionArrowDown nextSectionId={nextSection} />
+          <SectionArrowDown nextSectionId={nextSection} color={textColor} />
         </ContentContainer>
+        </FilterLayer>
       </ProjectContainer>
     </ThemeProvider>
   );
