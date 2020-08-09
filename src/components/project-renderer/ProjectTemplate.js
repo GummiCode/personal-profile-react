@@ -36,7 +36,16 @@ const IconContainer = styled.div`
   min-height: 7.5vh;
   width: 7.5vh;
   min-width: 7.5vh;
+
+  ${up("md")} {
+    height: 75px;
+  min-height: 75px;
+  width: 75px;
+  min-width: 75px;
+    }
 `;
+
+
 
 const TitleText = styled.h1`
   font-size: 1.5em;
@@ -89,6 +98,12 @@ const ImageContainer = styled.div`
     border-radius: 5vh;
     background-color: #ffffff;
     box-shadow: 2px 2px 2px 2px rgba(80, 40, 60, 0.2);
+
+    ${up("md")} {
+    height: 75px;
+    min-height: 75px;
+    width: 75px;
+    min-width: 75px;
   }
 `;
 
@@ -104,8 +119,8 @@ const ExtLink = styled.a`
 `;
 
 const Github = styled(FaGithub)`
-  height: 8vh;
-  width: 8vh;
+  height: 80%;
+  width: 80%;
   border-radius: 4vh;
   fill: #000000;
 
