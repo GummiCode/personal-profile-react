@@ -22,18 +22,16 @@ const HeaderImageContainer = styled.div`
 `;
 
 const HeaderText = styled.div`
-  height: 25vh;
+  height: 18vh;
   width: 100vw;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
   align-items: flex-end;
   background: rgba(10, 10, 10, 0.3);
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
 
   ${up("sm")} {
     height: 30vh;
-    clip-path: polygon(0 45%, 100% 0, 100% 100%, 0 100%);
   }
 
   h1 {
