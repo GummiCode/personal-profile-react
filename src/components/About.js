@@ -38,29 +38,39 @@ const StyledAboutIcon = styled(AboutIcon)`
   width: auto;
 `;
 
-const AboutText = styled(ReactMarkdown)`
+const TextContainer = styled.div`
   width: calc(100% - 2vw);
-  margin: 2vh 0 0 2vw;
-  font-size: 1em;
-
-
-  ${up("sm")} {
-    font-size: 1.2em;
-  }
-
-  ${up("smmd")} {
-    font-size: 1.6em;
-  }
+  margin: 2vh 0 0 0vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
+const TextBlock = styled.span`
+  width: fit-content;
+  height: fit-content;
+  margin: 0 0 8px 0;
+  font-size: 1em;
+`
+
 const About = ({ nextSection }) => {
+
+  const aboutTextRender = () => {
+    return aboutText.map((line) => {
+      return <TextBlock>{line}</TextBlock>;
+    });
+  };
+
   return (
     <ThemeProvider theme={breakpoints}>
       <AboutContainer data-testid="about" id="about">
         <TitleContainer>
           <StyledAboutIcon />
         </TitleContainer>
-        <AboutText source={aboutText} />
+        <TextContainer>
+          {aboutTextRender()}
+        </TextContainer>
         <SectionArrowDown nextSectionId={nextSection} />
       </AboutContainer>
     </ThemeProvider>

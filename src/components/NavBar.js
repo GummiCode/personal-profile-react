@@ -10,6 +10,7 @@ const NavBarContainer = styled.div`
   top: 0;
   left: 0;
   height: 10vh;
+  max-height: 80px;
   width: 100vw;
   color: #ffffff;
   background: #000000;

@@ -32,17 +32,10 @@ const ContentContainer = styled.div`
 `;
 
 const IconContainer = styled.div`
-  height: 7.5vh;
+  height: fit-content;
   min-height: 7.5vh;
-  width: 7.5vh;
+  width: fit-content;
   min-width: 7.5vh;
-
-  ${up("md")} {
-    height: 75px;
-    min-height: 75px;
-    width: 75px;
-    min-width: 75px;
-  }
 `;
 
 const TitleText = styled.h1`
@@ -129,8 +122,8 @@ const Github = styled(FaGithub)`
 `;
 
 const WebApp = styled(FaGlobe)`
-  height: 8vh;
-  width: 8vh;
+  height: 80%;
+  width: 80%;
   border-radius: 4vh;
   fill: #000000;
 

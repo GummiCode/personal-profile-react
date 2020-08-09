@@ -6,9 +6,9 @@ import breakpoints from "../styles/breakpoints";
 const HeaderImageContainer = styled.div`
   height: 50vh;
   width: 100vw;
-  margin: 10vh 0 0 0;
+  padding: 10vh 0 0 0;
   background-image: url("./images/profile-picture.jpg");
-  background-position: -15vw 10vh;
+  background-position: 0vw 10vh;
   background-attachment: fixed;
   background-size: auto 50%;
   display: flex;
@@ -44,7 +44,8 @@ const HeaderText = styled.div`
     ${up("md")} {
       font-size: 3.4em;
       margin: 0 40px 0 0;
-  }
+    }
+
   }
 
   h2 {
@@ -55,7 +56,8 @@ const HeaderText = styled.div`
     ${up("md")} {
       font-size: 3.4em;
       margin: 0 40px 30px 0;
-  }
+    }
+
   }
 `;
 

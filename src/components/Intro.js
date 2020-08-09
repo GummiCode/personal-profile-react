@@ -8,10 +8,15 @@ import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import introText from "../assets/introText";
 
 const IntroContainer = styled.div`
-  height: 36vh;
+  height: 40vh;
   width: 100vw;
-  padding: 0 0 4vh 0;
-  background-color: #ff5b1b;
+  background: url("./images/textures/intro.jpg");
+`;
+
+const FilterLayer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 91, 27, 0.9);
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
@@ -19,12 +24,19 @@ const IntroContainer = styled.div`
 `;
 
 const TextContainer = styled.div`
-  height: 80%;
-  width: 90%;
+  height: fit-content;
+  max-height: 70%;
+  width: fit-content;
+  max-width: 100%;
+  margin: 7% 0 0 0;
+  padding: 5px 5px;
+  background-color: rgba(255, 91, 27, 1);
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px 3px rgba(8, 0, 6, 0.3);
   display: flex;
   flex-flow: column nowrap;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   ${up("sm")} {
     padding: 0 6vw;
@@ -36,15 +48,12 @@ const TextContainer = styled.div`
   }
 `;
 
-const IntroText = styled(ReactMarkdown)`
-  width: 90%;
+const TextBlock = styled.span`
+  width: fit-content;
+  height: fit-content;
   margin: 0;
   padding: 0;
   font-size: 1.3em;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
 
   ${up("sm")} {
     font-size: 1.5em;
@@ -52,10 +61,6 @@ const IntroText = styled(ReactMarkdown)`
 
   ${up("smmd")} {
     font-size: 1.7em;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 3px 3px 3px 3px rgba(80, 40, 60, 0.2);
-    border-radius: 6px;
   }
 
   ${up("md")} {
@@ -64,12 +69,18 @@ const IntroText = styled(ReactMarkdown)`
 `;
 
 const Intro = ({ nextSection }) => {
+  const introTextRenderer = () => {
+    return introText.map((line) => {
+      return <TextBlock>{line}</TextBlock>;
+    });
+  };
+
   return (
     <ThemeProvider theme={breakpoints}>
       <IntroContainer data-testid="intro">
-        <TextContainer>
-          <IntroText source={introText} />
-        </TextContainer>
+        <FilterLayer>
+        <TextContainer>{introTextRenderer()}</TextContainer>
+        </FilterLayer>
         <SectionArrowDown nextSectionId={nextSection} />
       </IntroContainer>
     </ThemeProvider>

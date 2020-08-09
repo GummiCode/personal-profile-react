@@ -32,8 +32,6 @@ const Name = styled.h1`
   ${up("smmd")} {
     font-size: 1.9em;
   }
-
-  
 `;
 
 const Title = styled.h2`
@@ -67,10 +65,9 @@ const LinkContainer = styled.a`
   }
 
   ${up("smmd")} {
-      width: 413px;
-      height: 70px;
-
-    }
+    width: 413px;
+    height: 70px;
+  }
 
   ${up("md")} {
     width: 470px;
