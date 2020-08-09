@@ -41,7 +41,10 @@ const HeaderText = styled.div`
     color: #ffffff;
     margin: 0 5vw;
 
-
+    ${up("md")} {
+      font-size: 3.4em;
+      margin: 0 40px 0 0;
+  }
   }
 
   h2 {
@@ -49,7 +52,10 @@ const HeaderText = styled.div`
     color: #ffd400;
     margin: 0 5vw 4vh 0;
 
-
+    ${up("md")} {
+      font-size: 3.4em;
+      margin: 0 40px 30px 0;
+  }
   }
 `;
 
