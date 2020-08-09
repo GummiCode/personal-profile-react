@@ -60,6 +60,11 @@ const LinkContainer = styled.a`
     height: 56px;
   }
 
+  ${up("smmd")} {
+    width: 388px;
+    height: 63px;
+  }
+
   ${up("md")} {
     width: 413px;
     height: 70px;
@@ -85,6 +90,11 @@ const LinkContainer = styled.a`
     ${up("sm")} {
       font-size: 1.25em;
     }
+
+    
+  ${up("smmd")} {
+    font-size: 1.35em;
+  }
 
     ${up("md")} {
       font-size: 1.45em;

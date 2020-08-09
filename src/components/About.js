@@ -51,6 +51,7 @@ const TextContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+
 `;
 
 const TextBlock = styled.span`
@@ -58,6 +59,14 @@ const TextBlock = styled.span`
   height: fit-content;
   margin: 0 0 8px 0;
   font-size: 1em;
+
+  ${up("sm")} {
+    font-size: 1.2em;
+  }
+
+  ${up("smmd")} {
+    font-size: 1.4em;
+  }
 `
 
 const About = ({ nextSection }) => {

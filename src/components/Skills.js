@@ -81,10 +81,6 @@ const TechBlock = styled.span`
   ${up("smmd")} {
     font-size: 1.6em;
   }
-
-  ${up("md")} {
-    font-size: 1.6em;
-  }
 `;
 
 const Skills = ({ nextSection }) => {
