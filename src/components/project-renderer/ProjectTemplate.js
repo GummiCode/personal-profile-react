@@ -31,10 +31,6 @@ const ContentContainer = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-
-  ${up("smmd")} {
-    height: 79vh;
-  }
 `;
 
 const IconContainer = styled.div`
@@ -53,10 +49,6 @@ const TitleText = styled.h1`
   ${up("sm")} {
     font-size: 1.8em;
   }
-
-  ${up("smmd")} {
-    font-size: 2em;
-  }
 `;
 
 const SummaryText = styled.span`
@@ -68,10 +60,6 @@ const SummaryText = styled.span`
 
   ${up("sm")} {
     font-size: 1.4em;
-  }
-
-  ${up("smmd")} {
-    font-size: 1.8em;
   }
 `;
 
@@ -121,7 +109,7 @@ const Github = styled(FaGithub)`
   border-radius: 4vh;
   fill: #000000;
 
-  &: hover {
+  &:hover {
     fill: #fe4a49;
     transition: 0.5s;
   }
@@ -133,7 +121,7 @@ const WebApp = styled(FaGlobe)`
   border-radius: 4vh;
   fill: #000000;
 
-  &: hover {
+  &:hover {
     fill: #2ab7ca;
     transition: 0.5s;
   }
@@ -160,29 +148,31 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
         background={background}
       >
         <FilterLayer filter={filter}>
-        <ContentContainer>
-          <IconContainer>
-            <Icon size="7.5vh" color={textColor} />
-          </IconContainer>
-          <TitleText textColor={textColor}>{title}</TitleText>
+          <ContentContainer>
+            <IconContainer>
+              <Icon size="7.5vh" color={textColor} />
+            </IconContainer>
+            <TitleText textColor={textColor}>{title}</TitleText>
 
-          <SummaryText textColor={textColor}>
-            {summary}
-          </SummaryText>
-          <ImageContainer image={image}>
-            <div>
-              <ExtLink href={gitHub} target="_blank" rel="noopener noreferrer">
-                <Github />
-              </ExtLink>
-            </div>
-            <div>
-              <ExtLink href={url} target="_blank" rel="noopener noreferrer">
-                <WebApp />
-              </ExtLink>
-            </div>
-          </ImageContainer>
-          <SectionArrowDown nextSectionId={nextSection} color={textColor} />
-        </ContentContainer>
+            <SummaryText textColor={textColor}>{summary}</SummaryText>
+            <ImageContainer image={image}>
+              <div>
+                <ExtLink
+                  href={gitHub}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github />
+                </ExtLink>
+              </div>
+              <div>
+                <ExtLink href={url} target="_blank" rel="noopener noreferrer">
+                  <WebApp />
+                </ExtLink>
+              </div>
+            </ImageContainer>
+            <SectionArrowDown nextSectionId={nextSection} color={textColor} />
+          </ContentContainer>
         </FilterLayer>
       </ProjectContainer>
     </ThemeProvider>
@@ -198,12 +188,14 @@ ProjectTemplate.propTypes = {
     gitHub: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    featureTextColor: PropTypes.string.isRequired,
-    backgroundColor: PropTypes.string.isRequired,
     Icon: PropTypes.func.isRequired,
+    textColor: PropTypes.string.isRequired,
+    background: PropTypes.string.isRequired,
+    filter: PropTypes.string.isRequired,
   }).isRequired,
   projectId: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
+
 };
 
 export default ProjectTemplate;

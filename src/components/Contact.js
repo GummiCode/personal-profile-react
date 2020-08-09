@@ -11,9 +11,9 @@ import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
 const ContactContainer = styled.div`
   position: relative;
-  height: 74vh;
+  height: 78vh;
   width: 86vw;
-  padding: 8vh 7vw;
+  padding: 6vh 7vw;
   background-color: #ffffff;
   display: flex;
   flex-flow: column nowrap;
@@ -25,11 +25,7 @@ const Name = styled.h1`
   margin: 0 0 3vh 0;
   font-size: 1.5em;
 
-  ${up("sm")} {
-    font-size: 1.7em;
-  }
-
-  ${up("smmd")} {
+  ${up("md")} {
     font-size: 1.9em;
   }
 `;
@@ -42,7 +38,7 @@ const Title = styled.h2`
     font-size: 1.4em;
   }
 
-  ${up("smmd")} {
+  ${up("md")} {
     font-size: 1.6em;
   }
 `;
@@ -64,7 +60,7 @@ const LinkContainer = styled.a`
     height: 56px;
   }
 
-  ${up("smmd")} {
+  ${up("md")} {
     width: 413px;
     height: 70px;
   }
@@ -90,11 +86,11 @@ const LinkContainer = styled.a`
       font-size: 1.25em;
     }
 
-    ${up("smmd")} {
+    ${up("md")} {
       font-size: 1.45em;
     }
 
-    ${up("md")} {
+    ${up("lg")} {
       font-size: 1.65em;
     }
   }

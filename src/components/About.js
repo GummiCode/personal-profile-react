@@ -9,17 +9,16 @@ import aboutText from "../assets/aboutText";
 
 const AboutContainer = styled.div`
   position: relative;
-height: 90vh;
-width:100vw;
+  height: 90vh;
+  width:100vw;
   background: url("./images/textures/about.png");
-  background-size: auto 80%;
-  background-position: -8vw 0;
+  background-size: auto 100%;
+  background-position: -50vw 0;
 `;
 
 const FilterLayer = styled.div`
-    height: 83vh;
-  width: 84vw;
-  padding: 4.5vh 8vw;
+  height: 100%;
+  width: 100%;
   background-color: rgba(255, 93, 115, 0.95);
   display: flex;
   flex-flow: column;
@@ -31,7 +30,7 @@ const TitleContainer = styled.div`
   width: 100%;
   height: 10vh;
   font-size: 4em;
-  margin: 0 0 2vh 0;
+  margin: 7vh 0 2vh 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -46,8 +45,8 @@ const StyledAboutIcon = styled(AboutIcon)`
 `;
 
 const TextContainer = styled.div`
-  width: calc(100% - 2vw);
-  margin: 2vh 0 0 0vw;
+  width: calc(100% - 14vw);
+  margin: 2vh 7vw 0 7vw;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
