@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import { up } from "styled-breakpoints";
-import ReactMarkdown from "react-markdown";
 import { BsPersonBoundingBox as AboutIcon } from "react-icons/bs";
 import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
@@ -10,10 +9,18 @@ import aboutText from "../assets/aboutText";
 
 const AboutContainer = styled.div`
   position: relative;
-  height: 83vh;
+height: 90vh;
+width:100vw;
+  background: url("./images/textures/about.png");
+  background-size: auto 80%;
+  background-position: -8vw 0;
+`;
+
+const FilterLayer = styled.div`
+    height: 83vh;
   width: 84vw;
   padding: 4.5vh 8vw;
-  background-color: rgba(255, 93, 115);
+  background-color: rgba(255, 93, 115, 0.95);
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -65,6 +72,7 @@ const About = ({ nextSection }) => {
   return (
     <ThemeProvider theme={breakpoints}>
       <AboutContainer data-testid="about" id="about">
+        <FilterLayer>
         <TitleContainer>
           <StyledAboutIcon />
         </TitleContainer>
@@ -72,6 +80,7 @@ const About = ({ nextSection }) => {
           {aboutTextRender()}
         </TextContainer>
         <SectionArrowDown nextSectionId={nextSection} />
+        </FilterLayer>
       </AboutContainer>
     </ThemeProvider>
   );

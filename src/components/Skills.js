@@ -9,19 +9,25 @@ import techList from "../assets/techList";
 
 const SkillsContainer = styled.div`
   position: relative;
-  height: 83vh;
+  height: 90vh;
   width: 100vw;
-  padding: 4.5vh 0;
-  background-color: #ff5b1b;
+  background: url("./images/textures/tiles.png");
+`;
+
+const FilterLayer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 91, 27, 0.9);
   display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
 `;
 
 const TitleContainer = styled.div`
   width: 100%;
   height: 10vh;
+  margin: 4.5vh 0 0 0;
   font-size: 4.8em;
   display: flex;
   flex-flow: column nowrap;
@@ -63,7 +69,7 @@ const TechBlock = styled.span`
   width: fit-content;
   padding: 5px;
   margin: 5px;
-  font-size: 1.2em;
+  font-size: 1em;
   background: #e6e6e6;
   border-radius: 4px;
   box-shadow: 3px 3px 3px 3px rgba(80, 40, 60, 0.2);
@@ -91,6 +97,7 @@ const Skills = ({ nextSection }) => {
   return (
     <ThemeProvider theme={breakpoints}>
       <SkillsContainer data-testid="skills" id="skills">
+        <FilterLayer>
         <TitleContainer>
           <StyledSkillsIcon />
         </TitleContainer>
@@ -98,6 +105,7 @@ const Skills = ({ nextSection }) => {
           <div>{displayTechnologies(techList)}</div>
         </TechBlockContainer>
         <SectionArrowDown nextSectionId={nextSection} />
+        </FilterLayer>
       </SkillsContainer>
     </ThemeProvider>
   );

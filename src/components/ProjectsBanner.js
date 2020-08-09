@@ -8,7 +8,17 @@ const ProjectsContainer = styled.div`
   position: relative;
   height: 90vh;
   width: 100vw;
-  background: #ffffff;
+  background: url("./images/textures/concrete.png");
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const FilterLayer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -29,8 +39,10 @@ const ProjectsHeading = styled.h1`
 const ProjectsBanner = ({ nextSection }) => {
   return (
     <ProjectsContainer data-testid="projects-banner" id="projects-banner">
+      <FilterLayer>
       <StyledProjectsIcon />
       <ProjectsHeading>Projects</ProjectsHeading>
+      </FilterLayer>
       <SectionArrowDown nextSectionId={nextSection} />
     </ProjectsContainer>
   );
