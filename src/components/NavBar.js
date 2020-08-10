@@ -22,13 +22,15 @@ const NavBarContainer = styled.div`
 
 const LinksContainer = styled.div`
   height: 100%;
+  margin: 0 30px 0 0;
   display: flex;
+
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
 
   ${up("md")} {
-    margin: 0 30px 0 0;
+
   }
 
   a {

@@ -1,5 +1,6 @@
 {
   "name": "david-arrowsmith-profile",
+  "homepage": "https://gummicode.github.io/personal-profile-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
