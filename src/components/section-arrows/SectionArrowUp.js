@@ -1,11 +1,13 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import { Link as scrollLink } from "react-scroll";
 import { IconContext } from "react-icons";
 import { FaCaretUp } from "react-icons/fa";
 
+import breakpoints from "../../styles/breakpoints";
+
 const SectionArrowContainer = styled(scrollLink)`
-  position: absolute;
   bottom: 1vh;
   left: 0;
   right: 0;
@@ -15,10 +17,15 @@ const SectionArrowContainer = styled(scrollLink)`
   flex-flow: column nowrap;
   justify-content: start;
   align-items: center;
+
+  ${up("md")} {
+    display: none;
+  }
 `;
 
 const SectionArrowUp = () => {
   return (
+    <ThemeProvider theme={breakpoints}>
     <SectionArrowContainer
       activeClass="active"
       to="header"
@@ -36,6 +43,7 @@ const SectionArrowUp = () => {
         <FaCaretUp />
       </IconContext.Provider>
     </SectionArrowContainer>
+    </ThemeProvider>
   );
 };
 

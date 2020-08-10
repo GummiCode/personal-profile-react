@@ -13,7 +13,7 @@ const AboutContainer = styled.div`
   margin: 0 0 40px 0;
   background-color: #ffffff;
   display: flex;
-  flex-flow: column nowrap;;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
 `;
@@ -21,8 +21,8 @@ const AboutContainer = styled.div`
 const AboutCard = styled.div`
   height: fit-content;
   width: 360px;
-  max-width: 100vw;
-  margin: 30px 0 60px 0;
+  max-width: calc(100vw - 40px);
+  margin: 30px 20px 60px 20px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;

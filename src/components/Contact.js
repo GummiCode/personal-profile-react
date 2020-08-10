@@ -10,15 +10,31 @@ import breakpoints from "../styles/breakpoints";
 import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
 const ContactContainer = styled.div`
-  position: relative;
-  height: calc(100vh - 60px - 12vh);
-  width: 86vw;
-  padding: 6vh 7vw;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  ${up("md")} {
+    height: fit-content;
+    margin: 0 0 300px 0;
+  }
+`;
+
+const ContactCard = styled.div`
+  height: calc(100% - 20px);
+  width: 360px;
+  max-width: calc(100vw - 40px);
+  padding: 20px 20px 0 20px;
   background-color: #ffffff;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
+
 `;
 
 const Name = styled.h1`
@@ -134,40 +150,43 @@ const Contact = () => {
   return (
     <ThemeProvider theme={breakpoints}>
       <ContactContainer data-testid="contact" id="contact">
-        <Name>DAVID ARROWSMITH</Name>
+        <ContactCard>
+          <Name>DAVID ARROWSMITH</Name>
 
-        <Title>JUNIOR WEB DEVELOPER</Title>
+          <Title>JUNIOR WEB DEVELOPER</Title>
 
-        <LinkContainer
-          data-testid="contact-email-link"
-          href="mailto:gummicodeblog@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <EmailIcon />
-          <span>wemakearrows@gmail.com</span>
-        </LinkContainer>
+          <LinkContainer
+            data-testid="contact-email-link"
+            href="mailto:gummicodeblog@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <EmailIcon />
+            <span>wemakearrows@gmail.com</span>
+          </LinkContainer>
 
-        <LinkedinContainer
-          data-testid="contact-linkedin-link"
-          href="https://www.linkedin.com/in/david-arrowsmith/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon />
-          <span>david-arrowsmith</span>
-        </LinkedinContainer>
+          <LinkedinContainer
+            data-testid="contact-linkedin-link"
+            href="https://www.linkedin.com/in/david-arrowsmith/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinIcon />
+            <span>david-arrowsmith</span>
+          </LinkedinContainer>
 
-        <LinkContainer
-          data-testid="contact-github-link"
-          href="https://github.com/gummicode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon />
-          <span>GummiCode</span>
-        </LinkContainer>
+          <LinkContainer
+            data-testid="contact-github-link"
+            href="https://github.com/gummicode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon />
+            <span>GummiCode</span>
+          </LinkContainer>
 
+
+        </ContactCard>
         <SectionArrowUp />
       </ContactContainer>
     </ThemeProvider>

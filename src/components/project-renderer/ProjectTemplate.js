@@ -71,7 +71,7 @@ justify-content: center;
 
 const ImageContainer = styled.div`
   height: 58%;
-  width: 75%;
+  width: 85%;
   background-image: url(${(props) => props.image});
   background-size: cover;
   border-radius: 8px;
