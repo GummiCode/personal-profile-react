@@ -14,7 +14,7 @@ const ProjectContainer = styled.div`
 `;
 
 const FilterLayer = styled.div`
-  height: 83vh;
+  height: calc(100vh - 60px);
   width: 84vw;
   padding: 4.5vh 8vw;
   background: ${(props) => props.filter};
