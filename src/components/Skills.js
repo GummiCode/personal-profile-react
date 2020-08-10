@@ -28,10 +28,10 @@ const FilterLayer = styled.div`
   justify-content: start;
   align-items: center;
 
-${up("md")} {
-  height: fit-content;
-  min-height: 75vh;
-}
+  ${up("md")} {
+    height: fit-content;
+    min-height: 75vh;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -108,13 +108,13 @@ const Skills = ({ nextSection }) => {
     <ThemeProvider theme={breakpoints}>
       <SkillsContainer data-testid="skills" id="skills">
         <FilterLayer>
-        <TitleContainer>
-          <StyledSkillsIcon />
-        </TitleContainer>
-        <TechBlockContainer>
-          <div>{displayTechnologies(techList)}</div>
-        </TechBlockContainer>
-        <SectionArrowDown nextSectionId={nextSection} color="#000000" />
+          <TitleContainer>
+            <StyledSkillsIcon />
+          </TitleContainer>
+          <TechBlockContainer>
+            <div>{displayTechnologies(techList)}</div>
+          </TechBlockContainer>
+          <SectionArrowDown nextSectionId={nextSection} color="#000000" />
         </FilterLayer>
       </SkillsContainer>
     </ThemeProvider>

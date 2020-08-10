@@ -19,7 +19,6 @@ const AboutContainer = styled.div`
     height: fit-content;
     min-height: 75vh;
   }
-
 `;
 
 const FilterLayer = styled.div`
@@ -32,9 +31,9 @@ const FilterLayer = styled.div`
   align-items: flex-start;
 
   ${up("md")} {
-  height: fit-content;
-  min-height: 75vh;
-}
+    height: fit-content;
+    min-height: 75vh;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -76,7 +75,6 @@ const TextBlock = styled.span`
   ${up("md")} {
     font-size: 1.1em;
   }
-
 `;
 
 const About = ({ nextSection }) => {

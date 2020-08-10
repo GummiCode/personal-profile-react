@@ -91,10 +91,9 @@ const LinkContainer = styled.a`
       font-size: 1.25em;
     }
 
-    
-  ${up("smmd")} {
-    font-size: 1.35em;
-  }
+    ${up("smmd")} {
+      font-size: 1.35em;
+    }
 
     ${up("md")} {
       font-size: 1.45em;

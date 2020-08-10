@@ -53,13 +53,13 @@ const ProjectsHeading = styled.h1`
 const Projects = ({ nextSection }) => {
   return (
     <ThemeProvider theme={breakpoints}>
-    <ProjectsContainer data-testid="projects-banner" id="projects-banner">
-      <FilterLayer>
-        <StyledProjectsIcon />
-        <ProjectsHeading>Projects</ProjectsHeading>
-      </FilterLayer>
-      <SectionArrowDown nextSectionId={nextSection} color="#000000" />
-    </ProjectsContainer>
+      <ProjectsContainer data-testid="projects-banner" id="projects-banner">
+        <FilterLayer>
+          <StyledProjectsIcon />
+          <ProjectsHeading>Projects</ProjectsHeading>
+        </FilterLayer>
+        <SectionArrowDown nextSectionId={nextSection} color="#000000" />
+      </ProjectsContainer>
     </ThemeProvider>
   );
 };

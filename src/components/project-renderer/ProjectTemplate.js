@@ -195,7 +195,6 @@ ProjectTemplate.propTypes = {
   }).isRequired,
   projectId: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,
-
 };
 
 export default ProjectTemplate;

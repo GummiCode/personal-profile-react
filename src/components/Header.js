@@ -1,15 +1,13 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import { up } from "styled-breakpoints";
+import styled from "styled-components";
 import PropTypes from "prop-types";
-import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import introText from "../assets/introText";
 
 const HeaderContainer = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
@@ -49,7 +47,7 @@ const HeadText = styled.div`
   align-items: center;
 
   span {
-  font-size: 1.6em;
+    font-size: 1.6em;
   }
 `;
 
@@ -59,7 +57,6 @@ const TextBlock = styled.span`
   margin: 0;
   padding: 0;
   font-size: 1.2em;
-
 `;
 
 const Header = ({ nextSection }) => {
@@ -70,18 +67,17 @@ const Header = ({ nextSection }) => {
   };
 
   return (
-    <ThemeProvider theme={breakpoints}>
-      <HeaderContainer data-testid="header" id="header">
-        <HeaderCard>
-          <HeaderImage />
-          <HeadText><span>Hello! I'm David.</span></HeadText>
-          {HeaderTextRenderer()}
-        </HeaderCard>
-        
-      <SectionArrowDown nextSectionId={nextSection} color="#000000" />
-      </HeaderContainer>
+    <HeaderContainer data-testid="header" id="header">
+      <HeaderCard>
+        <HeaderImage />
+        <HeadText>
+          <span>Hello! I&apos;m David.</span>
+        </HeadText>
+        {HeaderTextRenderer()}
+      </HeaderCard>
 
-    </ThemeProvider>
+      <SectionArrowDown nextSectionId={nextSection} color="#000000" />
+    </HeaderContainer>
   );
 };
 

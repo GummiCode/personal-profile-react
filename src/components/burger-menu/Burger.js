@@ -1,8 +1,6 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import { up } from "styled-breakpoints";
+import styled from "styled-components";
 import { bool, func } from "prop-types";
-import breakpoints from "../../styles/breakpoints";
 
 const StyledBurger = styled.button`
   height: 54px;
