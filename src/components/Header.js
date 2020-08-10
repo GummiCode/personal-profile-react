@@ -31,7 +31,6 @@ const HeaderImage = styled.div`
   height: 240px;
   width: 240px;
   margin: 0 0 40px 0;
-  border-radius: 120px;
   background-image: url("./images/profile-picture-sq.png");
   background-position: center;
   background-size: cover;
