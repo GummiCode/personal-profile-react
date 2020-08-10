@@ -8,15 +8,20 @@ import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled.div`
   height: calc(100vh - 60px);
+  max-height: 740px;
   width: 100vw;
+  max-width: 420px;
+  margin: 0 0 30px 0;
   border-radius: 30px;
   background: ${(props) => props.background};
 `;
 
 const FilterLayer = styled.div`
-  height: calc(100vh - 60px - 9vh);
-  width: 84vw;
-  padding: 4.5vh 8vw;
+  height: calc(100vh - 60px - 40px);
+  max-height: 700px;
+  width: calc(100vw - 40px);
+  max-width: calc(420px - 40px);
+  padding: 20px;
   border-radius: 30px;
   background: ${(props) => props.filter};
   display: flex;
@@ -34,18 +39,13 @@ const ContentContainer = styled.div`
   align-items: center;
 `;
 
-const IconContainer = styled.div`
-  height: fit-content;
-  min-height: 7.5vh;
-  width: fit-content;
-  min-width: 7.5vh;
-`;
-
 const TitleText = styled.h1`
+height: fit-content;
+width: 100%
   font-size: 1.5em;
   text-transform: uppercase;
   color: ${(props) => props.textColor};
-  margin: 2vh 0 0 0;
+  margin: 14px 0 0 0;
 
   ${up("sm")} {
     font-size: 1.8em;
@@ -53,10 +53,15 @@ const TitleText = styled.h1`
 `;
 
 const SummaryText = styled.span`
-  width: 75vw;
-  font-size: 1em;
+height: 70px;
+width: 100%
+margin: 0 0 40px 0;
+  font-size: 1.3em;
   color: ${(props) => props.textColor};
-  margin: 1vh 0 3vh 0;
+display: flex;
+flex-flow: column nowrap;
+justify-content: center;
+
   text-align: center;
 
   ${up("sm")} {
@@ -65,8 +70,8 @@ const SummaryText = styled.span`
 `;
 
 const ImageContainer = styled.div`
-  height: 100%;
-  width: 75vw;
+  height: 58%;
+  width: 75%;
   background-image: url(${(props) => props.image});
   background-size: cover;
   border-radius: 8px;
@@ -77,10 +82,10 @@ const ImageContainer = styled.div`
   align-items: flex-end;
 
   div {
-    height: 10vh;
-    width: 10vh;
-    margin: 0 2vw 2vw 0;
-    border-radius: 5vh;
+    height: 74px;
+    width: 74px;
+    margin: 0 10px 10px 0;
+    border-radius: 36px;
     background-color: #ffffff;
     box-shadow: 2px 2px 2px 2px rgba(80, 40, 60, 0.2);
 
@@ -107,7 +112,7 @@ const ExtLink = styled.a`
 const Github = styled(FaGithub)`
   height: 80%;
   width: 80%;
-  border-radius: 4vh;
+  border-radius: 50px;
   fill: #000000;
 
   &:hover {
@@ -119,7 +124,7 @@ const Github = styled(FaGithub)`
 const WebApp = styled(FaGlobe)`
   height: 80%;
   width: 80%;
-  border-radius: 4vh;
+  border-radius: 50px;
   fill: #000000;
 
   &:hover {
@@ -150,9 +155,9 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
       >
         <FilterLayer filter={filter}>
           <ContentContainer>
-            <IconContainer>
-              <Icon size="7.5vh" color={textColor} />
-            </IconContainer>
+
+              <Icon size="100px" color={textColor} />
+
             <TitleText textColor={textColor}>{title}</TitleText>
 
             <SummaryText textColor={textColor}>{summary}</SummaryText>
