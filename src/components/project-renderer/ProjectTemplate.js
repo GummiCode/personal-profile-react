@@ -7,7 +7,6 @@ import breakpoints from "../../styles/breakpoints";
 import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled.div`
-  position: relative;
   height: calc(100vh - 60px);
   width: 100vw;
   border-radius: 30px;
@@ -27,7 +26,7 @@ const FilterLayer = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  height: 77vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;

@@ -7,10 +7,6 @@ import { FaCaretDown } from "react-icons/fa";
 import breakpoints from "../../styles/breakpoints";
 
 const SectionArrowContainer = styled(scrollLink)`
-  position: absolute;
-  bottom: 1vh;
-  left: 0;
-  right: 0;
   margin: 0 auto;
   width: 4vw;
   display: flex;

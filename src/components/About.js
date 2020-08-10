@@ -8,52 +8,36 @@ import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import aboutText from "../assets/aboutText";
 
 const AboutContainer = styled.div`
-  position: relative;
-  height: calc(100vh - 60px);
+  height: fit-content;
   width: 100vw;
-
-  ${up("md")} {
-    height: fit-content;
-    min-height: 75vh;
-  }
-`;
-
-const FilterLayer = styled.div`
-  height: 100%;
-  width: 100%;
+  margin: 0 0 40px 0;
   background-color: #ffffff;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;;
   justify-content: flex-start;
-  align-items: flex-start;
-
-  ${up("md")} {
-    height: fit-content;
-    min-height: 75vh;
-  }
+  align-items: center;
 `;
 
-const TitleContainer = styled.div`
-  width: 100%;
-  height: 10vh;
-  margin: 7vh 0 2vh 0;
-  font-size: 4em;
+const AboutCard = styled.div`
+  height: fit-content;
+  width: 360px;
+  max-width: 100vw;
+  margin: 30px 0 60px 0;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
 const StyledAboutIcon = styled(AboutIcon)`
-  height: 10vh;
-  min-height: 0.8em;
-  max-height: 3em;
-  width: auto;
+  height: 80px;
+  width: 80px;
+  margin: 0 0 40px 0;
+  border-radius: 5px;
 `;
 
 const TextContainer = styled.div`
-  width: calc(100% - 14vw);
-  margin: 2vh 7vw 7vh 7vw;
+  width: 100%;
   font-size: 1.1em;
   display: flex;
   flex-flow: column nowrap;
@@ -65,11 +49,6 @@ const TextBlock = styled.span`
   width: 100%;
   height: fit-content;
   margin: 0 0 8px 0;
-  font-size: 1em;
-
-  ${up("md")} {
-    font-size: 1.1em;
-  }
 `;
 
 const About = ({ nextSection }) => {
@@ -82,13 +61,12 @@ const About = ({ nextSection }) => {
   return (
     <ThemeProvider theme={breakpoints}>
       <AboutContainer data-testid="about" id="about">
-        <FilterLayer>
-          <TitleContainer>
+        <AboutCard>
             <StyledAboutIcon />
-          </TitleContainer>
           <TextContainer>{aboutTextRender()}</TextContainer>
+          </AboutCard>
+          
           <SectionArrowDown nextSectionId={nextSection} color="#000000" />
-        </FilterLayer>
       </AboutContainer>
     </ThemeProvider>
   );

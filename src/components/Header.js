@@ -5,20 +5,20 @@ import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import introText from "../assets/introText";
 
 const HeaderContainer = styled.div`
-  height: 100vh;
-  max-height: 740px;
+  height: fit-content;
   width: 100vw;
+  margin: 0 0 60px 0;
   background-color: #ffffff;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 `;
 
 const HeaderCard = styled.div`
   height: fit-content;
-  width: 360px;
-  max-width: calc(360px - 40px);
+  width: 320px;
+  max-width: 100vw;
   margin: calc(60px + 30px) 0 60px 0;
   border-radius: 15px;
   display: flex;

@@ -7,10 +7,10 @@ import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled.div`
-  position: relative;
-  height: calc(100vh - 60px);
+  height: fit-content;
   width: 100vw;
-  background: url("./images/textures/concrete.png");
+  margin: 80px 0 80px 0;
+  background: #ffffff;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -21,44 +21,25 @@ const ProjectsContainer = styled.div`
   }
 `;
 
-const FilterLayer = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 1);
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-`;
-
 const StyledProjectsIcon = styled(ProjectsIcon)`
-  height: 7.5vh;
-  width: auto;
-  margin: 0 0 0 1vw;
+  height: 75px;
+  width: 75px;
+  border-radius: 5px;
 
-  ${up("md")} {
-    margin: 6vh 0 3vh 1vw;
-  }
 `;
 
 const ProjectsHeading = styled.h1`
   font-size: 3em;
   font-weight: bold;
-
-  ${up("md")} {
-    margin: 0 0 7vh 0;
-  }
 `;
 
 const Projects = ({ nextSection }) => {
   return (
     <ThemeProvider theme={breakpoints}>
       <ProjectsContainer data-testid="projects" id="projects">
-        <FilterLayer>
+
           <StyledProjectsIcon />
           <ProjectsHeading>Projects</ProjectsHeading>
-        </FilterLayer>
-        <SectionArrowDown nextSectionId={nextSection} color="#000000" />
       </ProjectsContainer>
     </ThemeProvider>
   );
