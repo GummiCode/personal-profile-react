@@ -8,7 +8,7 @@ import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled.div`
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 60px);
   width: 100vw;
   background: ${(props) => props.background};
 `;

@@ -4,9 +4,9 @@ import { up } from "styled-breakpoints";
 import breakpoints from "../styles/breakpoints";
 
 const HeaderImageContainer = styled.div`
-  height: 50vh;
+  height: calc(60vh - 60px);
   width: 100vw;
-  padding: 10vh 0 0 0;
+  padding: 60px 0 0 0;
   background-image: url("./images/profile-picture.jpg");
   background-position: 0vw 10vh;
   background-attachment: fixed;
@@ -16,7 +16,6 @@ const HeaderImageContainer = styled.div`
   justify-content: flex-end;
 
   ${up("sm")} {
-    padding: 80px 0 0 0;
     background-position: -147px 3vh;
     background-size: auto 90%;
   }

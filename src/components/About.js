@@ -9,7 +9,7 @@ import aboutText from "../assets/aboutText";
 
 const AboutContainer = styled.div`
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 60px);
   width: 100vw;
   background: url("./images/textures/about.png");
   background-size: auto 100%;

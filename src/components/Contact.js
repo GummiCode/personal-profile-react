@@ -11,7 +11,7 @@ import SectionArrowUp from "./section-arrows/SectionArrowUp";
 
 const ContactContainer = styled.div`
   position: relative;
-  height: 78vh;
+  height: calc(100vh - 60px - 12vh);
   width: 86vw;
   padding: 6vh 7vw;
   background-color: #ffffff;

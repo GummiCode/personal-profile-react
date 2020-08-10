@@ -5,11 +5,9 @@ import { bool, func } from "prop-types";
 import breakpoints from "../../styles/breakpoints";
 
 const StyledBurger = styled.button`
-  width: 7vh;
-  max-width: 80px;
-  height: 6vh;
-  max-height: 72px;
-  margin: 1.5vw;
+  height: 54px;
+  width: 60px;
+  margin: 6px;
   background: transparent;
   border: none;
   cursor: pointer;

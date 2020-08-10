@@ -9,7 +9,7 @@ const NavBarContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  height: 10vh;
+  height: 60px;
   width: 100vw;
   color: #ffffff;
   background: #000000;
@@ -19,35 +19,20 @@ const NavBarContainer = styled.div`
   align-items: center;
   z-index: 9;
 
-  ${up("sm")} {
-    height: 80px;
-  }
-
 `;
 
 const LinksContainer = styled.div`
   height: 100%;
-  padding: 0 5% 0 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
 
-  ${up("sm")} {
-    padding: 0 20px 0 0;
-  }
-
   a {
-    height: 6vh;
-    max-height: 72px;
-    width: 6vh;
-    max-width: 72px;
-    border-radius: 50%;
-    margin: 0 0 0 8vw;
-
-    ${up("sm")} {
-      margin: 0 0 0 33.6px;
-    }
+    height: 54px;
+    width: 54px;
+    border-radius: 27x;
+    margin: 0 6px 0 14px;
   }
 `;
 

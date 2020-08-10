@@ -10,7 +10,7 @@ const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  height: 50vh;
+  height: calc(60vh - 60px);
   width: 45vw;
   padding: 0 0 0 5vw;
   text-align: left;
@@ -19,7 +19,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: start;
   cursor: pointer;
-  transform: ${({ open }) => (open ? "translateY(10vh)" : "translateY(-100%)")};
+  transform: ${({ open }) => (open ? "translateY(60px)" : "translateY(-100%)")};
   transition: transform 0.3s ease-in-out;
 
   ${up("sm")} {

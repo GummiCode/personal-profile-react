@@ -9,7 +9,7 @@ import techList from "../assets/techList";
 
 const SkillsContainer = styled.div`
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 60px);
   width: 100vw;
   background: url("./images/textures/tiles.png");
 

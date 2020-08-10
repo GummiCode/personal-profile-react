@@ -8,7 +8,7 @@ import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled.div`
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 60px);
   width: 100vw;
   background: url("./images/textures/concrete.png");
   display: flex;
