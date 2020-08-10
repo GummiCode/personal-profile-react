@@ -43,11 +43,11 @@ const projectData = [
   {
     title: "Platformer 00",
     key: "platformer00",
-    summary: "Browser-based platform game. Powered by a JavaScript event loop.",
+    summary: "Browser platform game powered by a JavaScript event loop.",
     aspects: [],
     gitHub: "https://github.com/GummiCode/platformer-00",
     url: "https://gummicode.github.io/platformer-00/",
-    image: "./images/platformer-00-sm.png",
+    image: "./images/platformer-00-lg.png",
     textColor: "#000000",
     background: `whitesmoke`,
     filter: "rgba(8, 8, 14, 0)",
