@@ -3,7 +3,7 @@ const aboutText = [
 
   `Tech moves fast. I train using contemporary resources to ensure my skills are up to date.`,
 
-  `I currently work as a senior research chemist. I have two degrees, over a decade of industrial experience and all of the executive and practical skills you'd expect from a proffessional scientist.`,
+  `I currently work as a senior research chemist. I have two degrees, over a decade of industrial experience and all of the executive and practical skills you'd expect from a professional scientist.`,
 
   `I have a real passion for coding, so much so that I'm changing careers.`,
 
