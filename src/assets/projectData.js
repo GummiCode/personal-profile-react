@@ -35,7 +35,7 @@ const projectData = [
     url: "https://queerfamilytea.com/#/",
     image: "./images/qft-demo.png",
     textColor: "#171226",
-    background: `url("./images/textures/qft.png")`,
+    background: `url("./images/textures/qft.jpg")`,
     filter: "rgba(254, 74, 73, 0.8)",
     Icon: FaTransgenderAlt,
   },

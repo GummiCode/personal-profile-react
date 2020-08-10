@@ -11,7 +11,7 @@ function App() {
     <div data-testid="app">
       <NavBar />
       <Header nextSection="about" />
-      <About lastSection="header" nextSection="projects" />
+      <About lastSection="header" nextSection="project0" />
       {/* <Skills lastSection="about" nextSection="projects-banner" /> */}
       <Projects lastSection="about" nextSection="project0" />
       <Contact />

@@ -30,7 +30,7 @@ const ProjectRenderer = () => {
           nextSection={determineNext(index, max)}
         />
       );
-    });
+    })
   };
 
   return <>{renderProjects(projectData)}</>;

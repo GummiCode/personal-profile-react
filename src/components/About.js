@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { BsPersonBoundingBox as AboutIcon } from "react-icons/bs";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import aboutText from "../assets/aboutText";
 
@@ -27,11 +26,13 @@ const AboutCard = styled.div`
   align-items: center;
 `;
 
-const StyledAboutIcon = styled(AboutIcon)`
-  height: 80px;
-  width: 80px;
+const AboutImage = styled.div`
+  height: 180px;
+  width: 180px;
   margin: 0 0 40px 0;
-  border-radius: 5px;
+  background-image: url("./images/about-picture-sq.png");
+  background-position: center;
+  background-size: cover;
 `;
 
 const TextContainer = styled.div`
@@ -59,7 +60,7 @@ const About = ({ nextSection }) => {
   return (
     <AboutContainer data-testid="about" id="about">
       <AboutCard>
-        <StyledAboutIcon />
+        <AboutImage />
         <TextContainer>{aboutTextRender()}</TextContainer>
       </AboutCard>
       <SectionArrowDown nextSectionId={nextSection} color="#000000" />

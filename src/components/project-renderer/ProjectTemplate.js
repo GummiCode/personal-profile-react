@@ -12,7 +12,7 @@ const ProjectContainer = styled.div`
   width: 100vw;
   max-width: 420px;
   margin: 0 0 30px 0;
-  border-radius: 30px;
+  border-radius: 20px;
   background: ${(props) => props.background};
 
   ${up("md")} {
@@ -26,7 +26,7 @@ const FilterLayer = styled.div`
   width: calc(100vw - 40px);
   max-width: calc(420px - 40px);
   padding: 20px;
-  border-radius: 30px;
+  border-radius: 20px;
   background: ${(props) => props.filter};
   display: flex;
   flex-flow: column nowrap;
