@@ -63,7 +63,7 @@ const TextBlock = styled.span`
 const Header = ({ nextSection }) => {
   const HeaderTextRenderer = () => {
     return introText.map((line) => {
-      return <TextBlock>{line}</TextBlock>;
+      return <TextBlock key={line}>{line}</TextBlock>;
     });
   };
 

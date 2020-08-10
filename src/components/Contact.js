@@ -34,7 +34,6 @@ const ContactCard = styled.div`
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-
 `;
 
 const Name = styled.h1`
@@ -44,7 +43,7 @@ const Name = styled.h1`
 
   ${up("md")} {
     font-size: 1.9em;
-  font-weight: normal;
+    font-weight: normal;
   }
 `;
 
@@ -187,8 +186,6 @@ const Contact = () => {
             <GithubIcon />
             <span>GummiCode</span>
           </LinkContainer>
-
-
         </ContactCard>
         <SectionArrowUp />
       </ContactContainer>

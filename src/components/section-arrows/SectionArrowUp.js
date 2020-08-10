@@ -26,23 +26,23 @@ const SectionArrowContainer = styled(scrollLink)`
 const SectionArrowUp = () => {
   return (
     <ThemeProvider theme={breakpoints}>
-    <SectionArrowContainer
-      activeClass="active"
-      to="header"
-      spy
-      smooth
-      offset={-60}
-      duration={500}
-    >
-      <IconContext.Provider
-        value={{
-          color: "#000000",
-          size: "4em",
-        }}
+      <SectionArrowContainer
+        activeClass="active"
+        to="header"
+        spy
+        smooth
+        offset={-60}
+        duration={500}
       >
-        <FaCaretUp />
-      </IconContext.Provider>
-    </SectionArrowContainer>
+        <IconContext.Provider
+          value={{
+            color: "#000000",
+            size: "4em",
+          }}
+        >
+          <FaCaretUp />
+        </IconContext.Provider>
+      </SectionArrowContainer>
     </ThemeProvider>
   );
 };

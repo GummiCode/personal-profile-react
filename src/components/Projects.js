@@ -1,11 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled, { ThemeProvider } from "styled-components";
 import { up } from "styled-breakpoints";
 import { FaPencilRuler as ProjectsIcon } from "react-icons/fa";
 import breakpoints from "../styles/breakpoints";
 import ProjectRenderer from "./project-renderer/ProjectRenderer";
-import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled.div`
   height: fit-content;
@@ -43,7 +41,6 @@ const StyledProjectsIcon = styled(ProjectsIcon)`
   height: 75px;
   width: 75px;
   border-radius: 5px;
-
 `;
 
 const ProjectsHeading = styled.h1`
@@ -60,29 +57,19 @@ const ProjectsGrid = styled.div`
   justify-content: center;
 `;
 
-
-
-const Projects = ({ nextSection }) => {
+const Projects = () => {
   return (
     <ThemeProvider theme={breakpoints}>
       <ProjectsContainer data-testid="projects" id="projects">
         <ProjectsCard>
-
           <StyledProjectsIcon />
           <ProjectsHeading>Projects</ProjectsHeading>
           <ProjectsGrid>
             <ProjectRenderer />
-
           </ProjectsGrid>
-          </ProjectsCard>
-
+        </ProjectsCard>
       </ProjectsContainer>
     </ThemeProvider>
   );
 };
-
-Projects.propTypes = {
-  nextSection: PropTypes.string.isRequired,
-};
-
 export default Projects;

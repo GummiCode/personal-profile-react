@@ -44,8 +44,8 @@ const ContentContainer = styled.div`
 `;
 
 const TitleText = styled.h1`
-height: fit-content;
-width: 100%
+  height: fit-content;
+  width: fit-content;
   font-size: 1.5em;
   text-transform: uppercase;
   color: ${(props) => props.textColor};
@@ -57,14 +57,13 @@ width: 100%
 `;
 
 const SummaryText = styled.span`
-height: 70px;
-width: 100%
-margin: 0 0 40px 0;
+  height: 70px;
+  width: 100%;
   font-size: 1.3em;
   color: ${(props) => props.textColor};
-display: flex;
-flex-flow: column nowrap;
-justify-content: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 
   text-align: center;
 
@@ -159,8 +158,7 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
       >
         <FilterLayer filter={filter}>
           <ContentContainer>
-
-              <Icon size="100px" color={textColor} />
+            <Icon size="100px" color={textColor} />
 
             <TitleText textColor={textColor}>{title}</TitleText>
 

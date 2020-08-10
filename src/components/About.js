@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeProvider } from "styled-components";
-import { up } from "styled-breakpoints";
+import styled from "styled-components";
 import { BsPersonBoundingBox as AboutIcon } from "react-icons/bs";
-import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import aboutText from "../assets/aboutText";
 
@@ -54,21 +52,18 @@ const TextBlock = styled.span`
 const About = ({ nextSection }) => {
   const aboutTextRender = () => {
     return aboutText.map((line) => {
-      return <TextBlock>{line}</TextBlock>;
+      return <TextBlock key={line}>{line}</TextBlock>;
     });
   };
 
   return (
-    <ThemeProvider theme={breakpoints}>
-      <AboutContainer data-testid="about" id="about">
-        <AboutCard>
-            <StyledAboutIcon />
-          <TextContainer>{aboutTextRender()}</TextContainer>
-          </AboutCard>
-          
-          <SectionArrowDown nextSectionId={nextSection} color="#000000" />
-      </AboutContainer>
-    </ThemeProvider>
+    <AboutContainer data-testid="about" id="about">
+      <AboutCard>
+        <StyledAboutIcon />
+        <TextContainer>{aboutTextRender()}</TextContainer>
+      </AboutCard>
+      <SectionArrowDown nextSectionId={nextSection} color="#000000" />
+    </AboutContainer>
   );
 };
 
