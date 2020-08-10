@@ -1,6 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import { FaGithub, FaAt, FaLinkedin } from "react-icons/fa";
+import breakpoints from "../styles/breakpoints";
 import BurgerMenu from "./burger-menu/BurgerMenu";
 
 const NavBarContainer = styled.div`
@@ -24,6 +26,10 @@ const LinksContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: start;
   align-items: center;
+
+  ${up("md")} {
+    margin: 0 30px 0 0;
+  }
 
   a {
     height: 54px;
@@ -68,35 +74,37 @@ const LinkedinIcon = styled(FaLinkedin)`
 
 const NavBar = () => {
   return (
-    <NavBarContainer data-testid="nav-bar">
-      <BurgerMenu />
-      <LinksContainer>
-        <a
-          data-testid="nav-email-link"
-          href="mailto:gummicodeblog@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <EmailIcon />
-        </a>
-        <a
-          data-testid="nav-github-link"
-          href="https://github.com/gummicode"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon />
-        </a>
-        <a
-          data-testid="nav-linkedin-link"
-          href="https://www.linkedin.com/in/david-arrowsmith/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon />
-        </a>
-      </LinksContainer>
-    </NavBarContainer>
+    <ThemeProvider theme={breakpoints}>
+      <NavBarContainer data-testid="nav-bar">
+        <BurgerMenu />
+        <LinksContainer>
+          <a
+            data-testid="nav-email-link"
+            href="mailto:gummicodeblog@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <EmailIcon />
+          </a>
+          <a
+            data-testid="nav-github-link"
+            href="https://github.com/gummicode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon />
+          </a>
+          <a
+            data-testid="nav-linkedin-link"
+            href="https://www.linkedin.com/in/david-arrowsmith/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinIcon />
+          </a>
+        </LinksContainer>
+      </NavBarContainer>
+    </ThemeProvider>
   );
 };
 
