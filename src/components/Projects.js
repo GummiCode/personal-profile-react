@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import { FaPencilRuler as ProjectsIcon } from "react-icons/fa";
+import breakpoints from "../styles/breakpoints";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 
 const ProjectsContainer = styled.div`
@@ -13,6 +15,10 @@ const ProjectsContainer = styled.div`
   flex-flow: column;
   justify-content: center;
   align-items: center;
+
+  ${up("md")} {
+    height: fit-content;
+  }
 `;
 
 const FilterLayer = styled.div`
@@ -28,28 +34,38 @@ const FilterLayer = styled.div`
 const StyledProjectsIcon = styled(ProjectsIcon)`
   height: 7.5vh;
   width: auto;
-  margin: 0 1vw 0 2vw;
+  margin: 0 0 0 1vw;
+
+  ${up("md")} {
+    margin: 6vh 0 3vh 1vw;
+  }
 `;
 
 const ProjectsHeading = styled.h1`
   font-size: 3em;
   font-weight: bold;
+
+  ${up("md")} {
+    margin: 0 0 7vh 0;
+  }
 `;
 
-const ProjectsBanner = ({ nextSection }) => {
+const Projects = ({ nextSection }) => {
   return (
+    <ThemeProvider theme={breakpoints}>
     <ProjectsContainer data-testid="projects-banner" id="projects-banner">
       <FilterLayer>
-      <StyledProjectsIcon />
-      <ProjectsHeading>Projects</ProjectsHeading>
+        <StyledProjectsIcon />
+        <ProjectsHeading>Projects</ProjectsHeading>
       </FilterLayer>
       <SectionArrowDown nextSectionId={nextSection} color="#000000" />
     </ProjectsContainer>
+    </ThemeProvider>
   );
 };
 
-ProjectsBanner.propTypes = {
+Projects.propTypes = {
   nextSection: PropTypes.string.isRequired,
 };
 
-export default ProjectsBanner;
+export default Projects;

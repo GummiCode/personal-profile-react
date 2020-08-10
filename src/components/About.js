@@ -10,10 +10,16 @@ import aboutText from "../assets/aboutText";
 const AboutContainer = styled.div`
   position: relative;
   height: 90vh;
-  width:100vw;
+  width: 100vw;
   background: url("./images/textures/about.png");
   background-size: auto 100%;
   background-position: -50vw 0;
+
+  ${up("md")} {
+    height: fit-content;
+    min-height: 75vh;
+  }
+
 `;
 
 const FilterLayer = styled.div`
@@ -24,13 +30,18 @@ const FilterLayer = styled.div`
   flex-flow: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  ${up("md")} {
+  height: fit-content;
+  min-height: 75vh;
+}
 `;
 
 const TitleContainer = styled.div`
   width: 100%;
   height: 10vh;
-  font-size: 4em;
   margin: 7vh 0 2vh 0;
+  font-size: 4em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -46,31 +57,28 @@ const StyledAboutIcon = styled(AboutIcon)`
 
 const TextContainer = styled.div`
   width: calc(100% - 14vw);
-  margin: 2vh 7vw 0 7vw;
+  margin: 2vh 7vw 7vh 7vw;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-
+  ${up("md")} {
+    font-size: 1.6em;
 `;
 
 const TextBlock = styled.span`
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   margin: 0 0 8px 0;
   font-size: 1em;
 
-  ${up("sm")} {
-    font-size: 1.2em;
+  ${up("md")} {
+    font-size: 1.1em;
   }
 
-  ${up("smmd")} {
-    font-size: 1.4em;
-  }
-`
+`;
 
 const About = ({ nextSection }) => {
-
   const aboutTextRender = () => {
     return aboutText.map((line) => {
       return <TextBlock>{line}</TextBlock>;
@@ -81,13 +89,11 @@ const About = ({ nextSection }) => {
     <ThemeProvider theme={breakpoints}>
       <AboutContainer data-testid="about" id="about">
         <FilterLayer>
-        <TitleContainer>
-          <StyledAboutIcon />
-        </TitleContainer>
-        <TextContainer>
-          {aboutTextRender()}
-        </TextContainer>
-        <SectionArrowDown nextSectionId={nextSection} color="#000000" />
+          <TitleContainer>
+            <StyledAboutIcon />
+          </TitleContainer>
+          <TextContainer>{aboutTextRender()}</TextContainer>
+          <SectionArrowDown nextSectionId={nextSection} color="#000000" />
         </FilterLayer>
       </AboutContainer>
     </ThemeProvider>

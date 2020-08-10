@@ -67,6 +67,7 @@ const TextBlock = styled.span`
   }
 `;
 
+
 const Intro = ({ nextSection }) => {
   const introTextRenderer = () => {
     return introText.map((line) => {

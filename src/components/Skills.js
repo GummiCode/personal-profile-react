@@ -12,6 +12,11 @@ const SkillsContainer = styled.div`
   height: 90vh;
   width: 100vw;
   background: url("./images/textures/tiles.png");
+
+  ${up("md")} {
+    height: fit-content;
+    min-height: 75vh;
+  }
 `;
 
 const FilterLayer = styled.div`
@@ -22,12 +27,17 @@ const FilterLayer = styled.div`
   flex-flow: column nowrap;
   justify-content: start;
   align-items: center;
+
+${up("md")} {
+  height: fit-content;
+  min-height: 75vh;
+}
 `;
 
 const TitleContainer = styled.div`
   width: 100%;
   height: 10vh;
-  margin: 4.5vh 0 0 0;
+  margin: 6vh 0 0 0;
   font-size: 4.8em;
   display: flex;
   flex-flow: column nowrap;
@@ -44,12 +54,16 @@ const StyledSkillsIcon = styled(SkillsIcon)`
 
 const TechBlockContainer = styled.div`
   width: 100%;
-  height: 60vh;
-  margin: 4vh 0 0 0;
+  height: 100%;
+  margin: 4vh 0 7vh 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
+
+  ${up("md")} {
+    width: 85%;
+  }
 
   div {
     height: auto;

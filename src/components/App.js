@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Header from "./Header";
 import About from "./About";
 import Skills from "./Skills";
-import ProjectsBanner from "./ProjectsBanner";
+import Projects from "./Projects";
 import ProjectRenderer from "./project-renderer/ProjectRenderer";
 import Contact from "./Contact";
 
@@ -14,7 +14,7 @@ function App() {
       <Header nextSection="about"/>
       <About lastSection="header" nextSection="skills" />
       <Skills lastSection="about" nextSection="projects-banner" />
-      <ProjectsBanner lastSection="skills" nextSection="project0" />
+      <Projects lastSection="skills" nextSection="project0" />
       <ProjectRenderer />
       <Contact />
     </div>
