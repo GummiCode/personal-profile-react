@@ -1,7 +1,7 @@
 const aboutText = [
   `I'm a Manchester-based Junior Web Developer. I'm looking for my first full-time role. `,
 
-  `I train using the most current resources to ensure my skills are up to date.`,
+  `Tech moves fast. I train using contemporary resources to ensure my skills are up to date.`,
 
   `I currently work as a senior research chemist. I have two degrees, over a decade of industrial experience and all of the executive and practical skills you'd expect from a proffessional scientist.`,
 

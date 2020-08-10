@@ -11,9 +11,6 @@ const AboutContainer = styled.div`
   position: relative;
   height: calc(100vh - 60px);
   width: 100vw;
-  background: url("./images/textures/about.png");
-  background-size: auto 100%;
-  background-position: -50vw 0;
 
   ${up("md")} {
     height: fit-content;
@@ -24,7 +21,7 @@ const AboutContainer = styled.div`
 const FilterLayer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(247, 247, 255, 0.95);
+  background-color: #ffffff;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -57,13 +54,11 @@ const StyledAboutIcon = styled(AboutIcon)`
 const TextContainer = styled.div`
   width: calc(100% - 14vw);
   margin: 2vh 7vw 7vh 7vw;
+  font-size: 1.1em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  ${up("md")} {
-    font-size: 1.6em;
-  }
 `;
 
 const TextBlock = styled.span`

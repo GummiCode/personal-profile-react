@@ -10,13 +10,15 @@ const ProjectContainer = styled.div`
   position: relative;
   height: calc(100vh - 60px);
   width: 100vw;
+  border-radius: 30px;
   background: ${(props) => props.background};
 `;
 
 const FilterLayer = styled.div`
-  height: calc(100vh - 60px);
+  height: calc(100vh - 60px - 9vh);
   width: 84vw;
   padding: 4.5vh 8vw;
+  border-radius: 30px;
   background: ${(props) => props.filter};
   display: flex;
   flex-flow: column nowrap;
@@ -68,7 +70,7 @@ const ImageContainer = styled.div`
   width: 75vw;
   background-image: url(${(props) => props.image});
   background-size: cover;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 3px 3px 3px 3px rgba(80, 40, 60, 0.2);
   display: flex;
   flex-flow: column nowrap;

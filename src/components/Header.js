@@ -6,6 +6,7 @@ import introText from "../assets/introText";
 
 const HeaderContainer = styled.div`
   height: 100vh;
+  max-height: 740px;
   width: 100vw;
   background-color: #ffffff;
   display: flex;
@@ -18,7 +19,7 @@ const HeaderCard = styled.div`
   height: fit-content;
   width: 360px;
   max-width: calc(360px - 40px);
-  margin: calc(60px + 30px) 0 0 0;
+  margin: calc(60px + 30px) 0 60px 0;
   border-radius: 15px;
   display: flex;
   flex-flow: column nowrap;

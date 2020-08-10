@@ -24,7 +24,7 @@ const ProjectsContainer = styled.div`
 const FilterLayer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -53,7 +53,7 @@ const ProjectsHeading = styled.h1`
 const Projects = ({ nextSection }) => {
   return (
     <ThemeProvider theme={breakpoints}>
-      <ProjectsContainer data-testid="projects-banner" id="projects-banner">
+      <ProjectsContainer data-testid="projects" id="projects">
         <FilterLayer>
           <StyledProjectsIcon />
           <ProjectsHeading>Projects</ProjectsHeading>

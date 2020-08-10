@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: whitesmoke;
+    background: white;
     font-family: 'Roboto', Helvetica, sans-serif;
   }
 `;
