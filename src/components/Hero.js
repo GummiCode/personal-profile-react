@@ -3,14 +3,15 @@ import styled, { ThemeProvider } from "styled-components";
 import { up } from "styled-breakpoints";
 import breakpoints from "../styles/breakpoints";
 
-const HeaderImageContainer = styled.div`
-  height: calc(60vh - 60px);
-  width: 100vw;
-  padding: 60px 0 0 0;
-  background-image: url("./images/profile-picture.jpg");
-  background-position: 0vw 10vh;
-  background-attachment: fixed;
-  background-size: auto 50%;
+const HeaderImage = styled.div`
+  height: 50vh;
+  min-height: 50vw;
+  max-height: 100px;
+  width: 50vw;
+  min-width: 50vh;
+  max-width: 100px;
+  background-image: url("./images/profile-picture-sq.jpg");
+  background-position: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
@@ -62,12 +63,11 @@ const HeaderText = styled.div`
 const Hero = () => {
   return (
     <ThemeProvider theme={breakpoints}>
-      <HeaderImageContainer data-testid="header" id="header">
+      <HeaderImage data-testid="header" id="header" />
         <HeaderText>
           <h1> DAVID ARROWSMITH</h1>
           <h2>JUNIOR DEVELOPER</h2>
         </HeaderText>
-      </HeaderImageContainer>
     </ThemeProvider>
   );
 };

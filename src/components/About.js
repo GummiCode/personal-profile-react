@@ -25,7 +25,7 @@ const AboutContainer = styled.div`
 const FilterLayer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: rgba(255, 93, 115, 0.95);
+  background-color: rgba(247, 247, 255, 0.95);
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
@@ -64,6 +64,7 @@ const TextContainer = styled.div`
   align-items: flex-start;
   ${up("md")} {
     font-size: 1.6em;
+  }
 `;
 
 const TextBlock = styled.span`
