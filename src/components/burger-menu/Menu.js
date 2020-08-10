@@ -10,7 +10,7 @@ const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(60vh - 60px);
+  height: calc(50vh - 60px);
   width: 45vw;
   padding: 0 0 0 5vw;
   text-align: left;
@@ -67,16 +67,6 @@ const Menu = ({ open }) => {
           duration={500}
         >
           About
-        </MenuLink>
-        <MenuLink
-          activeClass="active"
-          to="skills"
-          spy
-          smooth
-          offset={-50}
-          duration={500}
-        >
-          Skills
         </MenuLink>
         <ProjectsBurgerMenu />
         <MenuLink
