@@ -20,6 +20,10 @@ const FilterLayer = styled.div`
   flex-flow: column nowrap;
   justify-content: start;
   align-items: center;
+
+  ${up("md")} {
+    justify-content: center;
+  }
 `;
 
 const TextContainer = styled.div`
@@ -45,6 +49,13 @@ const TextContainer = styled.div`
     height: 90%;
     justify-content: center;
   }
+
+  ${up("md")} {
+    height: fit-content;
+    margin: 0;
+    padding: 50px;
+  }
+
 `;
 
 const TextBlock = styled.span`

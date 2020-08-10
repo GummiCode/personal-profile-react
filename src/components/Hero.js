@@ -16,6 +16,7 @@ const HeaderImageContainer = styled.div`
   justify-content: flex-end;
 
   ${up("sm")} {
+    padding: 80px 0 0 0;
     background-position: -147px 3vh;
     background-size: auto 90%;
   }
@@ -31,17 +32,17 @@ const HeaderText = styled.div`
   background: rgba(10, 10, 10, 0.3);
 
   ${up("sm")} {
-    height: 30vh;
+    height: fit-content;
   }
 
   h1 {
     font-size: calc(100vw / 13);
     color: #ffffff;
-    margin: 0 5vw;
+    margin: 4vh 5vw 0 0;
 
     ${up("md")} {
       font-size: 3.4em;
-      margin: 0 40px 0 0;
+      margin: 40px 40px 0 0;
     }
 
   }

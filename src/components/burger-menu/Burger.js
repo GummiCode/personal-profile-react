@@ -1,10 +1,14 @@
 import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import { up } from "styled-breakpoints";
 import { bool, func } from "prop-types";
-import styled from "styled-components";
+import breakpoints from "../../styles/breakpoints";
 
 const StyledBurger = styled.button`
   width: 7vh;
+  max-width: 80px;
   height: 6vh;
+  max-height: 72px;
   margin: 1.5vw;
   background: transparent;
   border: none;
