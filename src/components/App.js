@@ -15,7 +15,6 @@ function App() {
       <About lastSection="header" nextSection="projects" />
       {/* <Skills lastSection="about" nextSection="projects-banner" /> */}
       <Projects lastSection="about" nextSection="project0" />
-      <ProjectRenderer />
       <Contact />
     </div>
   );

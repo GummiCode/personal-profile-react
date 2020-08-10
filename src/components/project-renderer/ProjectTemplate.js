@@ -14,6 +14,10 @@ const ProjectContainer = styled.div`
   margin: 0 0 30px 0;
   border-radius: 30px;
   background: ${(props) => props.background};
+
+  ${up("md")} {
+    margin: 30px;
+  }
 `;
 
 const FilterLayer = styled.div`

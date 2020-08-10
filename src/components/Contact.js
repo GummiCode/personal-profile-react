@@ -20,7 +20,7 @@ const ContactContainer = styled.div`
 
   ${up("md")} {
     height: fit-content;
-    margin: 0 0 300px 0;
+    margin: 0 0 20vh 0;
   }
 `;
 
@@ -38,17 +38,20 @@ const ContactCard = styled.div`
 `;
 
 const Name = styled.h1`
-  margin: 0 0 3vh 0;
+  margin: 0 0 10px 0;
   font-size: 1.5em;
+  font-weight: normal;
 
   ${up("md")} {
     font-size: 1.9em;
+  font-weight: normal;
   }
 `;
 
 const Title = styled.h2`
   margin: 0 0 6vh 0;
   font-size: 1.2em;
+  font-weight: normal;
 
   ${up("sm")} {
     font-size: 1.4em;
@@ -151,9 +154,9 @@ const Contact = () => {
     <ThemeProvider theme={breakpoints}>
       <ContactContainer data-testid="contact" id="contact">
         <ContactCard>
-          <Name>DAVID ARROWSMITH</Name>
+          <Name>David Arrowsmith</Name>
 
-          <Title>JUNIOR WEB DEVELOPER</Title>
+          <Title>Web Developer</Title>
 
           <LinkContainer
             data-testid="contact-email-link"
