@@ -1,5 +1,5 @@
 const introText = [
-  `I'm a research scientist training to become a developer.`,
+  `I'm a web development enthusiast.`,
   `I'm trained in React,`,
   `Responsive Design,`,
   `Full-Stack &`,
