@@ -1,5 +1,5 @@
-import { FaUserAstronaut, FaTransgenderAlt } from "react-icons/fa";
-
+import { FaUserAstronaut, FaTransgenderAlt, FaRegArrowAltCircleUp } from "react-icons/fa"; 
+import { GiFalling } from "react-icons/gi"; 
 const projectData = [
   {
     title: "SpaceFrens",
@@ -38,6 +38,20 @@ const projectData = [
     background: `url("./images/textures/qft.jpg")`,
     filter: "rgba(254, 74, 73, 0.8)",
     Icon: FaTransgenderAlt,
+  },
+
+  {
+    title: "Platformer 00",
+    key: "platformer00",
+    summary: "Browser platform game powered by a JavaScript event loop.",
+    aspects: [],
+    gitHub: "https://github.com/GummiCode/platformer-00",
+    url: "https://gummicode.github.io/platformer-00/",
+    image: "./images/platformer-00-lg.png",
+    textColor: "#000000",
+    background: "#fffff4",
+    filter: "rgba(8, 8, 14, 0)",
+    Icon: GiFalling,
   },
 ];
 

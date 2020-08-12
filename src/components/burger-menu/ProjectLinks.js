@@ -30,7 +30,7 @@ const ProjectLinks = () => {
         to={`project${index}`}
         spy
         smooth
-        offset={-50}
+        offset={-60}
         duration={500}
       >
         {title}

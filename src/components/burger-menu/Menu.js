@@ -63,7 +63,7 @@ const Menu = ({ open }) => {
           to="about"
           spy
           smooth
-          offset={-50}
+          offset={-60}
           duration={500}
         >
           About
@@ -74,7 +74,7 @@ const Menu = ({ open }) => {
           to="contact"
           spy
           smooth
-          offset={-50}
+          offset={-60}
           duration={500}
         >
           Contact
