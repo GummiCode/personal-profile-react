@@ -14,11 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-<<<<<<< HEAD
-  "/personal-profile-react/precache-manifest.aa5b9fc5d16b8fd4cf1252418b4e797b.js"
-=======
-  "/personal-profile-react/precache-manifest.84ab138529b2cfb970134fc149dc2887.js"
->>>>>>> 45227488fca68ba326a7f9a233ad9cfdd3c5a1ef
+  "/personal-profile-react/precache-manifest.e4eb920c988bb7eb7b6883a725d7676c.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -39,5 +35,5 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/personal-profile-react/index.html"), {
   
-  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });
