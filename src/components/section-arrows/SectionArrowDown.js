@@ -27,7 +27,7 @@ const SectionArrowDown = ({ nextSectionId, color }) => {
         to={nextSectionId}
         spy
         smooth
-        offset={-50}
+        offset={-60}
         duration={500}
       >
         <FaCaretDown fill={color} size="4em" />
