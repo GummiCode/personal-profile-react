@@ -37,7 +37,7 @@ const HeaderImage = styled.div`
 `;
 
 const HeadText = styled.div`
-  width: 280px;
+  width: 300px;
   height: fit-content;
   margin: 0;
   padding: 0 0 20px 0;
@@ -52,7 +52,7 @@ const HeadText = styled.div`
 `;
 
 const TextBlock = styled.span`
-  width: 270px;
+  width: 300px;
   height: fit-content;
   margin: 0;
   padding: 0;
