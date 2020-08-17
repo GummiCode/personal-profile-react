@@ -7,31 +7,18 @@ import breakpoints from "../../styles/breakpoints";
 import SectionArrowDown from "../section-arrows/SectionArrowDown";
 
 const ProjectContainer = styled.div`
-  height: calc(100vh - 60px);
+  height: calc(100vh - 80px);
   max-height: 740px;
-  width: 100vw;
+  width: calc(100vw - 30px);
   max-width: 420px;
-  margin: 0 0 30px 0;
+  margin: 10px 10px 30px 10px;
+  padding: 15px 0 0 0;
   border-radius: 20px;
   background: ${(props) => props.background};
 
   ${up("md")} {
-    margin: 30px;
+    margin: 25px;
   }
-`;
-
-const FilterLayer = styled.div`
-  height: calc(100vh - 60px - 40px);
-  max-height: 700px;
-  width: calc(100vw - 40px);
-  max-width: calc(420px - 40px);
-  padding: 20px;
-  border-radius: 20px;
-  background: ${(props) => props.filter};
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
 `;
 
 const ContentContainer = styled.div`
@@ -46,20 +33,20 @@ const ContentContainer = styled.div`
 const TitleText = styled.h1`
   height: fit-content;
   width: fit-content;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-transform: uppercase;
   color: ${(props) => props.textColor};
-  margin: 14px 0 0 0;
+  margin: 12px 0 0 0;
 
   ${up("sm")} {
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 `;
 
 const SummaryText = styled.span`
-  height: 70px;
+  height: 60px;
   width: 100%;
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: ${(props) => props.textColor};
   display: flex;
   flex-flow: column nowrap;
@@ -68,7 +55,7 @@ const SummaryText = styled.span`
   text-align: center;
 
   ${up("sm")} {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 `;
 
@@ -85,18 +72,18 @@ const ImageContainer = styled.div`
   align-items: flex-end;
 
   div {
-    height: 74px;
-    width: 74px;
-    margin: 0 10px 10px 0;
-    border-radius: 36px;
+    height: 60px;
+    width: 60px;
+    margin: 0 8px 8px 0;
+    border-radius: 30px;
     background-color: #ffffff;
     box-shadow: 2px 2px 2px 2px rgba(80, 40, 60, 0.2);
 
     ${up("md")} {
-      height: 75px;
-      min-height: 75px;
-      width: 75px;
-      min-width: 75px;
+      height: 60px;
+      min-height: 60px;
+      width: 60px;
+      min-width: 60px;
     }
   }
 `;
@@ -115,7 +102,7 @@ const ExtLink = styled.a`
 const Github = styled(FaGithub)`
   height: 80%;
   width: 80%;
-  border-radius: 50px;
+  border-radius: 40px;
   fill: #000000;
 
   &:hover {
@@ -127,7 +114,7 @@ const Github = styled(FaGithub)`
 const WebApp = styled(FaGlobe)`
   height: 80%;
   width: 80%;
-  border-radius: 50px;
+  border-radius: 40px;
   fill: #000000;
 
   &:hover {
@@ -145,7 +132,6 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
     image,
     textColor,
     background,
-    filter,
     Icon,
   } = projectData;
 
@@ -156,9 +142,8 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
         id={projectId}
         background={background}
       >
-        <FilterLayer filter={filter}>
           <ContentContainer>
-            <Icon size="100px" color={textColor} />
+            <Icon size="75px" color={textColor} />
 
             <TitleText textColor={textColor}>{title}</TitleText>
 
@@ -181,7 +166,6 @@ const ProjectTemplate = ({ projectData, projectId, nextSection }) => {
             </ImageContainer>
             <SectionArrowDown nextSectionId={nextSection} color={textColor} />
           </ContentContainer>
-        </FilterLayer>
       </ProjectContainer>
     </ThemeProvider>
   );
@@ -199,7 +183,6 @@ ProjectTemplate.propTypes = {
     Icon: PropTypes.func.isRequired,
     textColor: PropTypes.string.isRequired,
     background: PropTypes.string.isRequired,
-    filter: PropTypes.string.isRequired,
   }).isRequired,
   projectId: PropTypes.string.isRequired,
   nextSection: PropTypes.string.isRequired,

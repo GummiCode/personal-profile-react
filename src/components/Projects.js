@@ -8,7 +8,7 @@ import ProjectRenderer from "./project-renderer/ProjectRenderer";
 const ProjectsContainer = styled.div`
   height: fit-content;
   width: 100vw;
-  margin: 80px 0 80px 0;
+  margin: 70px 0 70px 0;
   background: #ffffff;
   display: flex;
   flex-flow: column;
@@ -23,7 +23,7 @@ const ProjectsContainer = styled.div`
 const ProjectsCard = styled.div`
   height: fit-content;
   width: fit-content;
-  border-radius: 30px;
+  border-radius: 25px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -32,19 +32,19 @@ const ProjectsCard = styled.div`
   ${up("md")} {
     height: fit-content;
     width: fit-content;
-    padding: 40px 10px 40px 10px;
-    background: whitesmoke;
+    padding: 30px 10px 30px 10px;
+    background: #e1e8ec;
   }
 `;
 
 const StyledProjectsIcon = styled(ProjectsIcon)`
-  height: 75px;
-  width: 75px;
+  height: 60px;
+  width: 60px;
   border-radius: 5px;
 `;
 
 const ProjectsHeading = styled.h1`
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: normal;
 `;
 

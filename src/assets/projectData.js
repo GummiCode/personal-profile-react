@@ -1,5 +1,5 @@
 import { FaUserAstronaut, FaTransgenderAlt, FaRegArrowAltCircleUp } from "react-icons/fa"; 
-import { GiFalling } from "react-icons/gi"; 
+import { GiFalling, GiSpaceShuttle } from "react-icons/gi"; 
 const projectData = [
   {
     title: "SpaceFrens",
@@ -15,9 +15,8 @@ const projectData = [
     gitHub: "https://github.com/GummiCode/spacefrens",
     url: "https://spacefrens.herokuapp.com/",
     image: "./images/spacefrens-demo.jpg",
-    textColor: "#FDFDFF",
-    background: `url("./images/textures/spacefrens.jpg")`,
-    filter: "rgba(8, 8, 14, 0.5)",
+    textColor: "#000000",
+    background: "#f0ddb8",
     Icon: FaUserAstronaut,
   },
 
@@ -34,9 +33,8 @@ const projectData = [
     gitHub: "https://github.com/ian-antking/q-family-dinner",
     url: "https://queerfamilytea.com/#/",
     image: "./images/qft-demo.png",
-    textColor: "#171226",
-    background: `url("./images/textures/qft.jpg")`,
-    filter: "rgba(254, 74, 73, 0.8)",
+    textColor: "#000000",
+    background: "#f0c38f",
     Icon: FaTransgenderAlt,
   },
 
@@ -49,9 +47,20 @@ const projectData = [
     url: "https://gummicode.github.io/platformer-00/",
     image: "./images/platformer-00-lg.png",
     textColor: "#000000",
-    background: "#fffff4",
-    filter: "rgba(8, 8, 14, 0)",
+    background: "#d0dec2",
     Icon: GiFalling,
+  },
+  {
+    title: "NASA Image Search",
+    key: "nasa",
+    summary: "Search engine for the NASA images API.",
+    aspects: [],
+    gitHub: "https://github.com/GummiCode/nasa-image-search",
+    url: "https://gummicode.github.io/nasa-image-search/",
+    image: "./images/nasa-demo.png",
+    textColor: "#000000",
+    background: "#aecdad",
+    Icon: GiSpaceShuttle,
   },
 ];
 
