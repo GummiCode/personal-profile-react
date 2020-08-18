@@ -1,68 +1,30 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Portfolio – React App
+https://gummicode.github.io/personal-profile-react/
+## Introduction
+Hello! I'm David Arrowsmith. I'm a self-trained coding enthusiast. This React app acts as a portfolio of my projects. It has been designed to procedurally generate brief project summary ‘cards’ which include links to my projects’ GitHub repos and deployed versions.
 
-## Available Scripts
+This is a component-based React app with a mixture of hard-coded and procedurally generated content. Styling is implemented using styled-components. 
 
-In the project directory, you can run:
+## Aims
+- Create a portfolio with attractive, minimalistic styling
+- Implement a single-page continuously scrolling React app
+- Practice styled-components
+- Include procedurally generated content
+- Land my first coding job
 
-### `npm start`
+## Running the App
+The app is hosted on GitHub pages. It can be accessed at https://gummicode.github.io/personal-profile-react/
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The app can also be downloaded and run locally:
+1. [Clone the app onto your device.](https://docs.github.com/en/enterprise/2.13/user/articles/cloning-a-repository)
+2. Open a bash command terminal.
+3. Navigate to this directory’s root.
+4. Enter the command ```npm start```. The app will load in your default browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Using the App
+Please read from top to bottom, and be sure to check out the links on the project cards. If you’d like to skip straight to the projects (or any other section) you can use the burger menu in the app’s navbar. 
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Next Steps
+- The app does not have a complete array of tests. These should be completed.
+- The Project cards aren’t ideally proportioned. I’ve begun remedying this but this work is incomplete.
+- More & better content is always desireable! This project is a continuous work-in-progress.
