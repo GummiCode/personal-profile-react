@@ -1,5 +1,6 @@
-import { FaUserAstronaut, FaTransgenderAlt, FaRegArrowAltCircleUp } from "react-icons/fa"; 
+import { FaUserAstronaut, FaTransgenderAlt, FaCar } from "react-icons/fa"; 
 import { GiFalling, GiSpaceShuttle } from "react-icons/gi"; 
+import { RiDatabaseLine } from "react-icons/ri";
 const projectData = [
   {
     title: "SpaceFrens",
@@ -53,7 +54,7 @@ const projectData = [
   {
     title: "NASA Image Search",
     key: "nasa",
-    summary: "Search engine for the NASA images API.",
+    summary: "React search engine for the NASA images API.",
     aspects: [],
     gitHub: "https://github.com/GummiCode/nasa-image-search",
     url: "https://gummicode.github.io/nasa-image-search/",
@@ -61,6 +62,30 @@ const projectData = [
     textColor: "#000000",
     background: "#aecdad",
     Icon: GiSpaceShuttle,
+  },
+  {
+    title: "TinyCarList App",
+    key: "tinyCarApp",
+    summary: "Auto trading site. Frontend with filterable listings and submission form.",
+    aspects: [],
+    gitHub: "https://github.com/GummiCode/tiny-car-list-app",
+    url: "https://gummicode.github.io/tiny-car-list-app/#/",
+    image: "./images/tinyfront-demo.png",
+    textColor: "#000000",
+    background: "#b4b7cf",
+    Icon: FaCar,
+  },
+  {
+    title: "TinyCarList API",
+    key: "tinyCarApi",
+    summary: "TinyCarList app backend with full CRUD suite and tests. Hosted on Heroku.",
+    aspects: [],
+    gitHub: "https://github.com/GummiCode/tiny-car-list-api",
+    url: "https://github.com/GummiCode/tiny-car-list-api",
+    image: "./images/tinyfront-demo.png",
+    textColor: "#000000",
+    background: "#a6b3dd",
+    Icon: RiDatabaseLine,
   },
 ];
 
