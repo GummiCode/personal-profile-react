@@ -85,7 +85,7 @@ const projectData = [
     aspects: [],
     gitHub: "https://github.com/GummiCode/tiny-car-list-api",
     url: "https://github.com/GummiCode/tiny-car-list-api",
-    image: "./images/tinyfront-demo.png",
+    image: "./images/tinyback-demo.png",
     textColor: "#000000",
     background: "#a6b3dd",
     Icon: RiDatabaseLine,
