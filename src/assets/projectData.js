@@ -1,6 +1,7 @@
-import { FaUserAstronaut, FaTransgenderAlt, FaCar } from "react-icons/fa"; 
-import { GiFalling, GiSpaceShuttle } from "react-icons/gi"; 
+import { FaUserAstronaut, FaTransgenderAlt, FaCar } from "react-icons/fa";
+import { GiFalling, GiSpaceShuttle } from "react-icons/gi";
 import { RiDatabaseLine } from "react-icons/ri";
+
 const projectData = [
   {
     title: "SpaceFrens",
@@ -66,7 +67,8 @@ const projectData = [
   {
     title: "TinyCarList App",
     key: "tinyCarApp",
-    summary: "Auto trading site. Frontend with filterable listings and submission form.",
+    summary:
+      "Auto trading site. Frontend with filterable listings and submission form.",
     aspects: [],
     gitHub: "https://github.com/GummiCode/tiny-car-list-app",
     url: "https://gummicode.github.io/tiny-car-list-app/#/",
@@ -78,7 +80,8 @@ const projectData = [
   {
     title: "TinyCarList API",
     key: "tinyCarApi",
-    summary: "TinyCarList app backend with full CRUD suite and tests. Hosted on Heroku.",
+    summary:
+      "TinyCarList app backend with full CRUD suite and tests. Hosted on Heroku.",
     aspects: [],
     gitHub: "https://github.com/GummiCode/tiny-car-list-api",
     url: "https://github.com/GummiCode/tiny-car-list-api",
