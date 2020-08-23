@@ -10,7 +10,7 @@ This is a component-based React app with a mixture of hard-coded and procedurall
 - Implement a single-page continuously scrolling React app
 - Practice styled-components
 - Include procedurally generated content
-- Land my first coding job
+- Demonstrate my current skill level
 
 ## Running the App
 The app is hosted on GitHub pages. It can be accessed at https://gummicode.github.io/personal-profile-react/
