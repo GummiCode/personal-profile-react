@@ -1,5 +1,5 @@
 # My Portfolio – React App
-https://gummicode.github.io/personal-profile-react/
+https://gummicode.github.io/portfolio/
 ## Introduction
 Hello! I'm David Arrowsmith. I'm a self-trained coding enthusiast. This React app acts as a portfolio of my projects. It has been designed to procedurally generate brief project summary ‘cards’ which include links to my projects’ GitHub repos and deployed versions.
 
