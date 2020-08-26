@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import aboutText from "../assets/aboutText";
+import aboutPic from "../assets/images/about.png"
 
 const AboutContainer = styled.div`
   height: fit-content;
@@ -27,10 +28,10 @@ const AboutCard = styled.div`
 `;
 
 const AboutImage = styled.div`
-  height: 180px;
-  width: 180px;
+  height: 240px;
+  width: 240px;
   margin: 0 0 40px 0;
-  background-image: url("./images/about-picture-sq.png");
+  background-image: url(${aboutPic});
   background-position: center;
   background-size: cover;
 `;

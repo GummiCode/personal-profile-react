@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import SectionArrowDown from "./section-arrows/SectionArrowDown";
 import introText from "../assets/introText";
+import profilePic from "../assets/images/profilePic.png";
 
 const HeaderContainer = styled.div`
   height: fit-content;
@@ -31,7 +32,7 @@ const HeaderImage = styled.div`
   height: 240px;
   width: 240px;
   margin: 0 0 40px 0;
-  background-image: url("./images/profile-picture-sq.png");
+  background-image: url(${profilePic});
   background-position: center;
   background-size: cover;
 `;
