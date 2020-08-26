@@ -14,7 +14,7 @@ const ProjectContainer = styled.div`
   margin: 10px 10px 30px 10px;
   padding: 15px 0 0 0;
   border-radius: 20px;
-  background: ${(props) => props.background};
+  background: url(${(props) => props.background});
 
   ${up("md")} {
     margin: 25px;

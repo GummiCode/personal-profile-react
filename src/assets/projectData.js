@@ -1,6 +1,14 @@
 import { FaUserAstronaut, FaTransgenderAlt, FaCar } from "react-icons/fa";
 import { GiFalling, GiSpaceShuttle } from "react-icons/gi";
 import { RiDatabaseLine } from "react-icons/ri";
+import {
+	nasaDemo,
+	platformDemo,
+	qftDemo,
+	spacefrensDemo,
+	tinybackDemo,
+	tinyfrontDemo
+} from "../assets/images";
 
 const projectData = [
   {
@@ -16,7 +24,7 @@ const projectData = [
     ],
     gitHub: "https://github.com/GummiCode/spacefrens",
     url: "https://spacefrens.herokuapp.com/",
-    image: "./images/spacefrens-demo.jpg",
+    image: spacefrensDemo,
     textColor: "#000000",
     background: "#f0ddb8",
     Icon: FaUserAstronaut,
@@ -34,7 +42,7 @@ const projectData = [
     ],
     gitHub: "https://github.com/ian-antking/q-family-dinner",
     url: "https://queerfamilytea.com/#/",
-    image: "./images/qft-demo.png",
+    image: qftDemo,
     textColor: "#000000",
     background: "#f0c38f",
     Icon: FaTransgenderAlt,
@@ -47,7 +55,7 @@ const projectData = [
     aspects: [],
     gitHub: "https://github.com/GummiCode/platformer-00",
     url: "https://gummicode.github.io/platformer-00/",
-    image: "./images/platformer-00-lg.png",
+    image: platformDemo,
     textColor: "#000000",
     background: "#d0dec2",
     Icon: GiFalling,
@@ -59,7 +67,7 @@ const projectData = [
     aspects: [],
     gitHub: "https://github.com/GummiCode/nasa-image-search",
     url: "https://gummicode.github.io/nasa-image-search/",
-    image: "./images/nasa-demo.png",
+    image: nasaDemo,
     textColor: "#000000",
     background: "#aecdad",
     Icon: GiSpaceShuttle,
@@ -72,7 +80,7 @@ const projectData = [
     aspects: [],
     gitHub: "https://github.com/GummiCode/tiny-car-list-app",
     url: "https://gummicode.github.io/tiny-car-list-app/#/",
-    image: "./images/tinyfront-demo.png",
+    image: tinyfrontDemo,
     textColor: "#000000",
     background: "#b4b7cf",
     Icon: FaCar,
@@ -85,7 +93,7 @@ const projectData = [
     aspects: [],
     gitHub: "https://github.com/GummiCode/tiny-car-list-api",
     url: "https://github.com/GummiCode/tiny-car-list-api",
-    image: "./images/tinyback-demo.png",
+    image: tinybackDemo,
     textColor: "#000000",
     background: "#a6b3dd",
     Icon: RiDatabaseLine,
