@@ -38,6 +38,23 @@ const ProjectsCard = styled.div`
   }
 `;
 
+const ProjectsHeader = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .25);  
+  backdrop-filter: blur(5px);
+
+  ${up("md")} {
+    height: 180px;
+    width: 200px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+`;
+
 const StyledProjectsIcon = styled(ProjectsIcon)`
   height: 60px;
   width: 60px;
@@ -45,16 +62,16 @@ const StyledProjectsIcon = styled(ProjectsIcon)`
 
 
   ${up("md")} {
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
   }
 `;
 
-const ProjectsHeading = styled.h1`
+const ProjectsText = styled.h1`
   font-size: 2em;
   font-weight: normal;
 
   ${up("md")} {
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
 `;
 
@@ -72,8 +89,10 @@ const Projects = () => {
     <ThemeProvider theme={breakpoints}>
       <ProjectsContainer data-testid="projects" id="projects">
         <ProjectsCard>
-          <StyledProjectsIcon />
-          <ProjectsHeading>Projects</ProjectsHeading>
+          <ProjectsHeader>
+            <StyledProjectsIcon />
+            <ProjectsText>Projects</ProjectsText>
+          </ProjectsHeader>
           <ProjectsGrid>
             <ProjectRenderer />
           </ProjectsGrid>
