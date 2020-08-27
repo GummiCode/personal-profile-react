@@ -4,6 +4,7 @@ import { up } from "styled-breakpoints";
 import { FaPencilRuler as ProjectsIcon } from "react-icons/fa";
 import breakpoints from "../styles/breakpoints";
 import ProjectRenderer from "./project-renderer/ProjectRenderer";
+import desktop from "../assets/images/desktop.png";
 
 const ProjectsContainer = styled.div`
   height: fit-content;
@@ -23,7 +24,6 @@ const ProjectsContainer = styled.div`
 const ProjectsCard = styled.div`
   height: fit-content;
   width: fit-content;
-  border-radius: 25px;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -33,7 +33,8 @@ const ProjectsCard = styled.div`
     height: fit-content;
     width: fit-content;
     padding: 30px 10px 30px 10px;
-    background: #e1e8ec;
+    background: url(${desktop}) fixed;
+    background-size: cover;
   }
 `;
 
@@ -41,11 +42,20 @@ const StyledProjectsIcon = styled(ProjectsIcon)`
   height: 60px;
   width: 60px;
   border-radius: 5px;
+
+
+  ${up("md")} {
+    margin: 40px 0 0 0;
+  }
 `;
 
 const ProjectsHeading = styled.h1`
   font-size: 2em;
   font-weight: normal;
+
+  ${up("md")} {
+    margin: 0 0 40px 0;
+  }
 `;
 
 const ProjectsGrid = styled.div`
